@@ -1,0 +1,1664 @@
+{
+  "beginner": {
+    "mcqs": [
+      {
+        "question": "What does SLAM stand for?",
+        "options": {
+          "A": "Simultaneous Localization and Mapping",
+          "B": "Single Localization and Mapping",
+          "C": "Simultaneous Location and Movement",
+          "D": "Sensor Localization and Monitoring"
+        },
+        "correct": "A",
+        "explanation": "SLAM stands for Simultaneous Localization and Mapping."
+      },
+      {
+        "question": "What two tasks does SLAM perform simultaneously?",
+        "options": {
+          "A": "Localization and Navigation",
+          "B": "Localization and Mapping",
+          "C": "Mapping and Planning",
+          "D": "Planning and Control"
+        },
+        "correct": "B",
+        "explanation": "SLAM builds a map while simultaneously tracking the robot's position within that map."
+      },
+      {
+        "question": "What is 'localization' in robotics?",
+        "options": {
+          "A": "Knowing where the robot is in the map",
+          "B": "Building a map",
+          "C": "Moving to a goal",
+          "D": "Avoiding obstacles"
+        },
+        "correct": "A",
+        "explanation": "Localization answers the question: 'Where am I?' in the map."
+      },
+      {
+        "question": "What is 'mapping' in robotics?",
+        "options": {
+          "A": "Knowing robot position",
+          "B": "Building a representation of the environment",
+          "C": "Planning a path",
+          "D": "Controlling motors"
+        },
+        "correct": "B",
+        "explanation": "Mapping creates a map of the environment using sensor data."
+      },
+      {
+        "question": "Which topic typically publishes the map created by SLAM?",
+        "options": {
+          "A": "/cmd_vel",
+          "B": "/map",
+          "C": "/scan",
+          "D": "/pose"
+        },
+        "correct": "B",
+        "explanation": "SLAM algorithms publish the map on the /map topic."
+      },
+      {
+        "question": "What type of message is the /map topic?",
+        "options": {
+          "A": "LaserScan",
+          "B": "OccupancyGrid",
+          "C": "Twist",
+          "D": "Image"
+        },
+        "correct": "B",
+        "explanation": "/map uses nav_msgs/OccupancyGrid, a grid where each cell indicates occupied/free/unknown."
+      },
+      {
+        "question": "What sensor is commonly used for SLAM?",
+        "options": {
+          "A": "Camera",
+          "B": "Lidar (LaserScan)",
+          "C": "GPS",
+          "D": "IMU only"
+        },
+        "correct": "B",
+        "explanation": "Lidar is commonly used for SLAM because it provides accurate distance measurements."
+      },
+      {
+        "question": "What is the role of the /scan topic in SLAM?",
+        "options": {
+          "A": "Send velocity commands",
+          "B": "Provide laser distance data to build map",
+          "C": "Publish robot position",
+          "D": "Send goal positions"
+        },
+        "correct": "B",
+        "explanation": "SLAM uses LaserScan data from /scan to detect obstacles and build the map."
+      },
+      {
+        "question": "What is Navigation2 (Nav2)?",
+        "options": {
+          "A": "A simulation tool",
+          "B": "A ROS2 framework for robot navigation",
+          "C": "A SLAM algorithm",
+          "D": "A visualization tool"
+        },
+        "correct": "B",
+        "explanation": "Nav2 is a ROS2 framework that enables robots to navigate from point A to point B."
+      },
+      {
+        "question": "What is the first step in robot navigation?",
+        "options": {
+          "A": "Sending velocity commands",
+          "B": "Setting a goal position",
+          "C": "Building a map",
+          "D": "Avoiding obstacles"
+        },
+        "correct": "B",
+        "explanation": "Navigation starts by setting a goal position for the robot to reach."
+      },
+      {
+        "question": "What is the basic flow of navigation?",
+        "options": {
+          "A": "Goal → Planner → Controller → cmd_vel",
+          "B": "cmd_vel → Planner → Controller → Goal",
+          "C": "Map → Goal → cmd_vel",
+          "D": "Planner → Map → Controller"
+        },
+        "correct": "A",
+        "explanation": "Goal is given, planner creates path, controller computes velocities, cmd_vel moves robot."
+      },
+      {
+        "question": "What does the 'Planner' do in Nav2?",
+        "options": {
+          "A": "Controls robot motors",
+          "B": "Computes a path from start to goal",
+          "C": "Builds the map",
+          "D": "Processes sensor data"
+        },
+        "correct": "B",
+        "explanation": "The planner finds a global path from robot's current position to the goal."
+      },
+      {
+        "question": "What does the 'Controller' do in Nav2?",
+        "options": {
+          "A": "Plans the global path",
+          "B": "Computes velocity commands to follow the path",
+          "C": "Builds the map",
+          "D": "Localizes the robot"
+        },
+        "correct": "B",
+        "explanation": "The controller generates cmd_vel commands to follow the planned path while avoiding obstacles."
+      },
+      {
+        "question": "What is the output of the Nav2 Controller?",
+        "options": {
+          "A": "/map",
+          "B": "/cmd_vel",
+          "C": "/scan",
+          "D": "/goal"
+        },
+        "correct": "B",
+        "explanation": "The controller publishes Twist messages to /cmd_vel to move the robot."
+      },
+      {
+        "question": "What are 'Recovery' behaviors in Nav2?",
+        "options": {
+          "A": "Actions to recover from problems (e.g., getting stuck)",
+          "B": "Planning a path",
+          "C": "Building a map",
+          "D": "Sending goals"
+        },
+        "correct": "A",
+        "explanation": "Recovery behaviors like spinning or backing up help the robot when it gets stuck."
+      },
+      {
+        "question": "What is TortoiseBot?",
+        "options": {
+          "A": "A simulation only robot",
+          "B": "A real/simulated ROS2 robot platform for learning",
+          "C": "A SLAM algorithm",
+          "D": "A navigation tool"
+        },
+        "correct": "B",
+        "explanation": "TortoiseBot is a robot platform (real or simulated) used for learning ROS2 navigation."
+      },
+      {
+        "question": "Command to build a ROS2 workspace:",
+        "options": {
+          "A": "make",
+          "B": "catkin_make",
+          "C": "colcon build",
+          "D": "ros2 build"
+        },
+        "correct": "C",
+        "explanation": "colcon build is the standard build command for ROS2 workspaces."
+      },
+      {
+        "question": "Command to source a ROS2 workspace:",
+        "options": {
+          "A": "source /opt/ros/humble/setup.bash",
+          "B": "source install/setup.bash",
+          "C": "source devel/setup.bash",
+          "D": "source workspace.sh"
+        },
+        "correct": "B",
+        "explanation": "After building, source install/setup.bash to add workspace to environment."
+      },
+      {
+        "question": "What is a launch file in ROS2?",
+        "options": {
+          "A": "A script to start multiple nodes and configure settings",
+          "B": "A robot model file",
+          "C": "A map file",
+          "D": "A log file"
+        },
+        "correct": "A",
+        "explanation": "Launch files start multiple nodes, set parameters, and configure the system."
+      },
+      {
+        "question": "Command to launch a ROS2 launch file:",
+        "options": {
+          "A": "ros2 launch <package> <file.launch.py>",
+          "B": "ros2 run launch",
+          "C": "ros2 start",
+          "D": "ros2 execute"
+        },
+        "correct": "A",
+        "explanation": "Use 'ros2 launch package_name launch_file_name'."
+      },
+      {
+        "question": "What is teleoperation?",
+        "options": {
+          "A": "Robot moves autonomously",
+          "B": "Manually controlling the robot (e.g., keyboard)",
+          "C": "Robot builds a map",
+          "D": "Robot localizes itself"
+        },
+        "correct": "B",
+        "explanation": "Teleoperation means human-controlled robot movement, often via keyboard."
+      },
+      {
+        "question": "Command for keyboard teleoperation of TortoiseBot:",
+        "options": {
+          "A": "ros2 run teleop twist",
+          "B": "ros2 run teleop_twist_keyboard teleop_twist_keyboard",
+          "C": "ros2 run keyboard",
+          "D": "ros2 teleop start"
+        },
+        "correct": "B",
+        "explanation": "teleop_twist_keyboard node publishes keyboard commands to /cmd_vel."
+      },
+      {
+        "question": "How does teleoperation work?",
+        "options": {
+          "A": "Keyboard presses publish Twist messages to /cmd_vel",
+          "B": "Keyboard directly moves motors",
+          "C": "Keyboard sends goals",
+          "D": "Keyboard builds map"
+        },
+        "correct": "A",
+        "explanation": "Teleop nodes convert keyboard input to velocity commands published on /cmd_vel."
+      },
+      {
+        "question": "How to visualize robot position and map in RViz?",
+        "options": {
+          "A": "Add Map display and RobotModel",
+          "B": "Add LaserScan only",
+          "C": "Add TF only",
+          "D": "Automatic"
+        },
+        "correct": "A",
+        "explanation": "Map display shows occupancy grid; RobotModel shows robot pose."
+      },
+      {
+        "question": "What does the 'Map' display in RViz show?",
+        "options": {
+          "A": "Robot's path",
+          "B": "Occupancy grid (free/occupied/unknown cells)",
+          "C": "Sensor data",
+          "D": "TF frames"
+        },
+        "correct": "B",
+        "explanation": "Map display visualizes the occupancy grid map built by SLAM."
+      },
+      {
+        "question": "What does rqt_graph show?",
+        "options": {
+          "A": "Robot position",
+          "B": "Nodes and topic connections as a graph",
+          "C": "Map",
+          "D": "Laser scan data"
+        },
+        "correct": "B",
+        "explanation": "rqt_graph visualizes nodes (ovals) and topics (rectangles) and their connections."
+      },
+      {
+        "question": "Command to start rqt_graph:",
+        "options": {
+          "A": "ros2 run rqt_graph rqt_graph",
+          "B": "rqt_graph",
+          "C": "ros2 graph",
+          "D": "ros2 rqt graph"
+        },
+        "correct": "A",
+        "explanation": "Use 'ros2 run rqt_graph rqt_graph' to launch the graph visualization tool."
+      },
+      {
+        "question": "What does a node in rqt_graph represent?",
+        "options": {
+          "A": "A topic",
+          "B": "A running ROS2 node",
+          "C": "A robot part",
+          "D": "A sensor"
+        },
+        "correct": "B",
+        "explanation": "Each oval in rqt_graph represents a running ROS2 node."
+      },
+      {
+        "question": "What does a rectangle in rqt_graph represent?",
+        "options": {
+          "A": "A node",
+          "B": "A topic",
+          "C": "A robot",
+          "D": "A service"
+        },
+        "correct": "B",
+        "explanation": "Rectangles represent topics that nodes publish to or subscribe from."
+      },
+      {
+        "question": "What is SSH used for in robotics?",
+        "options": {
+          "A": "Simulation",
+          "B": "Remote access to a robot's computer",
+          "C": "Mapping",
+          "D": "Visualization"
+        },
+        "correct": "B",
+        "explanation": "SSH (Secure Shell) allows remote command-line access to a robot."
+      },
+      {
+        "question": "Command to SSH into a robot:",
+        "options": {
+          "A": "ssh robot@<ip_address>",
+          "B": "connect robot",
+          "C": "remote robot",
+          "D": "ros2 ssh"
+        },
+        "correct": "A",
+        "explanation": "Use 'ssh username@ip_address' to connect remotely."
+      },
+      {
+        "question": "Why would you SSH into a robot instead of working directly?",
+        "options": {
+          "A": "Robot may not have monitor/keyboard",
+          "B": "It's faster",
+          "C": "Better graphics",
+          "D": "Only way to run ROS"
+        },
+        "correct": "A",
+        "explanation": "Many robots are headless (no monitor/keyboard), so SSH is the only access method."
+      },
+      {
+        "question": "What does 'goal' mean in navigation context?",
+        "options": {
+          "A": "Target position the robot should reach",
+          "B": "Robot start position",
+          "C": "Obstacle location",
+          "D": "Sensor reading"
+        },
+        "correct": "A",
+        "explanation": "A goal is the desired final position (pose) for the robot."
+      },
+      {
+        "question": "How to set a navigation goal in RViz?",
+        "options": {
+          "A": "Using '2D Nav Goal' button and clicking on map",
+          "B": "Typing coordinates",
+          "C": "Using keyboard",
+          "D": "Automatic"
+        },
+        "correct": "A",
+        "explanation": "RViz provides a '2D Nav Goal' tool to click a goal pose on the map."
+      },
+      {
+        "question": "What does '2D Pose Estimate' in RViz do?",
+        "options": {
+          "A": "Sets navigation goal",
+          "B": "Initializes robot's estimated position for localization",
+          "C": "Plans path",
+          "D": "Stops robot"
+        },
+        "correct": "B",
+        "explanation": "2D Pose Estimate helps SLAM know where the robot starts."
+      },
+      {
+        "question": "What is the difference between global and local planning?",
+        "options": {
+          "A": "Global plans long path; local avoids immediate obstacles",
+          "B": "Same",
+          "C": "Local plans long path",
+          "D": "Global avoids obstacles"
+        },
+        "correct": "A",
+        "explanation": "Global planner finds path to goal; local planner adjusts for dynamic obstacles."
+      },
+      {
+        "question": "What happens if the robot gets stuck during navigation?",
+        "options": {
+          "A": "Robot stops forever",
+          "B": "Recovery behaviors activate (spin/backup)",
+          "C": "System crashes",
+          "D": "Robot continues"
+        },
+        "correct": "B",
+        "explanation": "Nav2 includes recovery behaviors like spinning or backing up to escape being stuck."
+      },
+      {
+        "question": "What is 'costmap' in Nav2?",
+        "options": {
+          "A": "A map that includes obstacle costs for path planning",
+          "B": "A regular occupancy grid",
+          "C": "Robot position",
+          "D": "Laser scan"
+        },
+        "correct": "A",
+        "explanation": "Costmap assigns higher costs to cells near obstacles for better path planning."
+      },
+      {
+        "question": "What are the two types of costmaps in Nav2?",
+        "options": {
+          "A": "Global costmap and Local costmap",
+          "B": "Big and small",
+          "C": "Old and new",
+          "D": "Static and dynamic"
+        },
+        "correct": "A",
+        "explanation": "Global costmap for long-term planning; local costmap for immediate obstacle avoidance."
+      },
+      {
+        "question": "What is 'slam_toolbox'?",
+        "options": {
+          "A": "A navigation planner",
+          "B": "A popular ROS2 SLAM package",
+          "C": "A robot model",
+          "D": "A visualization tool"
+        },
+        "correct": "B",
+        "explanation": "slam_toolbox is a widely used ROS2 package for laser-based SLAM."
+      },
+      {
+        "question": "What does 'map_server' do?",
+        "options": {
+          "A": "Builds map",
+          "B": "Saves and loads maps to/from disk",
+          "C": "Plans paths",
+          "D": "Controls robot"
+        },
+        "correct": "B",
+        "explanation": "map_server saves maps as images/YAML and loads saved maps."
+      },
+      {
+        "question": "How to save a map created by SLAM?",
+        "options": {
+          "A": "ros2 run nav2_map_server map_saver_cli -f map_name",
+          "B": "save_map",
+          "C": "ros2 map save",
+          "D": "ros2 slam save"
+        },
+        "correct": "A",
+        "explanation": "map_saver_cli saves the current /map topic as a map file."
+      },
+      {
+        "question": "What is 'AMCL' in navigation?",
+        "options": {
+          "A": "Adaptive Monte Carlo Localization (robot localization)",
+          "B": "A planner",
+          "C": "A controller",
+          "D": "A map format"
+        },
+        "correct": "A",
+        "explanation": "AMCL uses particle filters to estimate robot pose on a known map."
+      },
+      {
+        "question": "What does 'amcl' publish?",
+        "options": {
+          "A": "/cmd_vel",
+          "B": "/amcl_pose (robot pose estimate)",
+          "C": "/map",
+          "D": "/scan"
+        },
+        "correct": "B",
+        "explanation": "amcl publishes the robot's estimated pose on /amcl_pose and /tf."
+      },
+      {
+        "question": "What is the TortoiseBot simulation typically launched with?",
+        "options": {
+          "A": "ros2 launch tortoisebot_bringup robot.launch.py",
+          "B": "ros2 run gazebo",
+          "C": "ros2 launch gazebo",
+          "D": "ros2 start robot"
+        },
+        "correct": "A",
+        "explanation": "TortoiseBot uses a bringup launch file to start Gazebo, robot model, and sensors."
+      },
+      {
+        "question": "What is the 'bringup' package in robotics?",
+        "options": {
+          "A": "Package that launches everything needed to start the robot system",
+          "B": "Package for SLAM",
+          "C": "Package for navigation",
+          "D": "Package for visualization"
+        },
+        "correct": "A",
+        "explanation": "Bringup packages contain launch files to start the complete robot system."
+      },
+      {
+        "question": "How to check if /cmd_vel is being published?",
+        "options": {
+          "A": "ros2 topic echo /cmd_vel",
+          "B": "ros2 topic list",
+          "C": "ros2 node info",
+          "D": "ros2 topic type"
+        },
+        "correct": "A",
+        "explanation": "Echo /cmd_vel to see velocity commands being published."
+      },
+      {
+        "question": "What happens if /cmd_vel is published but robot doesn't move?",
+        "options": {
+          "A": "Check robot state publisher or Gazebo connection",
+          "B": "Ignore",
+          "C": "Restart",
+          "D": "No issue"
+        },
+        "correct": "A",
+        "explanation": "Possible issues: Gazebo not running, wrong topic name, or missing robot controller."
+      },
+      {
+        "question": "What does 'rqt' stand for?",
+        "options": {
+          "A": "ROS Qt Graphical Tools",
+          "B": "Robot Quick Test",
+          "C": "Real-time Query Tool",
+          "D": "ROS Query Terminal"
+        },
+        "correct": "A",
+        "explanation": "rqt is a framework of Qt-based GUI tools for ROS2."
+      },
+      {
+        "question": "Why is SSH important for real robots vs simulation?",
+        "options": {
+          "A": "Simulation doesn't need SSH; real robots often do",
+          "B": "Both need SSH",
+          "C": "Neither needs SSH",
+          "D": "Only simulation needs SSH"
+        },
+        "correct": "A",
+        "explanation": "Real robots are often headless and accessed remotely via SSH."
+      }
+    ]
+  },
+  "intermediate": {
+    "mcqs": [
+      {
+        "question": "What is the 'loop closure' problem in SLAM?",
+        "options": {
+          "A": "Closing a physical loop",
+          "B": "Recognizing a previously visited location to correct drift",
+          "C": "Closing the program",
+          "D": "Stopping the robot"
+        },
+        "correct": "B",
+        "explanation": "Loop closure detects when the robot returns to a known location to correct accumulated drift."
+      },
+      {
+        "question": "What is the difference between 'pose' and 'position' in robotics?",
+        "options": {
+          "A": "Pose includes position + orientation; position is just x,y,z",
+          "B": "Same thing",
+          "C": "Pose is orientation only",
+          "D": "Position is orientation only"
+        },
+        "correct": "A",
+        "explanation": "Pose = (x, y, z, roll, pitch, yaw); position = (x, y, z)."
+      },
+      {
+        "question": "What is an 'occupancy grid map'?",
+        "options": {
+          "A": "A map where each cell has probability of being occupied",
+          "B": "A color map",
+          "C": "A height map",
+          "D": "A topological map"
+        },
+        "correct": "A",
+        "explanation": "Occupancy grid stores probability (0-100) for each cell: free, occupied, or unknown."
+      },
+      {
+        "question": "What does a value of -1 in an occupancy grid mean?",
+        "options": {
+          "A": "Occupied",
+          "B": "Free",
+          "C": "Unknown",
+          "D": "Error"
+        },
+        "correct": "C",
+        "explanation": "In OccupancyGrid, -1 (or 255) typically represents unknown/unmapped space."
+      },
+      {
+        "question": "What is 'particle filter' in localization?",
+        "options": {
+          "A": "Algorithm representing robot pose hypotheses as particles",
+          "B": "Filter for images",
+          "C": "Laser filter",
+          "D": "Motor controller"
+        },
+        "correct": "A",
+        "explanation": "Particle filters maintain multiple pose hypotheses (particles) weighted by sensor data."
+      },
+      {
+        "question": "What is the difference between 'global' and 'local' costmap?",
+        "options": {
+          "A": "Global is static, local is dynamic and smaller",
+          "B": "Global is dynamic",
+          "C": "Same size",
+          "D": "Local is static"
+        },
+        "correct": "A",
+        "explanation": "Global costmap covers entire map; local costmap is smaller, updates faster for dynamic obstacles."
+      },
+      {
+        "question": "What is 'inflation radius' in costmaps?",
+        "options": {
+          "A": "Radius around obstacles where cost increases",
+          "B": "Robot size",
+          "C": "Laser range",
+          "D": "Map size"
+        },
+        "correct": "A",
+        "explanation": "Inflation radius adds a safety margin around obstacles to prevent collisions."
+      },
+      {
+        "question": "What is the default planner in Nav2?",
+        "options": {
+          "A": "A* planner",
+          "B": "NavFn Planner",
+          "C": "Dijkstra planner",
+          "D": "RRT planner"
+        },
+        "correct": "B",
+        "explanation": "Nav2 uses NavFn Planner by default (based on wavefront expansion)."
+      },
+      {
+        "question": "What is the default controller in Nav2?",
+        "options": {
+          "A": "Pure Pursuit",
+          "B": "Regulated Pure Pursuit",
+          "C": "MPC",
+          "D": "PID"
+        },
+        "correct": "B",
+        "explanation": "Regulated Pure Pursuit is the default controller in Nav2 (improved pure pursuit)."
+      },
+      {
+        "question": "How does 'pure pursuit' controller work?",
+        "options": {
+          "A": "Looks ahead on path and turns toward lookahead point",
+          "B": "Follows exact path",
+          "C": "Random movement",
+          "D": "Stops at obstacles"
+        },
+        "correct": "A",
+        "explanation": "Pure pursuit selects a lookahead point on the path and computes curvature to reach it."
+      },
+      {
+        "question": "What is 'recovery behavior' timeout in Nav2?",
+        "options": {
+          "A": "Time before activating recovery",
+          "B": "Time after which robot gives up",
+          "C": "Recovery duration",
+          "D": "No timeout"
+        },
+        "correct": "A",
+        "explanation": "If robot doesn't make progress within timeout, Nav2 triggers recovery behaviors."
+      },
+      {
+        "question": "What is 'slam_toolbox' asynchronous vs synchronous mode?",
+        "options": {
+          "A": "Async processes data continuously; Sync processes on request",
+          "B": "Same",
+          "C": "Async is slower",
+          "D": "Sync is faster"
+        },
+        "correct": "A",
+        "explanation": "Async mode processes scans continuously; Sync mode processes only when requested."
+      },
+      {
+        "question": "What is 'graph SLAM' vs 'filter SLAM'?",
+        "options": {
+          "A": "Graph: nonlinear optimization; Filter: recursive estimation",
+          "B": "Same",
+          "C": "Graph is older",
+          "D": "Filter is newer"
+        },
+        "correct": "A",
+        "explanation": "Graph SLAM optimizes a graph of poses and landmarks; Filter SLAM updates pose recursively."
+      },
+      {
+        "question": "How to launch Nav2 with a specific map?",
+        "options": {
+          "A": "ros2 launch nav2_bringup navigation_launch.py map:=/path/to/map.yaml",
+          "B": "ros2 run nav2 map",
+          "C": "ros2 launch map",
+          "D": "nav2 start"
+        },
+        "correct": "A",
+        "explanation": "Pass map parameter to navigation launch file to load a pre-saved map."
+      },
+      {
+        "question": "What is 'behavior tree' in Nav2?",
+        "options": {
+          "A": "A tree structure for organizing robot behaviors",
+          "B": "A map type",
+          "C": "A controller",
+          "D": "A planner"
+        },
+        "correct": "A",
+        "explanation": "Nav2 uses behavior trees to sequence navigation tasks (plan, control, recover)."
+      },
+      {
+        "question": "What is 'BT Navigator' in Nav2?",
+        "options": {
+          "A": "Behavior Tree Navigator that executes navigation behaviors",
+          "B": "A planner",
+          "C": "A controller",
+          "D": "A map server"
+        },
+        "correct": "A",
+        "explanation": "BT Navigator interprets behavior trees to perform navigation actions."
+      },
+      {
+        "question": "What is 'nav2_msgs/action/NavigateToPose'?",
+        "options": {
+          "A": "Action server for sending navigation goals",
+          "B": "A topic",
+          "C": "A service",
+          "D": "A message type"
+        },
+        "correct": "A",
+        "explanation": "NavigateToPose is the action interface for sending goals to Nav2."
+      },
+      {
+        "question": "How to send a navigation goal programmatically?",
+        "options": {
+          "A": "Send a goal to /navigate_to_pose action server",
+          "B": "Publish to /cmd_vel",
+          "C": "Publish to /goal",
+          "D": "Call service /set_goal"
+        },
+        "correct": "A",
+        "explanation": "Use action client to send a NavigateToPose goal to the Nav2 action server."
+      },
+      {
+        "question": "What is 'path smoothing' in navigation?",
+        "options": {
+          "A": "Removing sharp corners from planned path",
+          "B": "Adding more points",
+          "C": "Randomizing path",
+          "D": "Ignoring obstacles"
+        },
+        "correct": "A",
+        "explanation": "Path smoothing reduces curvature and makes paths more drivable."
+      },
+      {
+        "question": "What is 'state estimation' in robotics?",
+        "options": {
+          "A": "Estimating robot's pose (position + orientation)",
+          "B": "Estimating map",
+          "C": "Estimating sensor noise",
+          "D": "Estimating motor speed"
+        },
+        "correct": "A",
+        "explanation": "State estimation fuses sensor data to estimate robot pose."
+      },
+      {
+        "question": "How does 'extended Kalman filter' (EKF) help in localization?",
+        "options": {
+          "A": "Fuses sensor data (IMU, odometry, GPS) for better pose estimate",
+          "B": "Builds map",
+          "C": "Plans path",
+          "D": "Controls motors"
+        },
+        "correct": "A",
+        "explanation": "EKF fuses multiple sensor sources for improved pose estimation."
+      },
+      {
+        "question": "What is 'robot_localization' package?",
+        "options": {
+          "A": "EKF/UKF state estimation package for ROS2",
+          "B": "SLAM package",
+          "C": "Navigation package",
+          "D": "Simulation package"
+        },
+        "correct": "A",
+        "explanation": "robot_localization provides EKF/UKF nodes for multi-sensor pose estimation."
+      },
+      {
+        "question": "How does 'amcl' differ from 'ekf' localization?",
+        "options": {
+          "A": "AMCL uses particle filter with known map; EKF uses sensor fusion without map",
+          "B": "Same",
+          "C": "AMCL uses EKF",
+          "D": "EKF uses particle filter"
+        },
+        "correct": "A",
+        "explanation": "AMCL requires a known map; EKF works without a map using sensor fusion."
+      },
+      {
+        "question": "What is 'map -> odom' transform used for?",
+        "options": {
+          "A": "Correcting odometry drift using map-based localization",
+          "B": "Robot base position",
+          "C": "Sensor mounting",
+          "D": "Visualization only"
+        },
+        "correct": "A",
+        "explanation": "map->odom transform is published by SLAM/AMCL to correct odometry drift."
+      },
+      {
+        "question": "What happens if 'map -> odom' transform is missing?",
+        "options": {
+          "A": "Localization fails; robot may not know global position",
+          "B": "Robot stops",
+          "C": "No effect",
+          "D": "Faster navigation"
+        },
+        "correct": "A",
+        "explanation": "Without map->odom, the robot cannot relate odometry to global map."
+      },
+      {
+        "question": "What is 'nav2_lifecycle_manager'?",
+        "options": {
+          "A": "Manages lifecycle nodes (bringup/teardown)",
+          "B": "A planner",
+          "C": "A controller",
+          "D": "A recovery behavior"
+        },
+        "correct": "A",
+        "explanation": "Lifecycle manager activates and deactivates Nav2 nodes in correct order."
+      },
+      {
+        "question": "What is 'collision monitoring' in Nav2?",
+        "options": {
+          "A": "Detecting imminent collision and stopping robot",
+          "B": "Planning path",
+          "C": "Building map",
+          "D": "Localizing robot"
+        },
+        "correct": "A",
+        "explanation": "Collision monitor checks if robot is about to hit an obstacle and stops movement."
+      },
+      {
+        "question": "How to visualize Nav2 planned path in RViz?",
+        "options": {
+          "A": "Add 'Path' display and set topic to /plan",
+          "B": "Add RobotModel",
+          "C": "Add Map",
+          "D": "Add LaserScan"
+        },
+        "correct": "A",
+        "explanation": "Nav2 publishes the global plan on /plan topic (nav_msgs/Path)."
+      },
+      {
+        "question": "What does the '/plan' topic contain?",
+        "options": {
+          "A": "Sequence of poses for robot to follow",
+          "B": "Laser scan data",
+          "C": "Velocity commands",
+          "D": "Map data"
+        },
+        "correct": "A",
+        "explanation": "/plan contains the computed global path as a list of poses."
+      },
+      {
+        "question": "What is the 'controller_frequency' parameter?",
+        "options": {
+          "A": "How often controller computes new cmd_vel",
+          "B": "Planner frequency",
+          "C": "Sensor rate",
+          "D": "Map update rate"
+        },
+        "correct": "A",
+        "explanation": "Controller frequency determines how many cmd_vel commands are published per second."
+      },
+      {
+        "question": "What is 'robot_radius' or 'footprint' in costmap?",
+        "options": {
+          "A": "Robot's physical size for collision checking",
+          "B": "Laser range",
+          "C": "Map size",
+          "D": "Path length"
+        },
+        "correct": "A",
+        "explanation": "Footprint defines robot shape for costmap inflation and collision detection."
+      },
+      {
+        "question": "How does 'TortoiseBot' differ from 'TurtleBot3'?",
+        "options": {
+          "A": "TortoiseBot is a learning platform; TurtleBot3 is a commercial robot",
+          "B": "Same",
+          "C": "TortoiseBot is older",
+          "D": "TurtleBot3 is simulated only"
+        },
+        "correct": "A",
+        "explanation": "TortoiseBot is often used as a simplified educational simulation, while TurtleBot3 is a real commercial robot."
+      },
+      {
+        "question": "What is 'diff_drive_controller' in TortoiseBot?",
+        "options": {
+          "A": "Converts cmd_vel to wheel velocities",
+          "B": "Publishes map",
+          "C": "Localizes robot",
+          "D": "Plans path"
+        },
+        "correct": "A",
+        "explanation": "Differential drive controller subscribes to /cmd_vel and commands wheel motors."
+      },
+      {
+        "question": "What is 'joint_state_broadcaster'?",
+        "options": {
+          "A": "Publishes joint states (position/velocity) from simulation",
+          "B": "Sends velocity commands",
+          "C": "Plans path",
+          "D": "Builds map"
+        },
+        "correct": "A",
+        "explanation": "Joint state broadcaster publishes sensor_msgs/JointState for robot joints."
+      },
+      {
+        "question": "How to check if a navigation goal was successful?",
+        "options": {
+          "A": "Monitor action result status",
+          "B": "Check /cmd_vel",
+          "C": "Check /map",
+          "D": "Check /scan"
+        },
+        "correct": "A",
+        "explanation": "Action server returns result (SUCCEEDED, ABORTED, CANCELED) when goal completes."
+      },
+      {
+        "question": "What is 'nav2_simple_commander'?",
+        "options": {
+          "A": "Python API to send navigation goals programmatically",
+          "B": "A planner",
+          "C": "A controller",
+          "D": "A recovery behavior"
+        },
+        "correct": "A",
+        "explanation": "Simple commander provides a Python interface for basic navigation tasks."
+      },
+      {
+        "question": "What is 'waypoint following' in Nav2?",
+        "options": {
+          "A": "Navigating to multiple goals in sequence",
+          "B": "Single goal",
+          "C": "Random goals",
+          "D": "No goals"
+        },
+        "correct": "A",
+        "explanation": "Waypoint following allows robot to visit multiple poses in order."
+      },
+      {
+        "question": "How does 'rotate_recovery' work?",
+        "options": {
+          "A": "Robot rotates in place to escape stuck situation",
+          "B": "Robot moves forward",
+          "C": "Robot backs up",
+          "D": "Robot stops"
+        },
+        "correct": "A",
+        "explanation": "Rotate recovery spins the robot to find a clear path when stuck."
+      },
+      {
+        "question": "What is 'backup_recovery' in Nav2?",
+        "options": {
+          "A": "Robot moves backward to escape deadlock",
+          "B": "Robot rotates",
+          "C": "Robot stops",
+          "D": "Robot speeds up"
+        },
+        "correct": "A",
+        "explanation": "Backup recovery moves the robot backward when forward progress is impossible."
+      },
+      {
+        "question": "What is the purpose of 'nav2_map_server'?",
+        "options": {
+          "A": "Load and serve occupancy grid maps",
+          "B": "Build maps",
+          "C": "Plan paths",
+          "D": "Control robot"
+        },
+        "correct": "A",
+        "explanation": "map_server loads maps from disk and provides them via /map topic."
+      },
+      {
+        "question": "How to view the complete node/topic graph in real-time?",
+        "options": {
+          "A": "rqt_graph with dynamic updates",
+          "B": "ros2 topic list",
+          "C": "ros2 node list",
+          "D": "ros2 graph show"
+        },
+        "correct": "A",
+        "explanation": "rqt_graph updates in real-time as nodes and topics appear/disappear."
+      },
+      {
+        "question": "What does a dotted line in rqt_graph represent?",
+        "options": {
+          "A": "Service connection (request/response)",
+          "B": "Topic connection",
+          "C": "Action connection",
+          "D": "Parameter connection"
+        },
+        "correct": "A",
+        "explanation": "Dotted lines typically represent service connections (client-server)."
+      },
+      {
+        "question": "How to filter rqt_graph to show only certain nodes?",
+        "options": {
+          "A": "Use 'Hide' options and node filtering",
+          "B": "Cannot filter",
+          "C": "Only show all",
+          "D": "Only show topics"
+        },
+        "correct": "A",
+        "explanation": "rqt_graph has filtering options to show/hide nodes, topics, or specific namespaces."
+      },
+      {
+        "question": "What is 'SSH tunneling' used for in robotics?",
+        "options": {
+          "A": "Forward ROS2 ports securely between robot and development PC",
+          "B": "Faster communication",
+          "C": "No encryption",
+          "D": "Only file transfer"
+        },
+        "correct": "A",
+        "explanation": "SSH tunneling forwards ports (e.g., for ROS2 DDS) securely over SSH."
+      },
+      {
+        "question": "How to set ROS_DOMAIN_ID when SSH'd into robot?",
+        "options": {
+          "A": "export ROS_DOMAIN_ID=<number> in terminal",
+          "B": "Cannot set",
+          "C": "Set in file only",
+          "D": "Automatic"
+        },
+        "correct": "A",
+        "explanation": "Set ROS_DOMAIN_ID environment variable to the same value on robot and PC."
+      },
+      {
+        "question": "What is 'ROS_DOMAIN_ID' and why important for multiple robots?",
+        "options": {
+          "A": "Separates ROS2 networks to avoid cross-talk",
+          "B": "Robot ID",
+          "C": "Map ID",
+          "D": "Sensor ID"
+        },
+        "correct": "A",
+        "explanation": "Different domain IDs keep robot traffic isolated on the same network."
+      },
+      {
+        "question": "How to copy files to a robot using SCP?",
+        "options": {
+          "A": "scp local_file robot@ip:/path/",
+          "B": "ssh copy",
+          "C": "ros2 copy",
+          "D": "file transfer"
+        },
+        "correct": "A",
+        "explanation": "SCP (Secure Copy) copies files over SSH to/from remote robot."
+      },
+      {
+        "question": "What is 'rsync' advantage over scp for robot deployment?",
+        "options": {
+          "A": "Only copies changed files (incremental)",
+          "B": "Faster",
+          "C": "More secure",
+          "D": "No advantage"
+        },
+        "correct": "A",
+        "explanation": "rsync synchronizes only differences, saving time for large workspaces."
+      },
+      {
+        "question": "How to run ROS2 nodes remotely on robot from your PC?",
+        "options": {
+          "A": "SSH into robot and run commands",
+          "B": "Run locally",
+          "C": "Use ros2 run remote",
+          "D": "Cannot run"
+        },
+        "correct": "A",
+        "explanation": "SSH into robot's terminal and run ROS2 commands directly on the robot."
+      },
+      {
+        "question": "What is the purpose of 'ROS_DISCOVERY_SERVER' in multi-robot SSH setups?",
+        "options": {
+          "A": "Centralized discovery server for large networks",
+          "B": "Map server",
+          "C": "Planner",
+          "D": "Controller"
+        },
+        "correct": "A",
+        "explanation": "Discovery server replaces multicast with unicast for large robot networks."
+      }
+    ]
+  },
+  "advanced": {
+    "mcqs": [
+      {
+        "question": "What is the mathematical formulation of the SLAM problem?",
+        "options": {
+          "A": "Estimating robot pose and map jointly given controls and observations",
+          "B": "Estimating pose only",
+          "C": "Estimating map only",
+          "D": "Estimating controls only"
+        },
+        "correct": "A",
+        "explanation": "SLAM solves: P(x_t, m | u_{1:t}, z_{1:t}) - joint posterior over pose and map."
+      },
+      {
+        "question": "What is the 'kidnapped robot problem' in localization?",
+        "options": {
+          "A": "Robot is teleported without knowing new position",
+          "B": "Robot is lost",
+          "C": "Robot is stolen",
+          "D": "Robot cannot move"
+        },
+        "correct": "A",
+        "explanation": "Kidnapped robot problem tests if localization can recover from sudden pose changes."
+      },
+      {
+        "question": "What is 'particle depletion' in particle filters?",
+        "options": {
+          "A": "Loss of diversity in particles leading to poor estimates",
+          "B": "Too many particles",
+          "C": "Particles are too large",
+          "D": "Fast computation"
+        },
+        "correct": "A",
+        "explanation": "Particle depletion occurs when all particles converge to wrong hypothesis."
+      },
+      {
+        "question": "How does 'adaptive Monte Carlo localization' (AMCL) address particle depletion?",
+        "options": {
+          "A": "Adds random particles when diversity drops",
+          "B": "Uses fewer particles",
+          "C": "Uses Kalman filter",
+          "D": "No adaptation"
+        },
+        "correct": "A",
+        "explanation": "AMCL monitors particle cloud and adds random particles to maintain diversity."
+      },
+      {
+        "question": "What is 'KLD sampling' in particle filters?",
+        "options": {
+          "A": "Adapts number of particles based on distribution error",
+          "B": "Fixed particles",
+          "C": "Random sampling",
+          "D": "No sampling"
+        },
+        "correct": "A",
+        "explanation": "KLD (Kullback-Leibler Divergence) sampling adjusts particle count to maintain accuracy."
+      },
+      {
+        "question": "What is 'pose graph SLAM'?",
+        "options": {
+          "A": "Optimizes graph where nodes are robot poses and edges are constraints",
+          "B": "Filter-based SLAM",
+          "C": "Grid mapping only",
+          "D": "Lidar-only SLAM"
+        },
+        "correct": "A",
+        "explanation": "Pose graph SLAM optimizes a graph of robot poses with odometry and loop closure constraints."
+      },
+      {
+        "question": "What optimization method is commonly used in pose graph SLAM?",
+        "options": {
+          "A": "Gauss-Newton or Levenberg-Marquardt",
+          "B": "Gradient descent",
+          "C": "Simulated annealing",
+          "D": "Genetic algorithm"
+        },
+        "correct": "A",
+        "explanation": "Nonlinear least squares optimization (Gauss-Newton, LM) minimizes pose graph errors."
+      },
+      {
+        "question": "What is 'information matrix' in graph SLAM?",
+        "options": {
+          "A": "Inverse of covariance, represents constraint strength",
+          "B": "Robot pose",
+          "C": "Map",
+          "D": "Sensor reading"
+        },
+        "correct": "A",
+        "explanation": "Information matrix weights how strongly a constraint is enforced during optimization."
+      },
+      {
+        "question": "What is 'Scan Matching' in laser SLAM?",
+        "options": {
+          "A": "Aligning two laser scans to estimate robot motion",
+          "B": "Matching scans to map",
+          "C": "Filtering scans",
+          "D": "Compressing scans"
+        },
+        "correct": "A",
+        "explanation": "Scan matching finds relative pose between consecutive scans for odometry."
+      },
+      {
+        "question": "What is 'ICP' (Iterative Closest Point) used for?",
+        "options": {
+          "A": "Aligning two point clouds by minimizing distances",
+          "B": "Path planning",
+          "C": "Control",
+          "D": "Visualization"
+        },
+        "correct": "A",
+        "explanation": "ICP iteratively aligns point clouds by finding correspondences and minimizing distances."
+      },
+      {
+        "question": "What is the difference between 'online' and 'offline' SLAM?",
+        "options": {
+          "A": "Online: real-time incremental; Offline: batch processing",
+          "B": "Same",
+          "C": "Online is slower",
+          "D": "Offline is real-time"
+        },
+        "correct": "A",
+        "explanation": "Online SLAM updates incrementally; offline SLAM optimizes over entire dataset."
+      },
+      {
+        "question": "What is 'submap' in SLAM (e.g., Cartographer)?",
+        "options": {
+          "A": "Local map built from recent scans, later added to global map",
+          "B": "Global map",
+          "C": "Small robot",
+          "D": "Partial scan"
+        },
+        "correct": "A",
+        "explanation": "Cartographer builds submaps; loop closure matches scans against submaps."
+      },
+      {
+        "question": "What is 'costmap_2d' inflation layer implementation?",
+        "options": {
+          "A": "Propagates cost from obstacles using distance transform",
+          "B": "Binary occupancy",
+          "C": "Random costs",
+          "D": "No inflation"
+        },
+        "correct": "A",
+        "explanation": "Inflation layer uses distance transform to assign decreasing costs away from obstacles."
+      },
+      {
+        "question": "What is 'voxel grid' in costmap filtering?",
+        "options": {
+          "A": "Downsamples point clouds to reduce computation",
+          "B": "Map representation",
+          "C": "Robot footprint",
+          "D": "Sensor model"
+        },
+        "correct": "A",
+        "explanation": "Voxel grid reduces point cloud density by averaging points in 3D cells."
+      },
+      {
+        "question": "What is 'obstacle layer' in costmap?",
+        "options": {
+          "A": "Layer that marks obstacles from sensor data",
+          "B": "Inflation layer",
+          "C": "Static layer",
+          "D": "Plan layer"
+        },
+        "correct": "A",
+        "explanation": "Obstacle layer processes sensor messages (scan/pointcloud) to mark obstacles."
+      },
+      {
+        "question": "How does 'cost scaling factor' affect path planning?",
+        "options": {
+          "A": "Higher factor penalizes proximity to obstacles more",
+          "B": "Lower factor",
+          "C": "No effect",
+          "D": "Only affects speed"
+        },
+        "correct": "A",
+        "explanation": "Cost scaling factor determines how steeply cost increases near obstacles."
+      },
+      {
+        "question": "What is 'A* algorithm' heuristic in navigation?",
+        "options": {
+          "A": "Euclidean or Manhattan distance to goal",
+          "B": "Random",
+          "C": "Zero",
+          "D": "Maximum cost"
+        },
+        "correct": "A",
+        "explanation": "A* uses admissible heuristic (e.g., straight-line distance) for optimal search."
+      },
+      {
+        "question": "What is 'D* Lite' algorithm advantage over A*?",
+        "options": {
+          "A": "Replans efficiently when map changes",
+          "B": "Faster initial plan",
+          "C": "Simpler",
+          "D": "No advantage"
+        },
+        "correct": "A",
+        "explanation": "D* Lite replans incrementally after obstacle changes, saving computation."
+      },
+      {
+        "question": "What is 'model predictive control' (MPC) in navigation?",
+        "options": {
+          "A": "Optimizes control sequence over future horizon",
+          "B": "Pure pursuit",
+          "C": "PID control",
+          "D": "Random control"
+        },
+        "correct": "A",
+        "explanation": "MPC solves optimal control problem at each step, considering future trajectory."
+      },
+      {
+        "question": "What is 'TEB' (Timed Elastic Band) local planner?",
+        "options": {
+          "A": "Optimizes trajectory with temporal constraints",
+          "B": "Pure pursuit",
+          "C": "Global planner",
+          "D": "Recovery behavior"
+        },
+        "correct": "A",
+        "explanation": "TEB optimizes trajectory shape and timing while respecting dynamics."
+      },
+      {
+        "question": "What is 'regulation' in Regulated Pure Pursuit?",
+        "options": {
+          "A": "Adjusts velocity based on curvature and proximity to obstacles",
+          "B": "Constant speed",
+          "C": "Random speed",
+          "D": "No adjustment"
+        },
+        "correct": "A",
+        "explanation": "Regulated Pure Pursuit reduces speed near obstacles and sharp turns."
+      },
+      {
+        "question": "How does 'lookahead distance' affect pure pursuit?",
+        "options": {
+          "A": "Longer lookahead = smoother but cuts corners; shorter = more responsive",
+          "B": "No effect",
+          "C": "Only speed",
+          "D": "Only turning"
+        },
+        "correct": "A",
+        "explanation": "Lookahead trades off between path tracking accuracy and smoothness."
+      },
+      {
+        "question": "What is 'path following' vs 'trajectory tracking'?",
+        "options": {
+          "A": "Path: geometric; Trajectory: timed with velocity profile",
+          "B": "Same",
+          "C": "Path has time",
+          "D": "Trajectory has no time"
+        },
+        "correct": "A",
+        "explanation": "Path following ignores timing; trajectory tracking follows position and velocity over time."
+      },
+      {
+        "question": "What is 'BT tick rate' in behavior trees?",
+        "options": {
+          "A": "How often behavior tree is executed",
+          "B": "Robot speed",
+          "C": "Sensor rate",
+          "D": "Map update rate"
+        },
+        "correct": "A",
+        "explanation": "Tick rate controls how frequently the behavior tree is run (usually 10-50 Hz)."
+      },
+      {
+        "question": "What is 'reactive recovery' vs 'proactive recovery'?",
+        "options": {
+          "A": "Reactive: after failure; Proactive: anticipates issues",
+          "B": "Same",
+          "C": "Reactive is better",
+          "D": "Proactive is slower"
+        },
+        "correct": "A",
+        "explanation": "Reactive recovery responds after failure; proactive tries to prevent failure."
+      },
+      {
+        "question": "How does 'clearing rotation' help in localization?",
+        "options": {
+          "A": "Robot rotates to get better sensor coverage for relocalization",
+          "B": "Spins continuously",
+          "C": "Stops",
+          "D": "Moves forward"
+        },
+        "correct": "A",
+        "explanation": "Clearing rotation spins robot to collect more sensor data when localization is lost."
+      },
+      {
+        "question": "What is 'covariance' in state estimation?",
+        "options": {
+          "A": "Uncertainty estimate of pose",
+          "B": "Robot speed",
+          "C": "Map accuracy",
+          "D": "Sensor noise"
+        },
+        "correct": "A",
+        "explanation": "Covariance matrix represents uncertainty in position and orientation."
+      },
+      {
+        "question": "What is 'chi-square' gating in EKF?",
+        "options": {
+          "A": "Rejects outlier measurements beyond expected uncertainty",
+          "B": "Accepts all",
+          "C": "Increases uncertainty",
+          "D": "Decreases uncertainty"
+        },
+        "correct": "A",
+        "explanation": "Chi-square test rejects measurements unlikely given current state covariance."
+      },
+      {
+        "question": "How does 'motion model' affect EKF prediction step?",
+        "options": {
+          "A": "Predicts new pose from control inputs with uncertainty",
+          "B": "Corrects pose",
+          "C": "Fuses sensors",
+          "D": "Builds map"
+        },
+        "correct": "A",
+        "explanation": "Motion model (odometry) predicts next pose and adds process noise."
+      },
+      {
+        "question": "What is 'sensor model' in EKF update step?",
+        "options": {
+          "A": "Predicts expected measurement from current state",
+          "B": "Moves robot",
+          "C": "Plans path",
+          "D": "Builds map"
+        },
+        "correct": "A",
+        "explanation": "Sensor model computes expected observation (e.g., laser scan) from robot pose."
+      },
+      {
+        "question": "What is 'data association' in SLAM?",
+        "options": {
+          "A": "Matching current observations to previously seen landmarks",
+          "B": "Collecting data",
+          "C": "Storing data",
+          "D": "Ignoring data"
+        },
+        "correct": "A",
+        "explanation": "Data association determines if observed landmark is new or previously seen."
+      },
+      {
+        "question": "What is 'nearest neighbor' data association?",
+        "options": {
+          "A": "Matches observation to closest landmark in measurement space",
+          "B": "Random matching",
+          "C": "All matches",
+          "D": "No matching"
+        },
+        "correct": "A",
+        "explanation": "Nearest neighbor associates observation with closest landmark using distance metric."
+      },
+      {
+        "question": "What is 'JCBB' (Joint Compatibility Branch and Bound)?",
+        "options": {
+          "A": "Checks compatibility of observation pairs jointly",
+          "B": "Single compatibility",
+          "C": "Random compatibility",
+          "D": "No compatibility"
+        },
+        "correct": "A",
+        "explanation": "JCBB considers joint compatibility of multiple observation-landmark pairs."
+      },
+      {
+        "question": "What is 'SLAM frontend' vs 'backend'?",
+        "options": {
+          "A": "Frontend: scan matching, data association; Backend: optimization",
+          "B": "Same",
+          "C": "Frontend: optimization",
+          "D": "Backend: scan matching"
+        },
+        "correct": "A",
+        "explanation": "Frontend processes sensor data; backend optimizes the graph."
+      },
+      {
+        "question": "How does 'branch and bound' speed up scan matching?",
+        "options": {
+          "A": "Searches pose space efficiently by pruning impossible candidates",
+          "B": "Exhaustive search",
+          "C": "Random search",
+          "D": "No search"
+        },
+        "correct": "A",
+        "explanation": "Branch and bound recursively prunes search space for faster global localization."
+      },
+      {
+        "question": "What is 'fast-slam' algorithm?",
+        "options": {
+          "A": "Uses particle filter with EKF per particle for landmarks",
+          "B": "Graph SLAM",
+          "C": "Grid SLAM",
+          "D": "Scan matching only"
+        },
+        "correct": "A",
+        "explanation": "FastSLAM represents map with EKF per particle, factoring landmark estimates."
+      },
+      {
+        "question": "What is 'GMapping' algorithm?",
+        "options": {
+          "A": "Rao-Blackwellized particle filter SLAM",
+          "B": "Graph SLAM",
+          "C": "EKF SLAM",
+          "D": "Scan matching"
+        },
+        "correct": "A",
+        "explanation": "GMapping uses particle filter with efficient scan matching for grid mapping."
+      },
+      {
+        "question": "What is 'loop closure detection' method in Cartographer?",
+        "options": {
+          "A": "Matches current scan against submaps using branch and bound",
+          "B": "No detection",
+          "C": "Random detection",
+          "D": "Manual detection"
+        },
+        "correct": "A",
+        "explanation": "Cartographer uses branch and bound scan matching against nearby submaps."
+      },
+      {
+        "question": "What is 'ROS2 DDS security' for multi-robot SSH?",
+        "options": {
+          "A": "Authentication and encryption for ROS2 communication",
+          "B": "No security",
+          "C": "Only encryption",
+          "D": "Only authentication"
+        },
+        "correct": "A",
+        "explanation": "DDS security provides encryption, authentication, and access control."
+      },
+      {
+        "question": "What is 'RMV' (Resource Management Vehicle) in robot networking?",
+        "options": {
+          "A": "Managing computational resources across robots",
+          "B": "Robot type",
+          "C": "Sensor",
+          "D": "Controller"
+        },
+        "correct": "A",
+        "explanation": "RMV distributes tasks and manages resources in multi-robot systems."
+      },
+      {
+        "question": "How does 'Fast DDS' differ from 'Cyclone DDS'?",
+        "options": {
+          "A": "Different DDS implementations with performance/feature tradeoffs",
+          "B": "Same",
+          "C": "Fast DDS is slower",
+          "D": "Cyclone is older"
+        },
+        "correct": "A",
+        "explanation": "Different DDS implementations have varying performance, latency, and features."
+      },
+      {
+        "question": "What is 'shared memory' transport in DDS?",
+        "options": {
+          "A": "Zero-copy data transfer between processes on same machine",
+          "B": "Network transfer",
+          "C": "File transfer",
+          "D": "No transfer"
+        },
+        "correct": "A",
+        "explanation": "Shared memory transport avoids serialization/copying for low latency."
+      },
+      {
+        "question": "What is 'liveliness' in DDS QoS?",
+        "options": {
+          "A": "Monitors if publisher is still alive",
+          "B": "Speed",
+          "C": "Reliability",
+          "D": "Durability"
+        },
+        "correct": "A",
+        "explanation": "Liveliness QoS detects when a publisher stops sending messages."
+      },
+      {
+        "question": "How to reduce ROS2 discovery time in large networks?",
+        "options": {
+          "A": "Use ROS_DISCOVERY_SERVER instead of multicast",
+          "B": "Use more multicast",
+          "C": "Increase timeout",
+          "D": "No reduction"
+        },
+        "correct": "A",
+        "explanation": "Discovery server replaces multicast with unicast for faster, scalable discovery."
+      },
+      {
+        "question": "What is 'SuperClient' in ROS2 discovery server?",
+        "options": {
+          "A": "Client that forwards discovery to other clients",
+          "B": "Server",
+          "C": "Normal client",
+          "D": "No role"
+        },
+        "correct": "A",
+        "explanation": "SuperClient reduces traffic by aggregating discovery information."
+      },
+      {
+        "question": "What is 'network introspection' for debugging multi-robot?",
+        "options": {
+          "A": "Analyzing network traffic and DDS discovery",
+          "B": "Restarting",
+          "C": "Ignoring",
+          "D": "Logging only"
+        },
+        "correct": "A",
+        "explanation": "Tools like Wireshark with DDS dissectors analyze ROS2 network issues."
+      },
+      {
+        "question": "How to simulate network latency in Gazebo for realistic testing?",
+        "options": {
+          "A": "Use network simulation plugins or tc (traffic control)",
+          "B": "No simulation",
+          "C": "Only in real robot",
+          "D": "Random delays"
+        },
+        "correct": "A",
+        "explanation": "tc (Linux traffic control) or Gazebo network plugins simulate latency and packet loss."
+      },
+      {
+        "question": "What is 'rate controller' in Nav2 for smoothing?",
+        "options": {
+          "A": "Limits acceleration and jerk for smoother motion",
+          "B": "Increases speed",
+          "C": "No effect",
+          "D": "Only limits speed"
+        },
+        "correct": "A",
+        "explanation": "Rate controller implements acceleration and jerk limits for comfort and stability."
+      },
+      {
+        "question": "How does 'MPC' differ from 'PID' in robot control?",
+        "options": {
+          "A": "MPC predicts future; PID reacts only to current error",
+          "B": "Same",
+          "C": "PID predicts",
+          "D": "MPC reacts only"
+        },
+        "correct": "A",
+        "explanation": "MPC optimizes future trajectory; PID computes control from instantaneous error."
+      },
+      {
+        "question": "What is 'dead reckoning' and its limitations?",
+        "options": {
+          "A": "Estimating pose from odometry only; drifts over time",
+          "B": "Perfect estimation",
+          "C": "GPS-based",
+          "D": "No drift"
+        },
+        "correct": "A",
+        "explanation": "Dead reckoning integrates velocity/odometry but accumulates unbounded error."
+      }
+    ]
+  }
+}

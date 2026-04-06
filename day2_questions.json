@@ -1,0 +1,1416 @@
+{
+  "beginner": {
+    "mcqs": [
+      {
+        "question": "What does TF stand for in ROS2?",
+        "options": {
+          "A": "Transform Frames",
+          "B": "Transfer Function",
+          "C": "Task Framework",
+          "D": "Time Frequency"
+        },
+        "correct": "A",
+        "explanation": "TF (Transform Frames) is a library that keeps track of coordinate frames and their relationships."
+      },
+      {
+        "question": "What is the purpose of TF in ROS2?",
+        "options": {
+          "A": "To store robot images",
+          "B": "To track coordinate frame transformations",
+          "C": "To control robot motors",
+          "D": "To publish sensor data"
+        },
+        "correct": "B",
+        "explanation": "TF tracks the transformation between different coordinate frames over time."
+      },
+      {
+        "question": "Which frame is the world-fixed reference frame in a typical robot system?",
+        "options": {
+          "A": "base_link",
+          "B": "odom",
+          "C": "map",
+          "D": "sensor_frame"
+        },
+        "correct": "C",
+        "explanation": "The 'map' frame is the world-fixed global reference frame."
+      },
+      {
+        "question": "What is the typical hierarchy of frames?",
+        "options": {
+          "A": "map → odom → base_link → sensors",
+          "B": "base_link → map → odom → sensors",
+          "C": "sensors → base_link → odom → map",
+          "D": "odom → map → base_link → sensors"
+        },
+        "correct": "A",
+        "explanation": "Typical frame hierarchy: map (global) → odom (local) → base_link (robot base) → sensors."
+      },
+      {
+        "question": "What frame is attached to the robot's main body?",
+        "options": {
+          "A": "map",
+          "B": "odom",
+          "C": "base_link",
+          "D": "world"
+        },
+        "correct": "C",
+        "explanation": "base_link is the frame attached to the main body of the robot."
+      },
+      {
+        "question": "What is the odom frame used for?",
+        "options": {
+          "A": "Global positioning",
+          "B": "Local continuous motion tracking",
+          "C": "Sensor data",
+          "D": "Robot vision"
+        },
+        "correct": "B",
+        "explanation": "The odom frame provides continuous local position tracking based on odometry."
+      },
+      {
+        "question": "URDF stands for:",
+        "options": {
+          "A": "Unified Robot Description Format",
+          "B": "Universal Robotic Data Format",
+          "C": "User Robot Definition File",
+          "D": "Unique Robot Description Framework"
+        },
+        "correct": "A",
+        "explanation": "URDF (Unified Robot Description Format) is an XML format for describing robot models."
+      },
+      {
+        "question": "What does a 'link' represent in URDF?",
+        "options": {
+          "A": "A joint between two parts",
+          "B": "A rigid part of the robot",
+          "C": "A sensor",
+          "D": "A motor"
+        },
+        "correct": "B",
+        "explanation": "A link represents a rigid body part of the robot (like a wheel, arm, or base)."
+      },
+      {
+        "question": "What does a 'joint' represent in URDF?",
+        "options": {
+          "A": "A rigid part",
+          "B": "A connection between two links",
+          "C": "A sensor",
+          "D": "A controller"
+        },
+        "correct": "B",
+        "explanation": "A joint defines how two links are connected and their relative motion."
+      },
+      {
+        "question": "Which joint type allows rotation around one axis?",
+        "options": {
+          "A": "fixed",
+          "B": "prismatic",
+          "C": "revolute",
+          "D": "floating"
+        },
+        "correct": "C",
+        "explanation": "Revolute joints allow rotation around a single axis (like a hinge)."
+      },
+      {
+        "question": "Which joint type allows linear sliding motion?",
+        "options": {
+          "A": "revolute",
+          "B": "prismatic",
+          "C": "continuous",
+          "D": "fixed"
+        },
+        "correct": "B",
+        "explanation": "Prismatic joints allow linear sliding motion along an axis."
+      },
+      {
+        "question": "Which joint type has no motion and rigidly connects two links?",
+        "options": {
+          "A": "revolute",
+          "B": "prismatic",
+          "C": "floating",
+          "D": "fixed"
+        },
+        "correct": "D",
+        "explanation": "Fixed joints rigidly connect two links with no relative motion."
+      },
+      {
+        "question": "What is RViz in ROS2?",
+        "options": {
+          "A": "A simulation environment",
+          "B": "A 3D visualization tool",
+          "C": "A robot controller",
+          "D": "A sensor driver"
+        },
+        "correct": "B",
+        "explanation": "RViz is a 3D visualization tool for displaying robot models, sensor data, and TF frames."
+      },
+      {
+        "question": "Which display type in RViz shows the robot model?",
+        "options": {
+          "A": "LaserScan",
+          "B": "RobotModel",
+          "C": "TF",
+          "D": "Map"
+        },
+        "correct": "B",
+        "explanation": "The RobotModel display type loads and shows the URDF robot model."
+      },
+      {
+        "question": "What does the LaserScan topic typically publish?",
+        "options": {
+          "A": "Camera images",
+          "B": "Distance measurements from a lidar",
+          "C": "Robot velocity",
+          "D": "GPS coordinates"
+        },
+        "correct": "B",
+        "explanation": "LaserScan messages contain distance measurements from a laser scanner or lidar."
+      },
+      {
+        "question": "What is the typical name for the LaserScan topic?",
+        "options": {
+          "A": "/camera",
+          "B": "/cmd_vel",
+          "C": "/scan",
+          "D": "/pose"
+        },
+        "correct": "C",
+        "explanation": "The LaserScan topic is conventionally named '/scan'."
+      },
+      {
+        "question": "What does Gazebo do in ROS2?",
+        "options": {
+          "A": "Visualizes robot models",
+          "B": "Simulates robots in 3D environments with physics",
+          "C": "Controls real robots",
+          "D": "Processes sensor data"
+        },
+        "correct": "B",
+        "explanation": "Gazebo is a 3D robotics simulator with physics, sensors, and environments."
+      },
+      {
+        "question": "Command to launch an empty Gazebo world:",
+        "options": {
+          "A": "ros2 run gazebo",
+          "B": "gazebo",
+          "C": "ros2 launch gazebo_ros empty_world.launch.py",
+          "D": "ros2 start gazebo"
+        },
+        "correct": "C",
+        "explanation": "Use 'ros2 launch gazebo_ros empty_world.launch.py' to start Gazebo with an empty world."
+      },
+      {
+        "question": "What is used to spawn a robot model in Gazebo?",
+        "options": {
+          "A": "ros2 run spawn",
+          "B": "ros2 spawn_model",
+          "C": "ros2 run gazebo_ros spawn_entity.py",
+          "D": "ros2 gazebo spawn"
+        },
+        "correct": "C",
+        "explanation": "The spawn_entity.py script spawns a robot model into Gazebo."
+      },
+      {
+        "question": "What physics engine does Gazebo use?",
+        "options": {
+          "A": "Unity",
+          "B": "Unreal",
+          "C": "ODE / Bullet",
+          "D": "Havok"
+        },
+        "correct": "C",
+        "explanation": "Gazebo uses ODE (Open Dynamics Engine) or Bullet for physics simulation."
+      },
+      {
+        "question": "What is the purpose of the base_footprint frame?",
+        "options": {
+          "A": "Sensor mount",
+          "B": "Projection of base_link onto ground",
+          "C": "Camera position",
+          "D": "Wheel position"
+        },
+        "correct": "B",
+        "explanation": "base_footprint is the projection of base_link onto the ground (z=0)."
+      },
+      {
+        "question": "What does the 'visual' tag in URDF define?",
+        "options": {
+          "A": "Collision properties",
+          "B": "Visual appearance (mesh/color)",
+          "C": "Inertial properties",
+          "D": "Joint limits"
+        },
+        "correct": "B",
+        "explanation": "The visual tag defines how a link looks (mesh file, color, etc.)."
+      },
+      {
+        "question": "What does the 'collision' tag in URDF define?",
+        "options": {
+          "A": "Visual appearance",
+          "B": "Collision detection geometry",
+          "C": "Joint type",
+          "D": "Sensor data"
+        },
+        "correct": "B",
+        "explanation": "The collision tag defines simplified geometry for physics collision detection."
+      },
+      {
+        "question": "What does the 'inertial' tag in URDF define?",
+        "options": {
+          "A": "Link color",
+          "B": "Mass and moment of inertia",
+          "C": "Joint limits",
+          "D": "Sensor type"
+        },
+        "correct": "B",
+        "explanation": "The inertial tag defines mass, center of mass, and inertia matrix of a link."
+      },
+      {
+        "question": "What is the origin tag used for in URDF?",
+        "options": {
+          "A": "Defining joint limits",
+          "B": "Defining position and orientation of a link or joint",
+          "C": "Defining sensor parameters",
+          "D": "Defining robot name"
+        },
+        "correct": "B",
+        "explanation": "Origin defines the pose (xyz position and rpy orientation) of a link or joint."
+      },
+      {
+        "question": "What is the tool to check URDF syntax?",
+        "options": {
+          "A": "ros2 run check_urdf",
+          "B": "check_urdf",
+          "C": "urdf_check",
+          "D": "ros2 urdf verify"
+        },
+        "correct": "B",
+        "explanation": "The 'check_urdf' command-line tool validates URDF file syntax."
+      },
+      {
+        "question": "How to display URDF in RViz?",
+        "options": {
+          "A": "Add RobotModel display and set URDF path",
+          "B": "Add LaserScan display",
+          "C": "Add TF display",
+          "D": "Automatically loads"
+        },
+        "correct": "A",
+        "explanation": "Add RobotModel display in RViz and provide the URDF file path or robot_description parameter."
+      },
+      {
+        "question": "Which frame is often used as the origin for sensors like cameras and lidars?",
+        "options": {
+          "A": "base_link",
+          "B": "map",
+          "C": "sensor_frame (e.g., laser_frame)",
+          "D": "odom"
+        },
+        "correct": "C",
+        "explanation": "Sensors have their own frames attached to them, like laser_frame, camera_frame."
+      },
+      {
+        "question": "What does the 'publish_frequency' in TF do?",
+        "options": {
+          "A": "Sets sensor update rate",
+          "B": "Sets how often TF frames are broadcast",
+          "C": "Sets robot control frequency",
+          "D": "Sets simulation speed"
+        },
+        "correct": "B",
+        "explanation": "Publish_frequency determines how often TF transforms are broadcast."
+      },
+      {
+        "question": "Command to view TF frames in terminal:",
+        "options": {
+          "A": "ros2 tf frames",
+          "B": "ros2 run tf2_tools view_frames",
+          "C": "ros2 view_frames",
+          "D": "tf_echo"
+        },
+        "correct": "B",
+        "explanation": "'ros2 run tf2_tools view_frames' generates a PDF showing all TF frames."
+      },
+      {
+        "question": "What does the LaserScan message field 'ranges' represent?",
+        "options": {
+          "A": "Number of laser beams",
+          "B": "Distance measurements to obstacles",
+          "C": "Laser intensity",
+          "D": "Angle increment"
+        },
+        "correct": "B",
+        "explanation": "The 'ranges' array contains distance measurements for each laser beam."
+      },
+      {
+        "question": "What is the 'angle_min' in a LaserScan message?",
+        "options": {
+          "A": "Minimum distance",
+          "B": "Starting angle of the scan",
+          "C": "Minimum intensity",
+          "D": "Number of scans"
+        },
+        "correct": "B",
+        "explanation": "angle_min is the starting angle of the laser scan (radians)."
+      },
+      {
+        "question": "What is the 'angle_max' in a LaserScan message?",
+        "options": {
+          "A": "Maximum distance",
+          "B": "Ending angle of the scan",
+          "C": "Maximum intensity",
+          "D": "Total scans"
+        },
+        "correct": "B",
+        "explanation": "angle_max is the ending angle of the laser scan (radians)."
+      },
+      {
+        "question": "What does 'angle_increment' in LaserScan represent?",
+        "options": {
+          "A": "Increase in distance",
+          "B": "Angular step between laser beams",
+          "C": "Time increment",
+          "D": "Intensity step"
+        },
+        "correct": "B",
+        "explanation": "angle_increment is the angular resolution between consecutive measurements."
+      },
+      {
+        "question": "What is the purpose of the 'map' frame in SLAM?",
+        "options": {
+          "A": "Robot base position",
+          "B": "Global world reference for mapping",
+          "C": "Sensor mount",
+          "D": "Wheel odometry"
+        },
+        "correct": "B",
+        "explanation": "The map frame provides a globally consistent reference for mapping and localization."
+      },
+      {
+        "question": "Which tool is used to view TF tree structure?",
+        "options": {
+          "A": "rviz",
+          "B": "view_frames",
+          "C": "gazebo",
+          "D": "rqt_tf_tree"
+        },
+        "correct": "D",
+        "explanation": "rqt_tf_tree or view_frames can visualize the TF frame hierarchy."
+      },
+      {
+        "question": "What happens if a required TF transform is missing?",
+        "options": {
+          "A": "System crashes",
+          "B": "Error: 'No transform found'",
+          "C": "Robot stops moving",
+          "D": "Nothing"
+        },
+        "correct": "B",
+        "explanation": "Missing transforms cause TF lookup errors like 'No transform found'."
+      },
+      {
+        "question": "What is the typical extension of a URDF file?",
+        "options": {
+          "A": ".urdf",
+          "B": ".xml",
+          "C": ".robot",
+          "D": ".yaml"
+        },
+        "correct": "A",
+        "explanation": "URDF files typically have the .urdf extension (though they are XML files)."
+      },
+      {
+        "question": "What is the command to spawn a robot in Gazebo from a URDF?",
+        "options": {
+          "A": "ros2 run gazebo_ros spawn_model",
+          "B": "ros2 spawn",
+          "C": "ros2 gazebo_model",
+          "D": "ros2 run spawn_urdf"
+        },
+        "correct": "A",
+        "explanation": "Use 'ros2 run gazebo_ros spawn_model' or spawn_entity.py to spawn a robot."
+      },
+      {
+        "question": "What is the purpose of the 'robot_description' parameter?",
+        "options": {
+          "A": "Robot name",
+          "B": "URDF content as a string",
+          "C": "Robot speed",
+          "D": "Sensor calibration"
+        },
+        "correct": "B",
+        "explanation": "robot_description holds the URDF XML string for the robot model."
+      },
+      {
+        "question": "Which joint type allows continuous 360-degree rotation?",
+        "options": {
+          "A": "revolute",
+          "B": "continuous",
+          "C": "prismatic",
+          "D": "fixed"
+        },
+        "correct": "B",
+        "explanation": "Continuous joints allow unlimited rotation (like a wheel)."
+      },
+      {
+        "question": "What does the 'limit' tag define for a revolute joint?",
+        "options": {
+          "A": "Velocity and effort limits",
+          "B": "Lower and upper angle limits",
+          "C": "Color limits",
+          "D": "Size limits"
+        },
+        "correct": "B",
+        "explanation": "Limit defines lower, upper, velocity, and effort limits for the joint."
+      },
+      {
+        "question": "What is Gazebo's world file format?",
+        "options": {
+          "A": ".world (SDF format)",
+          "B": ".urdf",
+          "C": ".yaml",
+          "D": ".launch"
+        },
+        "correct": "A",
+        "explanation": "Gazebo worlds use SDF (Simulation Description Format) with .world extension."
+      },
+      {
+        "question": "What does SDF stand for?",
+        "options": {
+          "A": "Simple Description Format",
+          "B": "Simulation Description Format",
+          "C": "Standard Data Format",
+          "D": "Sensor Definition Format"
+        },
+        "correct": "B",
+        "explanation": "SDF (Simulation Description Format) is used by Gazebo for worlds and models."
+      },
+      {
+        "question": "Which RViz display shows TF frames as labels and axes?",
+        "options": {
+          "A": "RobotModel",
+          "B": "TF",
+          "C": "LaserScan",
+          "D": "Grid"
+        },
+        "correct": "B",
+        "explanation": "The TF display shows coordinate frames with axes and labels."
+      },
+      {
+        "question": "What is a 'child frame' in TF?",
+        "options": {
+          "A": "The parent reference",
+          "B": "The frame being transformed relative to parent",
+          "C": "A sensor",
+          "D": "A joint"
+        },
+        "correct": "B",
+        "explanation": "A child frame is defined relative to its parent frame."
+      },
+      {
+        "question": "What is the purpose of static_transform_publisher?",
+        "options": {
+          "A": "Publish changing transforms",
+          "B": "Publish fixed transforms between frames",
+          "C": "Publish robot velocity",
+          "D": "Publish sensor data"
+        },
+        "correct": "B",
+        "explanation": "static_transform_publisher broadcasts fixed (non-moving) transforms."
+      },
+      {
+        "question": "How to view LaserScan data in RViz?",
+        "options": {
+          "A": "Add RobotModel display",
+          "B": "Add LaserScan display and set /scan topic",
+          "C": "Add TF display",
+          "D": "Add Grid display"
+        },
+        "correct": "B",
+        "explanation": "Add LaserScan display and set the topic to '/scan' to see lidar data."
+      },
+      {
+        "question": "What is the purpose of simulation in robotics?",
+        "options": {
+          "A": "Replace real robots",
+          "B": "Test algorithms safely before real robot deployment",
+          "C": "Reduce cost of hardware",
+          "D": "Only for visualization"
+        },
+        "correct": "B",
+        "explanation": "Simulation allows safe, fast, and repeatable testing of robot algorithms."
+      },
+      {
+        "question": "What command publishes a fixed transform between 'map' and 'odom'?",
+        "options": {
+          "A": "ros2 run tf2_ros static_transform_publisher",
+          "B": "ros2 tf publish",
+          "C": "ros2 run transform",
+          "D": "ros2 static_tf"
+        },
+        "correct": "A",
+        "explanation": "Use 'ros2 run tf2_ros static_transform_publisher' to publish static transforms."
+      }
+    ]
+  },
+
+  "intermediate": {
+    "mcqs": [
+      {
+        "question": "What is the difference between the 'map' and 'odom' frames?",
+        "options": {
+          "A": "map is local, odom is global",
+          "B": "map is global with drift correction, odom is continuous but can drift",
+          "C": "Both are identical",
+          "D": "map is for sensors, odom is for base"
+        },
+        "correct": "B",
+        "explanation": "map is globally consistent (corrected by SLAM), odom accumulates drift over time."
+      },
+      {
+        "question": "Which TF tree structure is correct for a mobile robot?",
+        "options": {
+          "A": "odom → map → base_link",
+          "B": "map → base_link → odom",
+          "C": "map → odom → base_link",
+          "D": "base_link → map → odom"
+        },
+        "correct": "C",
+        "explanation": "Typical structure: map → odom → base_link → sensor frames."
+      },
+      {
+        "question": "What does TF2 provide over the original TF?",
+        "options": {
+          "A": "Only Python support",
+          "B": "Better performance, templated API, and buffer cache improvements",
+          "C": "Only C++ support",
+          "D": "No significant changes"
+        },
+        "correct": "B",
+        "explanation": "TF2 offers better performance, templated API, and improved buffer management."
+      },
+      {
+        "question": "How to get the transform between two frames in C++?",
+        "options": {
+          "A": "tf_buffer.lookupTransform()",
+          "B": "tf2::getTransform()",
+          "C": "lookup_transform()",
+          "D": "tf_buffer.get()"
+        },
+        "correct": "A",
+        "explanation": "Use tf_buffer->lookupTransform(target_frame, source_frame, time) in C++."
+      },
+      {
+        "question": "What does a URDF 'mesh' refer to?",
+        "options": {
+          "A": "A network of joints",
+          "B": "A 3D model file (STL, DAE, etc.)",
+          "C": "A type of sensor",
+          "D": "A control algorithm"
+        },
+        "correct": "B",
+        "explanation": "A mesh is a 3D model file (STL, Collada DAE, etc.) used for visual representation."
+      },
+      {
+        "question": "What is the purpose of the 'transmission' tag in URDF?",
+        "options": {
+          "A": "Define gear ratios between actuators and joints",
+          "B": "Define visual appearance",
+          "C": "Define collision properties",
+          "D": "Define sensor placement"
+        },
+        "correct": "A",
+        "explanation": "Transmission tags define how actuators (motors) drive joints (gearing, reduction)."
+      },
+      {
+        "question": "What is a 'gazebo_ros' plugin?",
+        "options": {
+          "A": "RViz visualization tool",
+          "B": "Plugin to interface ROS2 with Gazebo simulation",
+          "C": "URDF validator",
+          "D": "TF broadcaster"
+        },
+        "correct": "B",
+        "explanation": "gazebo_ros plugins connect Gazebo sensors/actuators to ROS2 topics/services."
+      },
+      {
+        "question": "How to add a laser scanner to a URDF model for Gazebo?",
+        "options": {
+          "A": "Add <gazebo> tag with laser plugin",
+          "B": "Just add visual tag",
+          "C": "Add <laser> tag",
+          "D": "It is automatic"
+        },
+        "correct": "A",
+        "explanation": "Use <gazebo> tag with a laser sensor plugin (like libgazebo_ros_laser.so)."
+      },
+      {
+        "question": "What does the 'time' parameter in lookupTransform() represent?",
+        "options": {
+          "A": "Future time",
+          "B": "Specific timestamp for which transform is requested",
+          "C": "Duration",
+          "D": "Frequency"
+        },
+        "correct": "B",
+        "explanation": "lookupTransform queries the transform at a specific timestamp (now, past, or future with buffer)."
+      },
+      {
+        "question": "What is a 'transform timeout'?",
+        "options": {
+          "A": "Maximum time to wait for transform",
+          "B": "Time between transforms",
+          "C": "Time to live",
+          "D": "Simulation time"
+        },
+        "correct": "A",
+        "explanation": "Transform timeout is the maximum duration to wait for a transform to become available."
+      },
+      {
+        "question": "What is the difference between a revolute and continuous joint?",
+        "options": {
+          "A": "Revolute has limits, continuous rotates infinitely",
+          "B": "Continuous has limits, revolute is infinite",
+          "C": "Both have no limits",
+          "D": "Both have limits"
+        },
+        "correct": "A",
+        "explanation": "Revolute joints have upper/lower angle limits; continuous joints can rotate freely."
+      },
+      {
+        "question": "What is 'xacro' and why is it used?",
+        "options": {
+          "A": "A URDF validator",
+          "B": "An XML macro language to simplify URDF creation",
+          "C": "A simulation tool",
+          "D": "A visualization tool"
+        },
+        "correct": "B",
+        "explanation": "Xacro allows macros, constants, and includes to make URDF files more modular and maintainable."
+      },
+      {
+        "question": "How to convert a xacro file to URDF?",
+        "options": {
+          "A": "ros2 run xacro xacro model.xacro > model.urdf",
+          "B": "xacro2urdf",
+          "C": "convert_xacro",
+          "D": "ros2 xacro process"
+        },
+        "correct": "A",
+        "explanation": "Run 'xacro model.xacro' to process macros and output URDF."
+      },
+      {
+        "question": "What is the purpose of the 'robot_state_publisher' node?",
+        "options": {
+          "A": "Publish robot velocity commands",
+          "B": "Publish TF transforms from URDF joint states",
+          "C": "Control robot motors",
+          "D": "Simulate sensors"
+        },
+        "correct": "B",
+        "explanation": "robot_state_publisher computes and broadcasts TF transforms based on joint states."
+      },
+      {
+        "question": "What does the 'joint_state_publisher' node do?",
+        "options": {
+          "A": "Publishes TF transforms",
+          "B": "Publishes joint positions/velocities/efforts to /joint_states topic",
+          "C": "Controls robot movement",
+          "D": "Simulates physics"
+        },
+        "correct": "B",
+        "explanation": "joint_state_publisher publishes sensor_msgs/JointState messages for robot joints."
+      },
+      {
+        "question": "What is a 'fixed frame' in RViz?",
+        "options": {
+          "A": "Frame that never moves",
+          "B": "Reference frame for all displays",
+          "C": "Robot base frame",
+          "D": "World frame only"
+        },
+        "correct": "B",
+        "explanation": "Fixed frame is the global reference frame used by RViz for all displays."
+      },
+      {
+        "question": "How to simulate a differential drive robot in Gazebo?",
+        "options": {
+          "A": "Add differential_drive_controller plugin",
+          "B": "Use cmd_vel directly",
+          "C": "Add odometry plugin only",
+          "D": "It is automatic"
+        },
+        "correct": "A",
+        "explanation": "Use the gazebo_ros_diff_drive plugin to convert /cmd_vel to wheel velocities."
+      },
+      {
+        "question": "What is the 'range_max' parameter in LaserScan?",
+        "options": {
+          "A": "Maximum intensity",
+          "B": "Maximum detectable distance",
+          "C": "Maximum angle",
+          "D": "Number of beams"
+        },
+        "correct": "B",
+        "explanation": "range_max defines the maximum distance the laser can measure."
+      },
+      {
+        "question": "What does 'inf' or 'NaN' in LaserScan ranges indicate?",
+        "options": {
+          "A": "Very close object",
+          "B": "No detection / beyond max range",
+          "C": "Sensor error",
+          "D": "Object too close"
+        },
+        "correct": "B",
+        "explanation": "Infinity or NaN indicates no valid detection (beyond max range or invalid)."
+      },
+      {
+        "question": "What is the purpose of the 'intensities' field in LaserScan?",
+        "options": {
+          "A": "Laser power",
+          "B": "Reflected signal strength for each beam",
+          "C": "Battery level",
+          "D": "Temperature"
+        },
+        "correct": "B",
+        "explanation": "Intensities provide the return signal strength for each laser beam."
+      },
+      {
+        "question": "What is a 'world' in Gazebo?",
+        "options": {
+          "A": "A single robot model",
+          "B": "A simulation environment containing models, lights, physics, and ground plane",
+          "C": "A type of sensor",
+          "D": "A controller"
+        },
+        "correct": "B",
+        "explanation": "A world is the complete simulation environment including models, physics, lighting, and terrain."
+      },
+      {
+        "question": "How to pause/resume Gazebo simulation?",
+        "options": {
+          "A": "Use Gazebo GUI buttons or /pause_physics and /unpause_physics services",
+          "B": "Restart Gazebo",
+          "C": "Kill process",
+          "D": "Cannot pause"
+        },
+        "correct": "A",
+        "explanation": "Use GUI controls or call /pause_physics and /unpause_physics services."
+      },
+      {
+        "question": "What is the purpose of the '/clock' topic in Gazebo?",
+        "options": {
+          "A": "Robot status",
+          "B": "Simulation time publisher",
+          "C": "Sensor data",
+          "D": "Control commands"
+        },
+        "correct": "B",
+        "explanation": "Gazebo publishes simulation time on the /clock topic (rosgraph_msgs/Clock)."
+      },
+      {
+        "question": "What is 'use_sim_time' parameter?",
+        "options": {
+          "A": "Use real hardware time",
+          "B": "Use simulation time instead of wall clock",
+          "C": "Speed up simulation",
+          "D": "Slow down simulation"
+        },
+        "correct": "B",
+        "explanation": "use_sim_time=true tells ROS2 nodes to use Gazebo's simulation time."
+      },
+      {
+        "question": "What is an SDF file compared to URDF?",
+        "options": {
+          "A": "URDF for robots, SDF for complete worlds and environments",
+          "B": "SDF is older",
+          "C": "They are identical",
+          "D": "SDF is only for sensors"
+        },
+        "correct": "A",
+        "explanation": "URDF describes robots; SDF describes worlds, environments, and can include multiple robots."
+      },
+      {
+        "question": "How to add a ground plane in Gazebo?",
+        "options": {
+          "A": "It is automatically added",
+          "B": "Add <include> for ground_plane model",
+          "C": "Add visual tag",
+          "D": "Cannot add"
+        },
+        "correct": "B",
+        "explanation": "Include the ground_plane model in the SDF world file."
+      },
+      {
+        "question": "What is the 'odometry' frame used for?",
+        "options": {
+          "A": "Global correction",
+          "B": "Local continuous pose estimation from wheel encoders",
+          "C": "Sensor mounting",
+          "D": "Visualization only"
+        },
+        "correct": "B",
+        "explanation": "Odometry frame provides local pose estimates based on wheel encoders or similar."
+      },
+      {
+        "question": "What is the purpose of the 'tf2_ros::TransformBroadcaster'?",
+        "options": {
+          "A": "Receive transforms",
+          "B": "Broadcast transforms to the TF tree",
+          "C": "Log transforms",
+          "D": "Store transforms"
+        },
+        "correct": "B",
+        "explanation": "TransformBroadcaster sends transforms to the TF system for other nodes to use."
+      },
+      {
+        "question": "What does 'lookupTransform()' throw if transform is not available?",
+        "options": {
+          "A": "std::runtime_error",
+          "B": "tf2::TransformException",
+          "C": "std::bad_alloc",
+          "D": "No exception"
+        },
+        "correct": "B",
+        "explanation": "lookupTransform throws tf2::TransformException (or a derived type like tf2::LookupException)."
+      },
+      {
+        "question": "What is the 'canTransform()' function used for?",
+        "options": {
+          "A": "Get transform if available",
+          "B": "Check if a transform exists without throwing exception",
+          "C": "Broadcast transform",
+          "D": "Delete transform"
+        },
+        "correct": "B",
+        "explanation": "canTransform checks transform availability without throwing exceptions."
+      },
+      {
+        "question": "How to fix 'TF_OLD_DATA' warning?",
+        "options": {
+          "A": "Increase buffer size or publish transforms more frequently",
+          "B": "Ignore it",
+          "C": "Restart system",
+          "D": "Delete cache"
+        },
+        "correct": "A",
+        "explanation": "Increase TF buffer size or ensure transforms are published at higher frequency."
+      },
+      {
+        "question": "What is a 'fixed joint' in URDF used for?",
+        "options": {
+          "A": "Moveable connection",
+          "B": "Rigidly attaching two links (e.g., sensor to base)",
+          "C": "Wheel joint",
+          "D": "Arm joint"
+        },
+        "correct": "B",
+        "explanation": "Fixed joints rigidly attach two links with no relative motion (e.g., camera mounted on base)."
+      },
+      {
+        "question": "What is the 'origin' tag's 'xyz' attribute?",
+        "options": {
+          "A": "RGB color",
+          "B": "Position offset (x, y, z) in meters",
+          "C": "Rotation only",
+          "D": "Joint velocity"
+        },
+        "correct": "B",
+        "explanation": "xyz defines the translation offset in meters for link or joint placement."
+      },
+      {
+        "question": "What is the 'origin' tag's 'rpy' attribute?",
+        "options": {
+          "A": "Position",
+          "B": "Roll, Pitch, Yaw rotation in radians",
+          "C": "RGB color",
+          "D": "Joint effort"
+        },
+        "correct": "B",
+        "explanation": "rpy defines orientation (roll, pitch, yaw) in radians."
+      },
+      {
+        "question": "How to visualize LaserScan data as points in RViz?",
+        "options": {
+          "A": "Select 'Points' or 'LaserScan' display style",
+          "B": "Use RobotModel",
+          "C": "Use TF display",
+          "D": "Use Grid"
+        },
+        "correct": "A",
+        "explanation": "In LaserScan display, change style to 'Points' or 'Lines' for different visualization."
+      },
+      {
+        "question": "What does the 'QoS' setting 'RELIABLE' vs 'BEST_EFFORT' mean for LaserScan?",
+        "options": {
+          "A": "Reliable guarantees delivery, best effort may drop data but faster",
+          "B": "No difference",
+          "C": "Best effort guarantees delivery",
+          "D": "Reliable drops data"
+        },
+        "correct": "A",
+        "explanation": "Reliable ensures delivery; best effort prioritizes speed over delivery guarantees."
+      },
+      {
+        "question": "How to spawn multiple robots in Gazebo?",
+        "options": {
+          "A": "Run spawn_entity.py multiple times with different namespaces",
+          "B": "Cannot spawn multiple",
+          "C": "Only one robot",
+          "D": "Use only one spawn"
+        },
+        "correct": "A",
+        "explanation": "Spawn each robot with a unique namespace and robot name."
+      },
+      {
+        "question": "What is the purpose of the 'gazebo_ros_control' plugin?",
+        "options": {
+          "A": "Visualization",
+          "B": "Integrate ros_control with Gazebo for joint control",
+          "C": "Sensor simulation",
+          "D": "TF broadcasting"
+        },
+        "correct": "B",
+        "explanation": "gazebo_ros_control connects ros_control controllers to Gazebo simulated joints."
+      },
+      {
+        "question": "What is a 'transmission' in ros_control context?",
+        "options": {
+          "A": "Gearbox mapping between actuator and joint",
+          "B": "Visual mesh",
+          "C": "Sensor",
+          "D": "Controller"
+        },
+        "correct": "A",
+        "explanation": "Transmission defines how actuator commands map to joint movements (gearing, reduction)."
+      },
+      {
+        "question": "What is 'child_frame_id' in a TransformStamped message?",
+        "options": {
+          "A": "Parent frame",
+          "B": "Child frame being transformed",
+          "C": "Timestamp",
+          "D": "Rotation"
+        },
+        "correct": "B",
+        "explanation": "child_frame_id is the frame that is being defined relative to the parent."
+      },
+      {
+        "question": "How to set robot initial pose in Gazebo?",
+        "options": {
+          "A": "Use -x -y -z arguments in spawn_entity.py",
+          "B": "Cannot set",
+          "C": "Only in world file",
+          "D": "Random"
+        },
+        "correct": "A",
+        "explanation": "spawn_entity.py accepts -x, -y, -z, -R, -P, -Y for initial pose."
+      },
+      {
+        "question": "What is the purpose of the 'gazebo_ros_skid_steer_drive' plugin?",
+        "options": {
+          "A": "Differential drive",
+          "B": "Skid-steer drive (tank-like robots)",
+          "C": "Ackermann steering",
+          "D": "Omni drive"
+        },
+        "correct": "B",
+        "explanation": "Skid-steer plugin simulates tank-like steering (differential drive with skid turning)."
+      },
+      {
+        "question": "What does the 'min_depth' and 'max_depth' in a depth camera plugin represent?",
+        "options": {
+          "A": "Color range",
+          "B": "Minimum and maximum distance for depth measurement",
+          "C": "Resolution",
+          "D": "Field of view"
+        },
+        "correct": "B",
+        "explanation": "min_depth and max_depth define the usable range of the depth sensor."
+      },
+      {
+        "question": "How to check TF tree for loops or errors?",
+        "options": {
+          "A": "view_frames generates PDF with warnings",
+          "B": "No check available",
+          "C": "Manual inspection",
+          "D": "Use rqt_graph"
+        },
+        "correct": "A",
+        "explanation": "view_frames generates a PDF that shows the TF tree and highlights issues."
+      },
+      {
+        "question": "What is a 'multirobot' setup in Gazebo?",
+        "options": {
+          "A": "Single robot",
+          "B": "Multiple robots in same world with separate namespaces",
+          "C": "Only one namespace",
+          "D": "Cannot do"
+        },
+        "correct": "B",
+        "explanation": "Multiple robots can co-exist using different namespaces for topics and frames."
+      },
+      {
+        "question": "How to add a camera sensor to URDF for Gazebo?",
+        "options": {
+          "A": "Add camera link with gazebo_ros_camera plugin",
+          "B": "Only visual",
+          "C": "Add <camera> tag",
+          "D": "Automatic"
+        },
+        "correct": "A",
+        "explanation": "Define camera link with visual, then add gazebo_ros_camera plugin."
+      },
+      {
+        "question": "What does the 'always_on' parameter in Gazebo plugins do?",
+        "options": {
+          "A": "Never turn off",
+          "B": "Update even when sensor is not visible",
+          "C": "Crash",
+          "D": "Disable sensor"
+        },
+        "correct": "B",
+        "explanation": "always_on=true updates sensor even if no subscriber is connected."
+      },
+      {
+        "question": "What is 'update_rate' in Gazebo sensor plugins?",
+        "options": {
+          "A": "Robot speed",
+          "B": "Frequency of sensor data publishing (Hz)",
+          "C": "Simulation speed",
+          "D": "Joint velocity"
+        },
+        "correct": "B",
+        "explanation": "update_rate defines how many times per second the sensor publishes data."
+      },
+      {
+        "question": "How to visualize robot model with textures in RViz?",
+        "options": {
+          "A": "Set 'Alpha' to 0.5",
+          "B": "Mesh files with textures, ensure paths are correct",
+          "C": "Use RobotModel only",
+          "D": "Cannot texture"
+        },
+        "correct": "B",
+        "explanation": "URDF mesh files can include textures; ensure mesh file paths are accessible."
+      },
+      {
+        "question": "What is the purpose of 'joint limits' in URDF?",
+        "options": {
+          "A": "Prevent joint from moving beyond safe range",
+          "B": "Increase speed",
+          "C": "Change color",
+          "D": "Add sensors"
+        },
+        "correct": "A",
+        "explanation": "Joint limits (effort, velocity, position) prevent damage and enforce constraints."
+      }
+    ]
+  },
+
+  "advanced": {
+    "mcqs": [
+      {
+        "question": "What is the mathematical representation of a transform in TF2?",
+        "options": {"A": "4x4 transformation matrix", "B": "Quaternion + Vector3 translation", "C": "Euler angles only", "D": "3x3 rotation matrix"},
+        "correct": "B",
+        "explanation": "TF2 uses quaternion (orientation) + vector3 (translation) for singularity-free transforms."
+      },
+      {
+        "question": "How does TF2 handle time-varying transforms?",
+        "options": {"A": "Stores transform history in a buffer with timestamps", "B": "Only latest transform", "C": "No history", "D": "File storage"},
+        "correct": "A",
+        "explanation": "TF2 buffer stores transforms with timestamps, allowing queries at past/future times."
+      },
+      {
+        "question": "What is 'transform interpolation' in TF2?",
+        "options": {"A": "Guess transforms between two known timestamps", "B": "Extrapolate future", "C": "Average all", "D": "Ignore time"},
+        "correct": "A",
+        "explanation": "TF2 linearly interpolates transforms when exact timestamp not available."
+      },
+      {
+        "question": "What causes 'ExtrapolationException' in TF2?",
+        "options": {"A": "Requesting transform too far from available data", "B": "Missing frame", "C": "Wrong frame name", "D": "Buffer empty"},
+        "correct": "A",
+        "explanation": "Extrapolation exception occurs when requested time is outside buffer range."
+      },
+      {
+        "question": "What is the purpose of 'tf2_ros::Buffer'?",
+        "options": {"A": "Store and manage transform history", "B": "Broadcast transforms", "C": "Log transforms", "D": "Delete old transforms"},
+        "correct": "A",
+        "explanation": "Buffer stores historical transforms and provides lookup methods."
+      },
+      {
+        "question": "How to set TF buffer size?",
+        "options": {"A": "Buffer constructor parameter 'cache_time'", "B": "Cannot change", "C": "Fixed size", "D": "Environment variable"},
+        "correct": "A",
+        "explanation": "tf2_ros::Buffer constructor accepts a duration for cache time (buffer size)."
+      },
+      {
+        "question": "What is the 'map' → 'odom' transform drift correction mechanism?",
+        "options": {"A": "SLAM continuously corrects map→odom transform", "B": "No correction", "C": "GPS only", "D": "Manual correction"},
+        "correct": "A",
+        "explanation": "SLAM algorithms publish corrected map→odom transforms to compensate for odometry drift."
+      },
+      {
+        "question": "What is a 'frame graph' in TF2?",
+        "options": {"A": "Directed acyclic graph of frame relationships", "B": "Undirected graph", "C": "Tree only", "D": "No structure"},
+        "correct": "A",
+        "explanation": "TF frames form a directed acyclic graph (DAG) where each child has one parent."
+      },
+      {
+        "question": "What happens if a cycle is created in TF frame graph?",
+        "options": {"A": "System crashes", "B": "TF2 handles gracefully but warns", "C": "No effect", "D": "Faster computation"},
+        "correct": "B",
+        "explanation": "TF2 detects cycles and may ignore conflicting transforms while logging warnings."
+      },
+      {
+        "question": "What is 'transform projection' in TF2?",
+        "options": {"A": "Apply transform to a point", "B": "Reverse transform", "C": "Convert between frames", "D": "Store transform"},
+        "correct": "C",
+        "explanation": "Transform projection transforms points/poses from source to target frame."
+      },
+      {
+        "question": "What is the performance impact of too many TF frames?",
+        "options": {"A": "No impact", "B": "Increased CPU usage and buffer memory", "C": "Only memory", "D": "Only CPU"},
+        "correct": "B",
+        "explanation": "Many frames increase buffer memory and transform lookup computation time."
+      },
+      {
+        "question": "How to implement a custom TF broadcaster efficiently?",
+        "options": {"A": "Use TransformBroadcaster with batch transforms", "B": "Broadcast each transform separately", "C": "Use static transforms only", "D": "No optimization"},
+        "correct": "A",
+        "explanation": "Batch multiple transforms into one message for efficiency."
+      },
+      {
+        "question": "What is 'transform_tolerance' in navigation?",
+        "options": {"A": "Allowed transform delay before considering robot lost", "B": "Transform accuracy", "C": "Buffer size", "D": "Update rate"},
+        "correct": "A",
+        "explanation": "Tolerance defines maximum acceptable transform age before robot is considered 'lost'."
+      },
+      {
+        "question": "What are 'URDF semantics'?",
+        "options": {"A": "Meaning of URDF elements for standard robot descriptions", "B": "File format", "C": "Parser only", "D": "No meaning"},
+        "correct": "A",
+        "explanation": "URDF semantics define conventions for naming frames and joint types (e.g., base_link)."
+      },
+      {
+        "question": "How to optimize URDF for complex robots?",
+        "options": {"A": "Use Xacro, simplify collision geometry, reduce mesh complexity", "B": "Add more meshes", "C": "Increase joint count", "D": "No optimization"},
+        "correct": "A",
+        "explanation": "Simplify collision shapes, use primitive geometries, reduce triangle count."
+      },
+      {
+        "question": "What is the difference between 'visual' and 'collision' geometry for performance?",
+        "options": {"A": "Collision uses simplified shapes for physics", "B": "Same geometry", "C": "Visual is simpler", "D": "No difference"},
+        "correct": "A",
+        "explanation": "Collision geometry should be simpler (boxes/spheres/cylinders) for faster physics."
+      },
+      {
+        "question": "How to create a 'continuous' joint for a rolling wheel?",
+        "options": {"A": "Use continuous joint type with no limits", "B": "Use revolute with large limits", "C": "Use fixed joint", "D": "Use prismatic joint"},
+        "correct": "A",
+        "explanation": "Continuous joint allows unlimited 360° rotation for wheels."
+      },
+      {
+        "question": "What is 'kinematics' vs 'dynamics' in URDF?",
+        "options": {"A": "Kinematics: motion without forces; Dynamics: forces causing motion", "B": "Same", "C": "Dynamics is positions", "D": "Kinematics is forces"},
+        "correct": "A",
+        "explanation": "Kinematics describes motion; dynamics requires inertial properties for forces."
+      },
+      {
+        "question": "How to compute forward kinematics from URDF?",
+        "options": {"A": "robot_state_publisher computes transforms from joint angles", "B": "Manual calculation", "C": "Gazebo does it", "D": "No computation"},
+        "correct": "A",
+        "explanation": "robot_state_publisher uses URDF and joint states to compute all link transforms."
+      },
+      {
+        "question": "What is 'inertial' tag's 'origin' used for?",
+        "options": {"A": "Center of mass offset from link origin", "B": "Visual placement", "C": "Joint location", "D": "Collision offset"},
+        "correct": "A",
+        "explanation": "Inertial origin defines center of mass relative to link origin."
+      },
+      {
+        "question": "How to debug missing TF transform in complex systems?",
+        "options": {"A": "Use view_frames, tf_echo, and analyze frame tree", "B": "Restart only", "C": "Ignore", "D": "Rebuild system"},
+        "correct": "A",
+        "explanation": "Systematic approach: view_frames for structure, tf_echo for specific transforms."
+      },
+      {
+        "question": "What is 'static transform publisher' vs 'dynamic'?",
+        "options": {"A": "Static publishes once, dynamic publishes continuously", "B": "Same", "C": "Dynamic is slower", "D": "Static is deprecated"},
+        "correct": "A",
+        "explanation": "Static transforms (like sensor mounts) published once; dynamic (like robot pose) continuously."
+      },
+      {
+        "question": "How to reduce TF bandwidth usage?",
+        "options": {"A": "Reduce publish frequency, batch transforms", "B": "Increase frequency", "C": "Publish all frames", "D": "No reduction"},
+        "correct": "A",
+        "explanation": "Lower frequency and batching reduces network and CPU overhead."
+      },
+      {
+        "question": "What is the 'waitForTransform()' function?",
+        "options": {"A": "Block until transform available or timeout", "B": "Non-blocking check", "C": "Get transform", "D": "Broadcast transform"},
+        "correct": "A",
+        "explanation": "waitForTransform blocks until requested transform is available or timeout occurs."
+      },
+      {
+        "question": "How to handle TF lookup in real-time threads?",
+        "options": {"A": "Use canTransform() non-blocking, avoid waitForTransform()", "B": "Use blocking calls", "C": "Sleep", "D": "Ignore"},
+        "correct": "A",
+        "explanation": "Non-blocking canTransform() avoids priority inversion in real-time threads."
+      },
+      {
+        "question": "What is 'urdfdom'?",
+        "options": {"A": "URDF parsing library", "B": "Simulation tool", "C": "Visualizer", "D": "Controller"},
+        "correct": "A",
+        "explanation": "urdfdom is the C++ library for parsing and using URDF models."
+      },
+      {
+        "question": "How to create a URDF model programmatically?",
+        "options": {"A": "Use urdf::ModelInterface and build from code", "B": "Only XML files", "C": "Python only", "D": "Cannot programmatically"},
+        "correct": "A",
+        "explanation": "urdfdom library allows constructing URDF models in C++ code."
+      },
+      {
+        "question": "What is the purpose of 'gazebo_ros_planar_move' plugin?",
+        "options": {"A": "Planar (2D) movement for ground robots", "B": "3D movement", "C": "Flying robots", "D": "Underwater"},
+        "correct": "A",
+        "explanation": "Planar move plugin simplifies 2D robot simulation without wheel physics."
+      },
+      {
+        "question": "How to simulate lidar with noise in Gazebo?",
+        "options": {"A": "Add Gaussian noise parameters in laser plugin", "B": "No noise simulation", "C": "Add post-processing", "D": "Cannot add noise"},
+        "correct": "A",
+        "explanation": "Gazebo laser plugins support Gaussian noise parameters for realistic simulation."
+      },
+      {
+        "question": "What is 'multi-threaded' spinner vs 'single-threaded' in Gazebo plugins?",
+        "options": {"A": "Multi-threaded allows concurrent callbacks", "B": "Single is faster", "C": "No difference", "D": "Multi-threaded crashes"},
+        "correct": "A",
+        "explanation": "Multi-threaded spinner processes callbacks concurrently for better throughput."
+      },
+      {
+        "question": "How to simulate GPS in Gazebo?",
+        "options": {"A": "Use libgazebo_ros_gps plugin", "B": "Use laser plugin", "C": "Manual publish", "D": "No GPS simulation"},
+        "correct": "A",
+        "explanation": "gazebo_ros_gps plugin simulates GPS sensor with noise and updates."
+      },
+      {
+        "question": "What is 'implicit' vs 'explicit' coordinate transform?",
+        "options": {"A": "Implicit: from frame IDs; Explicit: manual matrix", "B": "Same", "C": "Explicit is automatic", "D": "Implicit is manual"},
+        "correct": "A",
+        "explanation": "Implicit transforms use frame names; explicit requires direct matrix/vector specification."
+      },
+      {
+        "question": "How to simulate 'wheel slip' in Gazebo?",
+        "options": {"A": "Modify friction coefficients and contact parameters", "B": "No slip simulation", "C": "Add slip plugin", "D": "Manual adjustment"},
+        "correct": "A",
+        "explanation": "Adjusting ODE friction and surface parameters models wheel slip."
+      },
+      {
+        "question": "What is 'bullet' physics engine vs 'ode'?",
+        "options": {"A": "Different solvers with different performance/stability tradeoffs", "B": "Same", "C": "Bullet is older", "D": "ODE is newer"},
+        "correct": "A",
+        "explanation": "Bullet (default) and ODE offer different contact and constraint solvers."
+      },
+      {
+        "question": "How to implement 'ROS2 control' with Gazebo?",
+        "options": {"A": "Use gazebo_ros2_control plugin and configure controller manager", "B": "Direct joint control", "C": "No control", "D": "Manual commands"},
+        "correct": "A",
+        "explanation": "gazebo_ros2_control connects ros2_control controllers to Gazebo simulation."
+      },
+      {
+        "question": "What is 'forward command controller' in ros2_control?",
+        "options": {"A": "Publishes joint commands to hardware/simulation", "B": "Reads sensors", "C": "State estimator", "D": "Trajectory planner"},
+        "correct": "A",
+        "explanation": "Forward command controller sends computed commands to actuators."
+      },
+      {
+        "question": "How to simulate 'sensor fusion' in Gazebo?",
+        "options": {"A": "Run multiple sensors and fuse in ROS2 node", "B": "Single sensor", "C": "Gazebo fuses automatically", "D": "No fusion"},
+        "correct": "A",
+        "explanation": "Gazebo provides raw sensor data; fusion is done in external ROS2 nodes."
+      },
+      {
+        "question": "What is the 'camera_info' topic and its purpose?",
+        "options": {"A": "Camera calibration parameters (intrinsics)", "B": "Image data", "C": "Camera pose", "D": "Camera temperature"},
+        "correct": "A",
+        "explanation": "CameraInfo contains intrinsic matrix, distortion, and resolution for image rectification."
+      },
+      {
+        "question": "How to simulate 'depth camera' (RGB-D) in Gazebo?",
+        "options": {"A": "Use libgazebo_ros_depth_camera plugin", "B": "Use laser only", "C": "Use RGB only", "D": "Manual publish"},
+        "correct": "A",
+        "explanation": "Depth camera plugin provides RGB image and depth image topics."
+      },
+      {
+        "question": "What is 'pointcloud2' message and how from LaserScan?",
+        "options": {"A": "Convert LaserScan to 3D points using laser_geometry package", "B": "Direct mapping", "C": "No conversion", "D": "Manual conversion"},
+        "correct": "A",
+        "explanation": "laser_geometry::LaserProjection projects LaserScan to PointCloud2 in 3D."
+      },
+      {
+        "question": "How to handle 'laser retro-reflectors' in simulation?",
+        "options": {"A": "Modify material properties and laser return intensity", "B": "No effect", "C": "Add plugin", "D": "Manual marking"},
+        "correct": "A",
+        "explanation": "Material reflectance affects laser intensity return in Gazebo sensors."
+      },
+      {
+        "question": "What is 'deterministic simulation' and why important?",
+        "options": {"A": "Same inputs produce same outputs (for debugging)", "B": "Random outputs", "C": "Faster simulation", "D": "No importance"},
+        "correct": "A",
+        "explanation": "Determinism enables repeatable tests and debugging."
+      },
+      {
+        "question": "How to achieve deterministic Gazebo simulation?",
+        "options": {"A": "Fix random seed, use realtime factor = 0, disable threading", "B": "Random seed", "C": "No control", "D": "Faster CPU"},
+        "correct": "A",
+        "explanation": "Fix random seed, disable threading, and use non-realtime for deterministic runs."
+      },
+      {
+        "question": "What is 'realtime factor' in Gazebo?",
+        "options": {"A": "Simulation time / wall clock time ratio", "B": "Physics speed", "C": "Render speed", "D": "Network speed"},
+        "correct": "A",
+        "explanation": "Real-time factor < 1 means simulation slower than real-time; >1 faster."
+      },
+      {
+        "question": "How to debug physics instability in Gazebo?",
+        "options": {"A": "Reduce step size, increase iterations, check inertia", "B": "Increase step size", "C": "Ignore", "D": "Restart"},
+        "correct": "A",
+        "explanation": "Smaller step size and more iterations improve stability at computational cost."
+      },
+      {
+        "question": "What is 'contact surface' parameters in Gazebo?",
+        "options": {"A": "Friction, restitution, stiffness, damping", "B": "Color only", "C": "Mass only", "D": "Visual only"},
+        "correct": "A",
+        "explanation": "Surface parameters define how two materials interact on contact."
+      },
+      {
+        "question": "How to simulate 'soft contacts' or 'deformable objects' in Gazebo?",
+        "options": {"A": "Limited support; use ODE soft contact parameters", "B": "Full support", "C": "No support", "D": "Use plugins"},
+        "correct": "A",
+        "explanation": "Gazebo has limited deformable support; ODE's soft CFM/ERP parameters approximate compliance."
+      },
+      {
+        "question": "What is 'SDFormat' 1.6 vs 1.7 differences for ROS2?",
+        "options": {"A": "Version differences in plugin syntax and element names", "B": "No difference", "C": "Only version number", "D": "Incompatible"},
+        "correct": "A",
+        "explanation": "Newer SDF versions change element names and plugin specifications."
+      },
+      {
+        "question": "How to 'spawn' world from code (not launch file)?",
+        "options": {"A": "Use gazebo_msgs/SpawnModel service", "B": "Cannot spawn", "C": "Use command line", "D": "Manual file copy"},
+        "correct": "A",
+        "explanation": "SpawnModel service loads SDF/URDF into Gazebo programmatically."
+      },
+      {
+        "question": "What is the tradeoff between accuracy and performance in Gazebo?",
+        "options": {"A": "Higher accuracy needs smaller step size and more iterations (slower)", "B": "Same", "C": "Lower accuracy faster", "D": "No tradeoff"},
+        "correct": "A",
+        "explanation": "Accuracy requires more computation; balance with real-time factor requirements."
+      }
+    ]
+  }
+}

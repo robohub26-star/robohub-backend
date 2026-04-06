@@ -1,0 +1,1664 @@
+{
+  "beginner": {
+    "mcqs": [
+      {
+        "question": "What is Ubuntu?",
+        "options": {
+          "A": "Hardware",
+          "B": "OS",
+          "C": "Software tool",
+          "D": "Language"
+        },
+        "correct": "B",
+        "explanation": "Ubuntu is a Linux-based operating system."
+      },
+      {
+        "question": "Ubuntu is based on:",
+        "options": {
+          "A": "Windows",
+          "B": "Linux",
+          "C": "macOS",
+          "D": "Android"
+        },
+        "correct": "B",
+        "explanation": "Ubuntu is a distribution of the Linux operating system."
+      },
+      {
+        "question": "Command to list files:",
+        "options": {
+          "A": "show",
+          "B": "list",
+          "C": "ls",
+          "D": "dir"
+        },
+        "correct": "C",
+        "explanation": "The 'ls' command lists files and directories in Linux."
+      },
+      {
+        "question": "Command to change directory:",
+        "options": {
+          "A": "cd",
+          "B": "move",
+          "C": "dir",
+          "D": "go"
+        },
+        "correct": "A",
+        "explanation": "'cd' (change directory) is used to navigate between directories."
+      },
+      {
+        "question": "Root directory is represented as:",
+        "options": {
+          "A": "/",
+          "B": "root",
+          "C": "home",
+          "D": "~"
+        },
+        "correct": "A",
+        "explanation": "The root directory in Linux is represented by a forward slash (/)."
+      },
+      {
+        "question": "Command to print current directory:",
+        "options": {
+          "A": "pwd",
+          "B": "dir",
+          "C": "show",
+          "D": "cd"
+        },
+        "correct": "A",
+        "explanation": "'pwd' (print working directory) shows the current directory path."
+      },
+      {
+        "question": "ROS stands for:",
+        "options": {
+          "A": "Robot Operating System",
+          "B": "Real OS",
+          "C": "Robot Open System",
+          "D": "Remote OS"
+        },
+        "correct": "A",
+        "explanation": "ROS stands for Robot Operating System."
+      },
+      {
+        "question": "ROS2 is mainly used for:",
+        "options": {
+          "A": "Gaming",
+          "B": "Robotics",
+          "C": "Banking",
+          "D": "Editing"
+        },
+        "correct": "B",
+        "explanation": "ROS2 is a framework designed for robotics applications."
+      },
+      {
+        "question": "ROS2 is:",
+        "options": {
+          "A": "OS",
+          "B": "Framework",
+          "C": "Hardware",
+          "D": "App"
+        },
+        "correct": "B",
+        "explanation": "ROS2 is a middleware/framework for robot software development."
+      },
+      {
+        "question": "ROS2 improves over ROS1 in:",
+        "options": {
+          "A": "Security",
+          "B": "Communication",
+          "C": "Real-time",
+          "D": "All"
+        },
+        "correct": "D",
+        "explanation": "ROS2 improves on security, real-time performance, and communication."
+      },
+      {
+        "question": "A node is:",
+        "options": {
+          "A": "Hardware",
+          "B": "Process",
+          "C": "Sensor",
+          "D": "File"
+        },
+        "correct": "B",
+        "explanation": "A node is an executable process that performs computation in ROS2."
+      },
+      {
+        "question": "Nodes communicate using:",
+        "options": {
+          "A": "Files",
+          "B": "Topics",
+          "C": "USB",
+          "D": "RAM"
+        },
+        "correct": "B",
+        "explanation": "Nodes communicate with each other using topics, services, or actions."
+      },
+      {
+        "question": "One program =",
+        "options": {
+          "A": "Many nodes",
+          "B": "One node",
+          "C": "No node",
+          "D": "Driver"
+        },
+        "correct": "B",
+        "explanation": "A single program typically runs as one node, but can also run multiple nodes."
+      },
+      {
+        "question": "Command to list nodes:",
+        "options": {
+          "A": "ros2 node show",
+          "B": "ros2 node list",
+          "C": "ros2 list",
+          "D": "ros node list"
+        },
+        "correct": "B",
+        "explanation": "'ros2 node list' displays all active nodes in the ROS2 system."
+      },
+      {
+        "question": "Nodes are:",
+        "options": {
+          "A": "Independent",
+          "B": "Dependent",
+          "C": "Static",
+          "D": "Fixed"
+        },
+        "correct": "A",
+        "explanation": "Nodes are designed to be independent and modular."
+      },
+      {
+        "question": "Topic is:",
+        "options": {
+          "A": "File",
+          "B": "Communication channel",
+          "C": "Sensor",
+          "D": "Code"
+        },
+        "correct": "B",
+        "explanation": "A topic is a named communication channel for publishing/subscribing data."
+      },
+      {
+        "question": "Topics follow:",
+        "options": {
+          "A": "Request",
+          "B": "Publish/Subscribe",
+          "C": "Call",
+          "D": "Loop"
+        },
+        "correct": "B",
+        "explanation": "Topics use the publish-subscribe communication pattern."
+      },
+      {
+        "question": "Command to list topics:",
+        "options": {
+          "A": "ros2 topic show",
+          "B": "ros2 topic list",
+          "C": "ros topic list",
+          "D": "list topic"
+        },
+        "correct": "B",
+        "explanation": "'ros2 topic list' shows all available topics in the ROS2 system."
+      },
+      {
+        "question": "Topics are:",
+        "options": {
+          "A": "Synchronous",
+          "B": "Asynchronous",
+          "C": "Offline",
+          "D": "Manual"
+        },
+        "correct": "B",
+        "explanation": "Topics provide asynchronous communication between nodes."
+      },
+      {
+        "question": "Multiple nodes can:",
+        "options": {
+          "A": "Publish",
+          "B": "Subscribe",
+          "C": "Both",
+          "D": "None"
+        },
+        "correct": "C",
+        "explanation": "Multiple nodes can both publish to and subscribe from the same topic."
+      },
+      {
+        "question": "Publisher:",
+        "options": {
+          "A": "Receives data",
+          "B": "Sends data",
+          "C": "Stores data",
+          "D": "Deletes data"
+        },
+        "correct": "B",
+        "explanation": "A publisher sends data to a topic."
+      },
+      {
+        "question": "Subscriber:",
+        "options": {
+          "A": "Sends",
+          "B": "Receives",
+          "C": "Stores",
+          "D": "Deletes"
+        },
+        "correct": "B",
+        "explanation": "A subscriber receives data from a topic."
+      },
+      {
+        "question": "Publisher sends data to:",
+        "options": {
+          "A": "File",
+          "B": "Topic",
+          "C": "Node",
+          "D": "CPU"
+        },
+        "correct": "B",
+        "explanation": "Publishers send data to a specific topic, not directly to other nodes."
+      },
+      {
+        "question": "Subscriber listens to:",
+        "options": {
+          "A": "Topic",
+          "B": "File",
+          "C": "RAM",
+          "D": "Disk"
+        },
+        "correct": "A",
+        "explanation": "Subscribers listen for messages on a specific topic."
+      },
+      {
+        "question": "Example topic:",
+        "options": {
+          "A": "/cmd_vel",
+          "B": "/file",
+          "C": "/data",
+          "D": "/ram"
+        },
+        "correct": "A",
+        "explanation": "/cmd_vel is a common topic for sending velocity commands to a robot."
+      },
+      {
+        "question": "Turtlesim is used for:",
+        "options": {
+          "A": "Game",
+          "B": "Simulation",
+          "C": "Hardware",
+          "D": "Design"
+        },
+        "correct": "B",
+        "explanation": "Turtlesim is a simulation tool for learning ROS2 concepts."
+      },
+      {
+        "question": "Launch turtlesim:",
+        "options": {
+          "A": "ros2 run turtlesim",
+          "B": "ros2 run turtlesim turtlesim_node",
+          "C": "turtlesim start",
+          "D": "run turtle"
+        },
+        "correct": "B",
+        "explanation": "Use 'ros2 run turtlesim turtlesim_node' to launch the turtlesim simulation."
+      },
+      {
+        "question": "Turtle moves using:",
+        "options": {
+          "A": "Mouse",
+          "B": "Topic",
+          "C": "Keyboard",
+          "D": "File"
+        },
+        "correct": "B",
+        "explanation": "The turtle moves by publishing velocity commands to a topic."
+      },
+      {
+        "question": "Turtle name default:",
+        "options": {
+          "A": "turtle1",
+          "B": "bot1",
+          "C": "sim1",
+          "D": "robot1"
+        },
+        "correct": "A",
+        "explanation": "The default turtle in turtlesim is named 'turtle1'."
+      },
+      {
+        "question": "Turtle movement controlled by:",
+        "options": {
+          "A": "/cmd_vel",
+          "B": "/move",
+          "C": "/speed",
+          "D": "/go"
+        },
+        "correct": "A",
+        "explanation": "The /cmd_vel topic publishes Twist messages to control turtle movement."
+      },
+      {
+        "question": "ros2 node list shows:",
+        "options": {
+          "A": "Topics",
+          "B": "Nodes",
+          "C": "Files",
+          "D": "Paths"
+        },
+        "correct": "B",
+        "explanation": "The 'ros2 node list' command displays all active nodes."
+      },
+      {
+        "question": "ros2 topic list shows:",
+        "options": {
+          "A": "Nodes",
+          "B": "Topics",
+          "C": "Files",
+          "D": "Memory"
+        },
+        "correct": "B",
+        "explanation": "The 'ros2 topic list' command displays all active topics."
+      },
+      {
+        "question": "ros2 topic echo does:",
+        "options": {
+          "A": "Send data",
+          "B": "Show data",
+          "C": "Delete data",
+          "D": "Save data"
+        },
+        "correct": "B",
+        "explanation": "'ros2 topic echo' displays messages being published to a topic."
+      },
+      {
+        "question": "ros2 topic echo /cmd_vel shows:",
+        "options": {
+          "A": "Movement commands",
+          "B": "Images",
+          "C": "Files",
+          "D": "Code"
+        },
+        "correct": "A",
+        "explanation": "Echoing /cmd_vel shows velocity movement commands."
+      },
+      {
+        "question": "ROS2 commands run in:",
+        "options": {
+          "A": "Terminal",
+          "B": "Browser",
+          "C": "App",
+          "D": "Editor"
+        },
+        "correct": "A",
+        "explanation": "ROS2 commands are executed in a terminal/command line."
+      },
+      {
+        "question": "cmd_vel stands for:",
+        "options": {
+          "A": "Command velocity",
+          "B": "Control value",
+          "C": "Code velocity",
+          "D": "Move velocity"
+        },
+        "correct": "A",
+        "explanation": "cmd_vel is short for Command Velocity."
+      },
+      {
+        "question": "cmd_vel controls:",
+        "options": {
+          "A": "Camera",
+          "B": "Robot movement",
+          "C": "Audio",
+          "D": "Sensor"
+        },
+        "correct": "B",
+        "explanation": "cmd_vel is used to control robot movement (linear and angular velocity)."
+      },
+      {
+        "question": "cmd_vel message type:",
+        "options": {
+          "A": "String",
+          "B": "Twist",
+          "C": "Int",
+          "D": "Bool"
+        },
+        "correct": "B",
+        "explanation": "cmd_vel uses the Twist message type from geometry_msgs."
+      },
+      {
+        "question": "Twist includes:",
+        "options": {
+          "A": "Position",
+          "B": "Velocity",
+          "C": "Color",
+          "D": "Size"
+        },
+        "correct": "B",
+        "explanation": "Twist messages contain linear and angular velocity components."
+      },
+      {
+        "question": "Linear velocity is:",
+        "options": {
+          "A": "Rotation",
+          "B": "Straight movement",
+          "C": "Stop",
+          "D": "Jump"
+        },
+        "correct": "B",
+        "explanation": "Linear velocity controls straight-line forward/backward movement."
+      },
+      {
+        "question": "Angular velocity is:",
+        "options": {
+          "A": "Straight",
+          "B": "Rotation",
+          "C": "Stop",
+          "D": "Speed"
+        },
+        "correct": "B",
+        "explanation": "Angular velocity controls rotational movement (turning)."
+      },
+      {
+        "question": "ROS2 uses:",
+        "options": {
+          "A": "DDS",
+          "B": "HTTP",
+          "C": "FTP",
+          "D": "SMTP"
+        },
+        "correct": "A",
+        "explanation": "ROS2 uses DDS (Data Distribution Service) for communication."
+      },
+      {
+        "question": "Communication is:",
+        "options": {
+          "A": "Centralized",
+          "B": "Distributed",
+          "C": "Offline",
+          "D": "Static"
+        },
+        "correct": "B",
+        "explanation": "ROS2 uses distributed communication where nodes can run on different devices."
+      },
+      {
+        "question": "ROS2 supports:",
+        "options": {
+          "A": "Real-time",
+          "B": "Non real-time",
+          "C": "Both",
+          "D": "None"
+        },
+        "correct": "C",
+        "explanation": "ROS2 supports both real-time and non-real-time applications."
+      },
+      {
+        "question": "Node lifecycle helps:",
+        "options": {
+          "A": "Control node states",
+          "B": "Delete files",
+          "C": "Store data",
+          "D": "Run OS"
+        },
+        "correct": "A",
+        "explanation": "Node lifecycle manages node states like unconfigured, active, and shutdown."
+      },
+      {
+        "question": "ROS2 workspace contains:",
+        "options": {
+          "A": "Packages",
+          "B": "OS",
+          "C": "RAM",
+          "D": "Drivers"
+        },
+        "correct": "A",
+        "explanation": "A ROS2 workspace contains packages, source code, and build files."
+      },
+      {
+        "question": "Package includes:",
+        "options": {
+          "A": "Code",
+          "B": "Config",
+          "C": "Resources",
+          "D": "All"
+        },
+        "correct": "D",
+        "explanation": "A ROS2 package includes code, configuration files, resources, and package.xml."
+      },
+      {
+        "question": "Build tool in ROS2:",
+        "options": {
+          "A": "catkin",
+          "B": "colcon",
+          "C": "make",
+          "D": "gcc"
+        },
+        "correct": "B",
+        "explanation": "colcon is the recommended build tool for ROS2."
+      },
+      {
+        "question": "ROS2 supports languages:",
+        "options": {
+          "A": "Python",
+          "B": "C++",
+          "C": "Both",
+          "D": "None"
+        },
+        "correct": "C",
+        "explanation": "ROS2 supports both Python and C++ (and other languages via clients)."
+      },
+      {
+        "question": "ROS2 is mainly for:",
+        "options": {
+          "A": "Automation",
+          "B": "Robotics",
+          "C": "AI",
+          "D": "All"
+        },
+        "correct": "D",
+        "explanation": "ROS2 is used in robotics, automation, and AI applications."
+      }
+    ]
+  },
+  "intermediate": {
+    "mcqs": [
+      {
+        "question": "Which command updates Ubuntu packages?",
+        "options": {
+          "A": "apt install",
+          "B": "apt update",
+          "C": "apt upgrade",
+          "D": "update all"
+        },
+        "correct": "B",
+        "explanation": "'apt update' refreshes the package list from repositories."
+      },
+      {
+        "question": "Which command installs ROS2 packages?",
+        "options": {
+          "A": "apt install ros2",
+          "B": "sudo apt install ros-<distro>-<pkg>",
+          "C": "install ros2",
+          "D": "pip install ros"
+        },
+        "correct": "B",
+        "explanation": "ROS2 packages are installed using 'sudo apt install ros-<distro>-<package-name>'."
+      },
+      {
+        "question": "What does source /opt/ros/<distro>/setup.bash do?",
+        "options": {
+          "A": "Installs ROS",
+          "B": "Deletes ROS",
+          "C": "Sets environment variables",
+          "D": "Runs node"
+        },
+        "correct": "C",
+        "explanation": "Sourcing setup.bash sets ROS2 environment variables in the current shell."
+      },
+      {
+        "question": "If ROS2 commands not working, first check:",
+        "options": {
+          "A": "Internet",
+          "B": "Environment sourcing",
+          "C": "RAM",
+          "D": "CPU"
+        },
+        "correct": "B",
+        "explanation": "Most ROS2 command issues are resolved by sourcing the setup.bash file."
+      },
+      {
+        "question": "Nodes in ROS2 are:",
+        "options": {
+          "A": "Threads",
+          "B": "Independent processes",
+          "C": "Files",
+          "D": "Drivers"
+        },
+        "correct": "B",
+        "explanation": "Each node runs as an independent process in ROS2."
+      },
+      {
+        "question": "Multiple nodes in same program possible?",
+        "options": {
+          "A": "No",
+          "B": "Yes",
+          "C": "Only 2",
+          "D": "Only 1"
+        },
+        "correct": "B",
+        "explanation": "Yes, multiple nodes can be created within a single program using different node instances."
+      },
+      {
+        "question": "Node communication is:",
+        "options": {
+          "A": "Direct",
+          "B": "Through topics/services",
+          "C": "Via files",
+          "D": "Manual"
+        },
+        "correct": "B",
+        "explanation": "ROS2 nodes communicate via topics, services, or actions, not directly."
+      },
+      {
+        "question": "Command to get node info:",
+        "options": {
+          "A": "ros2 node show",
+          "B": "ros2 node info",
+          "C": "ros2 info",
+          "D": "ros node info"
+        },
+        "correct": "B",
+        "explanation": "'ros2 node info <node_name>' shows subscribers, publishers, services, and actions of a node."
+      },
+      {
+        "question": "Node name must be:",
+        "options": {
+          "A": "Unique",
+          "B": "Same",
+          "C": "Random",
+          "D": "Fixed"
+        },
+        "correct": "A",
+        "explanation": "Each node in a ROS2 graph must have a unique name."
+      },
+      {
+        "question": "Hidden nodes can be viewed using:",
+        "options": {
+          "A": "--all",
+          "B": "--show-hidden-nodes",
+          "C": "--hidden",
+          "D": "-h"
+        },
+        "correct": "B",
+        "explanation": "'ros2 node list --show-hidden-nodes' displays hidden internal nodes."
+      },
+      {
+        "question": "Topics are used for:",
+        "options": {
+          "A": "Request-response",
+          "B": "Continuous data flow",
+          "C": "File transfer",
+          "D": "Storage"
+        },
+        "correct": "B",
+        "explanation": "Topics are best for streaming continuous data like sensor readings or commands."
+      },
+      {
+        "question": "Topics use which communication model?",
+        "options": {
+          "A": "Client-server",
+          "B": "Pub-Sub",
+          "C": "Peer-to-peer",
+          "D": "Direct"
+        },
+        "correct": "B",
+        "explanation": "Topics use the publish-subscribe (pub-sub) communication model."
+      },
+      {
+        "question": "Command to check topic type:",
+        "options": {
+          "A": "ros2 topic type",
+          "B": "ros2 topic info",
+          "C": "ros2 type",
+          "D": "ros topic show"
+        },
+        "correct": "A",
+        "explanation": "'ros2 topic type <topic_name>' shows the message type of a topic."
+      },
+      {
+        "question": "Command for detailed topic info:",
+        "options": {
+          "A": "ros2 topic type",
+          "B": "ros2 topic info",
+          "C": "ros2 info",
+          "D": "topic list"
+        },
+        "correct": "B",
+        "explanation": "'ros2 topic info <topic_name>' shows publisher/subscriber count and type."
+      },
+      {
+        "question": "Topic names start with:",
+        "options": {
+          "A": "/",
+          "B": "#",
+          "C": "$",
+          "D": "@"
+        },
+        "correct": "A",
+        "explanation": "ROS2 topic names start with a forward slash (/) by convention."
+      },
+      {
+        "question": "Publisher frequency is called:",
+        "options": {
+          "A": "Rate",
+          "B": "Speed",
+          "C": "Loop",
+          "D": "Cycle"
+        },
+        "correct": "A",
+        "explanation": "Publisher rate refers to how many messages per second are published."
+      },
+      {
+        "question": "Multiple subscribers can:",
+        "options": {
+          "A": "Listen same topic",
+          "B": "Not allowed",
+          "C": "Crash system",
+          "D": "Duplicate node"
+        },
+        "correct": "A",
+        "explanation": "Multiple subscribers can listen to the same topic without issues."
+      },
+      {
+        "question": "Subscriber callback function is used for:",
+        "options": {
+          "A": "Sending data",
+          "B": "Receiving data",
+          "C": "Deleting data",
+          "D": "Storing data"
+        },
+        "correct": "B",
+        "explanation": "Callback functions are triggered when a subscriber receives a new message."
+      },
+      {
+        "question": "Publisher needs:",
+        "options": {
+          "A": "Topic name + message type",
+          "B": "File",
+          "C": "RAM",
+          "D": "Node ID"
+        },
+        "correct": "A",
+        "explanation": "A publisher requires a topic name and the message type to publish."
+      },
+      {
+        "question": "Subscriber needs:",
+        "options": {
+          "A": "Topic + callback",
+          "B": "File",
+          "C": "CPU",
+          "D": "Disk"
+        },
+        "correct": "A",
+        "explanation": "A subscriber needs a topic to listen to and a callback function to process messages."
+      },
+      {
+        "question": "Which package is used?",
+        "options": {
+          "A": "turtlebot",
+          "B": "turtlesim",
+          "C": "robot_sim",
+          "D": "sim_ros"
+        },
+        "correct": "B",
+        "explanation": "turtlesim is the package used for the turtle simulation in ROS2."
+      },
+      {
+        "question": "Command to control turtle using keyboard:",
+        "options": {
+          "A": "ros2 run turtlesim control",
+          "B": "ros2 run turtlesim turtle_teleop_key",
+          "C": "ros2 run teleop",
+          "D": "turtle move"
+        },
+        "correct": "B",
+        "explanation": "'ros2 run turtlesim turtle_teleop_key' runs the keyboard teleoperation node."
+      },
+      {
+        "question": "Turtlesim publishes position on:",
+        "options": {
+          "A": "/pose",
+          "B": "/position",
+          "C": "/loc",
+          "D": "/coord"
+        },
+        "correct": "A",
+        "explanation": "Turtlesim publishes turtle position and orientation on the /pose topic."
+      },
+      {
+        "question": "Turtlesim subscribes to:",
+        "options": {
+          "A": "/pose",
+          "B": "/cmd_vel",
+          "C": "/speed",
+          "D": "/move"
+        },
+        "correct": "B",
+        "explanation": "Turtlesim subscribes to /cmd_vel to receive velocity commands."
+      },
+      {
+        "question": "Coordinate system in turtlesim is:",
+        "options": {
+          "A": "2D",
+          "B": "3D",
+          "C": "1D",
+          "D": "4D"
+        },
+        "correct": "A",
+        "explanation": "Turtlesim uses a 2D coordinate system (x, y, theta)."
+      },
+      {
+        "question": "ros2 topic echo shows:",
+        "options": {
+          "A": "Live data",
+          "B": "Stored data",
+          "C": "Logs",
+          "D": "Files"
+        },
+        "correct": "A",
+        "explanation": "'ros2 topic echo' displays live streaming data from a topic."
+      },
+      {
+        "question": "ros2 topic pub is used to:",
+        "options": {
+          "A": "Subscribe",
+          "B": "Publish manually",
+          "C": "Delete topic",
+          "D": "Stop node"
+        },
+        "correct": "B",
+        "explanation": "'ros2 topic pub' manually publishes a message to a topic from the command line."
+      },
+      {
+        "question": "ros2 topic echo /pose shows:",
+        "options": {
+          "A": "Velocity",
+          "B": "Position",
+          "C": "Image",
+          "D": "Sensor"
+        },
+        "correct": "B",
+        "explanation": "Echoing /pose shows the turtle's position (x, y) and orientation (theta)."
+      },
+      {
+        "question": "ros2 node info shows:",
+        "options": {
+          "A": "Topic connections",
+          "B": "Files",
+          "C": "Memory",
+          "D": "CPU"
+        },
+        "correct": "A",
+        "explanation": "'ros2 node info' shows which topics, services, and actions a node uses."
+      },
+      {
+        "question": "ros2 topic list -t shows:",
+        "options": {
+          "A": "Topic + type",
+          "B": "Nodes",
+          "C": "Files",
+          "D": "RAM"
+        },
+        "correct": "A",
+        "explanation": "'ros2 topic list -t' lists topics along with their message types."
+      },
+      {
+        "question": "/cmd_vel is a:",
+        "options": {
+          "A": "Node",
+          "B": "Topic",
+          "C": "File",
+          "D": "Sensor"
+        },
+        "correct": "B",
+        "explanation": "/cmd_vel is a standard topic for sending velocity commands."
+      },
+      {
+        "question": "Message type for cmd_vel:",
+        "options": {
+          "A": "Pose",
+          "B": "Twist",
+          "C": "String",
+          "D": "Float"
+        },
+        "correct": "B",
+        "explanation": "/cmd_vel uses the Twist message type from geometry_msgs."
+      },
+      {
+        "question": "Twist contains:",
+        "options": {
+          "A": "Linear + Angular",
+          "B": "Position + Speed",
+          "C": "X + Y",
+          "D": "A + B"
+        },
+        "correct": "A",
+        "explanation": "Twist contains linear (x, y, z) and angular (x, y, z) velocity components."
+      },
+      {
+        "question": "Linear.x controls:",
+        "options": {
+          "A": "Forward/backward",
+          "B": "Rotation",
+          "C": "Stop",
+          "D": "Height"
+        },
+        "correct": "A",
+        "explanation": "Linear.x controls forward (positive) and backward (negative) movement."
+      },
+      {
+        "question": "Angular.z controls:",
+        "options": {
+          "A": "Rotation",
+          "B": "Speed",
+          "C": "Position",
+          "D": "Height"
+        },
+        "correct": "A",
+        "explanation": "Angular.z controls rotation around the vertical axis (turning)."
+      },
+      {
+        "question": "If angular.z > 0:",
+        "options": {
+          "A": "Left turn",
+          "B": "Right turn",
+          "C": "Stop",
+          "D": "Forward"
+        },
+        "correct": "A",
+        "explanation": "Positive angular.z typically causes a counter-clockwise/left turn."
+      },
+      {
+        "question": "If linear.x = 0:",
+        "options": {
+          "A": "Move",
+          "B": "Stop forward motion",
+          "C": "Rotate",
+          "D": "Jump"
+        },
+        "correct": "B",
+        "explanation": "Zero linear.x means no forward/backward movement (but rotation can still happen)."
+      },
+      {
+        "question": "ROS2 communication uses:",
+        "options": {
+          "A": "DDS",
+          "B": "TCP only",
+          "C": "HTTP",
+          "D": "FTP"
+        },
+        "correct": "A",
+        "explanation": "ROS2 uses DDS (Data Distribution Service) as its middleware."
+      },
+      {
+        "question": "DDS provides:",
+        "options": {
+          "A": "Middleware",
+          "B": "OS",
+          "C": "File",
+          "D": "GUI"
+        },
+        "correct": "A",
+        "explanation": "DDS provides middleware for reliable, real-time data communication."
+      },
+      {
+        "question": "QoS in ROS2 means:",
+        "options": {
+          "A": "Quality of Service",
+          "B": "Quantity of Service",
+          "C": "Queue system",
+          "D": "Quick service"
+        },
+        "correct": "A",
+        "explanation": "QoS stands for Quality of Service settings in ROS2."
+      },
+      {
+        "question": "QoS affects:",
+        "options": {
+          "A": "Communication reliability",
+          "B": "CPU",
+          "C": "RAM",
+          "D": "Files"
+        },
+        "correct": "A",
+        "explanation": "QoS settings control reliability, durability, and history of message delivery."
+      },
+      {
+        "question": "If no data in echo, check:",
+        "options": {
+          "A": "Topic active",
+          "B": "Node running",
+          "C": "Correct name",
+          "D": "All"
+        },
+        "correct": "D",
+        "explanation": "All three - active topic, running publisher node, and correct topic name - are needed."
+      },
+      {
+        "question": "If node not listed:",
+        "options": {
+          "A": "Not running",
+          "B": "Hidden",
+          "C": "Error",
+          "D": "All"
+        },
+        "correct": "D",
+        "explanation": "A node may not be listed if not running, hidden, or crashed with an error."
+      },
+      {
+        "question": "Multiple publishers on same topic:",
+        "options": {
+          "A": "Allowed",
+          "B": "Not allowed",
+          "C": "Crash",
+          "D": "Error"
+        },
+        "correct": "A",
+        "explanation": "Multiple publishers can publish to the same topic simultaneously."
+      },
+      {
+        "question": "Data flow is:",
+        "options": {
+          "A": "One way",
+          "B": "Two way",
+          "C": "Loop",
+          "D": "Random"
+        },
+        "correct": "A",
+        "explanation": "Topics provide one-way data flow from publisher(s) to subscriber(s)."
+      },
+      {
+        "question": "ROS2 graph shows:",
+        "options": {
+          "A": "Nodes + topics",
+          "B": "Files",
+          "C": "RAM",
+          "D": "CPU"
+        },
+        "correct": "A",
+        "explanation": "The ROS2 graph shows nodes and their topic/service connections."
+      },
+      {
+        "question": "A node can be both:",
+        "options": {
+          "A": "Publisher & Subscriber",
+          "B": "Only publisher",
+          "C": "Only subscriber",
+          "D": "None"
+        },
+        "correct": "A",
+        "explanation": "A node can simultaneously publish to one topic and subscribe to another."
+      },
+      {
+        "question": "ros2 topic pub sends data:",
+        "options": {
+          "A": "Once",
+          "B": "Continuous",
+          "C": "Both (depends)",
+          "D": "Never"
+        },
+        "correct": "C",
+        "explanation": "Using '--once' sends once; without it, sends continuously at 1Hz."
+      },
+      {
+        "question": "Teleop node acts as:",
+        "options": {
+          "A": "Publisher",
+          "B": "Subscriber",
+          "C": "Both",
+          "D": "None"
+        },
+        "correct": "A",
+        "explanation": "Teleop node publishes velocity commands to /cmd_vel."
+      },
+      {
+        "question": "Turtlesim node acts as:",
+        "options": {
+          "A": "Subscriber (/cmd_vel)",
+          "B": "Publisher (/pose)",
+          "C": "Both",
+          "D": "None"
+        },
+        "correct": "C",
+        "explanation": "Turtlesim subscribes to /cmd_vel and publishes to /pose."
+      }
+    ]
+  },
+  "advanced": {
+    "mcqs": [
+      {
+        "question": "If ROS2 commands work in one terminal but not another, the issue is:",
+        "options": {
+          "A": "RAM",
+          "B": "Missing sourcing",
+          "C": "CPU",
+          "D": "Disk"
+        },
+        "correct": "B",
+        "explanation": "Each terminal needs to source the ROS2 setup.bash file independently."
+      },
+      {
+        "question": "Correct order after installing ROS2:",
+        "options": {
+          "A": "run node → source",
+          "B": "source → run node",
+          "C": "run topic → install",
+          "D": "echo → source"
+        },
+        "correct": "B",
+        "explanation": "Environment must be sourced before running any ROS2 commands."
+      },
+      {
+        "question": "Workspace overlay is created using:",
+        "options": {
+          "A": "source /opt/ros",
+          "B": "source install/setup.bash",
+          "C": "apt install",
+          "D": "ros2 run"
+        },
+        "correct": "B",
+        "explanation": "Sourcing install/setup.bash from your workspace overlays it on top of the base ROS2 installation."
+      },
+      {
+        "question": "If two ROS2 distributions conflict, solution:",
+        "options": {
+          "A": "Restart system",
+          "B": "Source correct distro",
+          "C": "Delete files",
+          "D": "Format system"
+        },
+        "correct": "B",
+        "explanation": "Source the setup.bash of the specific distribution you want to use."
+      },
+      {
+        "question": "A node can communicate without topics using:",
+        "options": {
+          "A": "Files",
+          "B": "Services",
+          "C": "RAM",
+          "D": "Disk"
+        },
+        "correct": "B",
+        "explanation": "Services and actions provide alternative communication patterns to topics."
+      },
+      {
+        "question": "Node lifecycle helps in:",
+        "options": {
+          "A": "Managing states",
+          "B": "Increasing speed",
+          "C": "Reducing RAM",
+          "D": "File handling"
+        },
+        "correct": "A",
+        "explanation": "Node lifecycle manages states like unconfigured, inactive, active, and shutdown."
+      },
+      {
+        "question": "If two nodes have same name:",
+        "options": {
+          "A": "Allowed",
+          "B": "Conflict",
+          "C": "Ignored",
+          "D": "Merged"
+        },
+        "correct": "B",
+        "explanation": "Node names must be unique within the same ROS2 domain."
+      },
+      {
+        "question": "ros2 node info shows:",
+        "options": {
+          "A": "Publishers & Subscribers",
+          "B": "Files",
+          "C": "CPU",
+          "D": "Disk"
+        },
+        "correct": "A",
+        "explanation": "'ros2 node info' displays all publishers, subscribers, services, and actions of a node."
+      },
+      {
+        "question": "A node can publish to multiple topics:",
+        "options": {
+          "A": "No",
+          "B": "Yes",
+          "C": "Only 2",
+          "D": "Only 1"
+        },
+        "correct": "B",
+        "explanation": "A node can create multiple publisher objects for different topics."
+      },
+      {
+        "question": "Topics are best for:",
+        "options": {
+          "A": "Instant response",
+          "B": "Streaming data",
+          "C": "File transfer",
+          "D": "Storage"
+        },
+        "correct": "B",
+        "explanation": "Topics excel at continuous streaming of sensor or command data."
+      },
+      {
+        "question": "For request-response, use:",
+        "options": {
+          "A": "Topic",
+          "B": "Service",
+          "C": "File",
+          "D": "Node"
+        },
+        "correct": "B",
+        "explanation": "Services provide synchronous request-response communication."
+      },
+      {
+        "question": "If topic exists but no data:",
+        "options": {
+          "A": "No publisher",
+          "B": "Error",
+          "C": "Crash",
+          "D": "RAM issue"
+        },
+        "correct": "A",
+        "explanation": "A topic without data means no node is publishing to it."
+      },
+      {
+        "question": "Topic type mismatch causes:",
+        "options": {
+          "A": "Smooth run",
+          "B": "No communication",
+          "C": "Faster speed",
+          "D": "Crash OS"
+        },
+        "correct": "B",
+        "explanation": "Publisher and subscriber must use the exact same message type to communicate."
+      },
+      {
+        "question": "QoS mismatch results in:",
+        "options": {
+          "A": "Data drop",
+          "B": "Perfect communication",
+          "C": "Faster speed",
+          "D": "No effect"
+        },
+        "correct": "A",
+        "explanation": "Incompatible QoS settings between publisher and subscriber can cause message loss."
+      },
+      {
+        "question": "Publisher rate too high →",
+        "options": {
+          "A": "Faster system",
+          "B": "Data loss possible",
+          "C": "No effect",
+          "D": "Crash node"
+        },
+        "correct": "B",
+        "explanation": "Subscribers may not keep up, causing buffer overflow and data loss."
+      },
+      {
+        "question": "Subscriber slow processing →",
+        "options": {
+          "A": "Buffer overflow",
+          "B": "Faster system",
+          "C": "No issue",
+          "D": "Auto fix"
+        },
+        "correct": "A",
+        "explanation": "Slow callbacks cause messages to queue up, potentially overflowing the buffer."
+      },
+      {
+        "question": "Callback executes when:",
+        "options": {
+          "A": "Node starts",
+          "B": "Message arrives",
+          "C": "Topic created",
+          "D": "File saved"
+        },
+        "correct": "B",
+        "explanation": "Subscriber callback functions are triggered upon message reception."
+      },
+      {
+        "question": "One publisher → many subscribers is:",
+        "options": {
+          "A": "Invalid",
+          "B": "Valid",
+          "C": "Error",
+          "D": "Limited"
+        },
+        "correct": "B",
+        "explanation": "A single publisher can serve any number of subscribers."
+      },
+      {
+        "question": "Turtlesim node publishes continuously on:",
+        "options": {
+          "A": "/pose",
+          "B": "/cmd_vel",
+          "C": "/speed",
+          "D": "/loc"
+        },
+        "correct": "A",
+        "explanation": "/pose topic carries the turtle's position and orientation at regular intervals."
+      },
+      {
+        "question": "Teleop node publishes to:",
+        "options": {
+          "A": "/pose",
+          "B": "/cmd_vel",
+          "C": "/state",
+          "D": "/loc"
+        },
+        "correct": "B",
+        "explanation": "Teleop node publishes velocity commands to the /cmd_vel topic."
+      },
+      {
+        "question": "If turtle not moving but echo shows data:",
+        "options": {
+          "A": "Wrong topic",
+          "B": "QoS mismatch",
+          "C": "Node error",
+          "D": "All"
+        },
+        "correct": "D",
+        "explanation": "Multiple issues could cause this: wrong topic, QoS mismatch, or node malfunction."
+      },
+      {
+        "question": "Turtlesim coordinate origin is:",
+        "options": {
+          "A": "Center",
+          "B": "Bottom-left",
+          "C": "Top-right",
+          "D": "Random"
+        },
+        "correct": "B",
+        "explanation": "Turtlesim uses bottom-left corner as origin (0,0)."
+      },
+      {
+        "question": "Command to manually publish:",
+        "options": {
+          "A": "ros2 topic send",
+          "B": "ros2 topic pub",
+          "C": "ros2 pub",
+          "D": "ros send"
+        },
+        "correct": "B",
+        "explanation": "'ros2 topic pub' is used to manually publish messages from the command line."
+      },
+      {
+        "question": "Publishing one-time message:",
+        "options": {
+          "A": "--once",
+          "B": "--single",
+          "C": "--1",
+          "D": "--stop"
+        },
+        "correct": "A",
+        "explanation": "The --once flag publishes a single message and exits."
+      },
+      {
+        "question": "ros2 topic echo can filter fields using:",
+        "options": {
+          "A": "grep",
+          "B": "filter option",
+          "C": "field keyword",
+          "D": "Not possible"
+        },
+        "correct": "A",
+        "explanation": "Pipe output to grep or jq to filter specific fields."
+      },
+      {
+        "question": "ros2 topic hz shows:",
+        "options": {
+          "A": "Frequency",
+          "B": "Data",
+          "C": "Type",
+          "D": "Node"
+        },
+        "correct": "A",
+        "explanation": "'ros2 topic hz' displays the publishing frequency of a topic."
+      },
+      {
+        "question": "cmd_vel is conventionally used for:",
+        "options": {
+          "A": "Sensors",
+          "B": "Velocity control",
+          "C": "Image",
+          "D": "Map"
+        },
+        "correct": "B",
+        "explanation": "cmd_vel is the standard topic name for robot velocity commands."
+      },
+      {
+        "question": "Twist message has:",
+        "options": {
+          "A": "2 vectors",
+          "B": "3 vectors",
+          "C": "1 vector",
+          "D": "4 vectors"
+        },
+        "correct": "A",
+        "explanation": "Twist contains linear vector (x,y,z) and angular vector (x,y,z)."
+      },
+      {
+        "question": "Linear vector includes:",
+        "options": {
+          "A": "x, y, z",
+          "B": "a, b, c",
+          "C": "pos",
+          "D": "vel"
+        },
+        "correct": "A",
+        "explanation": "Linear vector has components for x, y, and z axes."
+      },
+      {
+        "question": "Angular vector includes:",
+        "options": {
+          "A": "x, y, z",
+          "B": "pos",
+          "C": "speed",
+          "D": "dir"
+        },
+        "correct": "A",
+        "explanation": "Angular vector has components for roll, pitch, and yaw."
+      },
+      {
+        "question": "Forward motion in turtle:",
+        "options": {
+          "A": "linear.x > 0",
+          "B": "angular.z > 0",
+          "C": "linear.y > 0",
+          "D": "angular.x > 0"
+        },
+        "correct": "A",
+        "explanation": "Positive linear.x moves the turtle forward."
+      },
+      {
+        "question": "Rotate right:",
+        "options": {
+          "A": "angular.z < 0",
+          "B": "angular.z > 0",
+          "C": "linear.x > 0",
+          "D": "linear.y < 0"
+        },
+        "correct": "A",
+        "explanation": "Negative angular.z rotates clockwise (right turn)."
+      },
+      {
+        "question": "Stop motion completely:",
+        "options": {
+          "A": "linear=0, angular=0",
+          "B": "linear>0",
+          "C": "angular>0",
+          "D": "none"
+        },
+        "correct": "A",
+        "explanation": "Set both linear and angular components to zero for complete stop."
+      },
+      {
+        "question": "ROS2 uses DDS for:",
+        "options": {
+          "A": "Storage",
+          "B": "Communication",
+          "C": "GUI",
+          "D": "OS"
+        },
+        "correct": "B",
+        "explanation": "DDS is the middleware that handles all ROS2 communication."
+      },
+      {
+        "question": "DDS allows:",
+        "options": {
+          "A": "Decentralized system",
+          "B": "Central server",
+          "C": "File storage",
+          "D": "GUI"
+        },
+        "correct": "A",
+        "explanation": "DDS enables peer-to-peer, decentralized communication without a central broker."
+      },
+      {
+        "question": "ROS2 communication is:",
+        "options": {
+          "A": "Peer-to-peer",
+          "B": "Server-client",
+          "C": "File-based",
+          "D": "Manual"
+        },
+        "correct": "A",
+        "explanation": "Nodes communicate directly (peer-to-peer) via DDS."
+      },
+      {
+        "question": "No topic in list:",
+        "options": {
+          "A": "Node not running",
+          "B": "Wrong environment",
+          "C": "Both",
+          "D": "None"
+        },
+        "correct": "C",
+        "explanation": "Either no node is publishing topics, or environment is not sourced correctly."
+      },
+      {
+        "question": "Topic visible but no echo:",
+        "options": {
+          "A": "No publisher",
+          "B": "QoS mismatch",
+          "C": "Both",
+          "D": "None"
+        },
+        "correct": "C",
+        "explanation": "Either no active publisher or QoS settings prevent message reception."
+      },
+      {
+        "question": "Node exists but no communication:",
+        "options": {
+          "A": "Topic mismatch",
+          "B": "Type mismatch",
+          "C": "QoS mismatch",
+          "D": "All"
+        },
+        "correct": "D",
+        "explanation": "Any mismatch in topic name, message type, or QoS can break communication."
+      },
+      {
+        "question": "Multiple publishers sending different data:",
+        "options": {
+          "A": "Combined stream",
+          "B": "Conflict",
+          "C": "Crash",
+          "D": "Ignored"
+        },
+        "correct": "A",
+        "explanation": "Subscribers receive interleaved messages from all publishers on the topic."
+      },
+      {
+        "question": "ROS2 graph represents:",
+        "options": {
+          "A": "Nodes + Topics + Connections",
+          "B": "Files",
+          "C": "RAM",
+          "D": "CPU"
+        },
+        "correct": "A",
+        "explanation": "The ROS2 graph visualizes nodes, topics, and their communication relationships."
+      },
+      {
+        "question": "A node acting as both pub/sub is:",
+        "options": {
+          "A": "Common",
+          "B": "Rare",
+          "C": "Not allowed",
+          "D": "Error"
+        },
+        "correct": "A",
+        "explanation": "Many nodes both publish and subscribe (e.g., filtering or transformation nodes)."
+      },
+      {
+        "question": "Turtlesim + teleop is example of:",
+        "options": {
+          "A": "Pub-sub system",
+          "B": "File system",
+          "C": "OS",
+          "D": "Storage"
+        },
+        "correct": "A",
+        "explanation": "Teleop publishes to /cmd_vel, turtlesim subscribes - classic pub-sub pattern."
+      },
+      {
+        "question": "Real robot replaces turtle but keeps:",
+        "options": {
+          "A": "Same concept",
+          "B": "Same GUI",
+          "C": "Same file",
+          "D": "Same OS"
+        },
+        "correct": "A",
+        "explanation": "The same pub-sub architecture with /cmd_vel topic applies to real robots."
+      },
+      {
+        "question": "Why topics instead of direct calls?",
+        "options": {
+          "A": "Loose coupling",
+          "B": "Faster speed",
+          "C": "Less RAM",
+          "D": "GUI"
+        },
+        "correct": "A",
+        "explanation": "Topics decouple publishers and subscribers for modular, scalable systems."
+      },
+      {
+        "question": "Best use of cmd_vel:",
+        "options": {
+          "A": "Navigation",
+          "B": "Motion control",
+          "C": "Mapping",
+          "D": "Localization"
+        },
+        "correct": "B",
+        "explanation": "cmd_vel is primarily for low-level motion control commands."
+      },
+      {
+        "question": "If subscriber joins late:",
+        "options": {
+          "A": "Miss old messages",
+          "B": "Gets all",
+          "C": "Crash",
+          "D": "Restart"
+        },
+        "correct": "A",
+        "explanation": "Topics are not persistent; late subscribers only get future messages."
+      },
+      {
+        "question": "Reliable QoS ensures:",
+        "options": {
+          "A": "Delivery guarantee",
+          "B": "Fast speed",
+          "C": "Less memory",
+          "D": "No delay"
+        },
+        "correct": "A",
+        "explanation": "Reliable QoS ensures messages are delivered or the sender is notified of failure."
+      },
+      {
+        "question": "Best debugging approach:",
+        "options": {
+          "A": "echo + list + info",
+          "B": "Restart",
+          "C": "Ignore",
+          "D": "Delete"
+        },
+        "correct": "A",
+        "explanation": "Combine 'ros2 topic echo', 'ros2 topic list', and 'ros2 node info' for systematic debugging."
+      },
+      {
+        "question": "Core ROS2 idea:",
+        "options": {
+          "A": "Modular communication",
+          "B": "Single program",
+          "C": "File system",
+          "D": "Hardware"
+        },
+        "correct": "A",
+        "explanation": "ROS2's core principle is modular, distributed communication between independent nodes."
+      }
+    ]
+  }
+}

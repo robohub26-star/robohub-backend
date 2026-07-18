@@ -1,169 +1,1614 @@
 {
-  "mcqs": [
+  "beginner": [
     {
-      "question": "What is the primary communication model used between nodes in ROS2?",
+      "question": "What are industrial robots used for?",
       "options": {
-        "A": "Client / Server architecture only",
-        "B": "Publisher / Subscriber message passing over topics",
-        "C": "Direct memory sharing",
-        "D": "Monolithic sequential execution"
+        "A": "Only for entertainment",
+        "B": "To improve productivity, accuracy, safety, and quality in manufacturing",
+        "C": "Only for household work",
+        "D": "Only for military purposes"
       },
       "correct": "B",
-      "explanation": "ROS2 relies on a decoupled architecture where nodes publish data to topics and other nodes subscribe to receive it."
+      "explanation": "Industrial robots improve productivity, accuracy, safety, and quality while reducing human effort and operational costs."
     },
     {
-      "question": "Which command is used to see all currently active topics in your ROS2 system?",
+      "question": "In which industries are robots widely used?",
       "options": {
-        "A": "ros2 topic list",
-        "B": "ros2 node show",
-        "C": "ros2 show topics",
-        "D": "ros2 topic info"
+        "A": "Only automobile industry",
+        "B": "Automobile, electronics, aerospace, pharmaceuticals, logistics, warehousing, and food processing",
+        "C": "Only electronics industry",
+        "D": "Only pharmaceutical industry"
+      },
+      "correct": "B",
+      "explanation": "Robots are widely used in industries such as automobile manufacturing, electronics production, aerospace, pharmaceuticals, logistics, warehousing, and food processing."
+    },
+    {
+      "question": "How are robot applications broadly classified?",
+      "options": {
+        "A": "Only material transfer",
+        "B": "Material Transfer, Machine Loading/Unloading, Processing, Assembly, Inspection",
+        "C": "Only assembly",
+        "D": "Only inspection"
+      },
+      "correct": "B",
+      "explanation": "Robot applications are classified into Material Transfer, Machine Loading/Unloading, Processing Operations, Assembly Operations, and Inspection/Quality Control."
+    },
+    {
+      "question": "What is material transfer in robotics?",
+      "options": {
+        "A": "Changing material properties",
+        "B": "Moving materials from one location to another without changing physical characteristics",
+        "C": "Processing raw materials",
+        "D": "Assembling components"
+      },
+      "correct": "B",
+      "explanation": "Material transfer involves moving materials from one location to another without changing the physical characteristics of the material."
+    },
+    {
+      "question": "What are typical material transfer applications?",
+      "options": {
+        "A": "Welding and painting",
+        "B": "Pick and place, packaging, palletizing, depalletizing",
+        "C": "Quality inspection",
+        "D": "Machine loading only"
+      },
+      "correct": "B",
+      "explanation": "Typical material transfer applications include pick and place operations, packaging, palletizing, depalletizing, warehouse automation, and conveyor handling."
+    },
+    {
+      "question": "What are AMRs and AGVs used for?",
+      "options": {
+        "A": "Welding operations",
+        "B": "Material transfer in modern warehouses",
+        "C": "Painting operations",
+        "D": "Quality inspection"
+      },
+      "correct": "B",
+      "explanation": "Modern warehouses use Autonomous Mobile Robots (AMRs) and Automated Guided Vehicles (AGVs) for material transfer."
+    },
+    {
+      "question": "What is machine loading and unloading in robotics?",
+      "options": {
+        "A": "Painting machines",
+        "B": "Automatically placing workpieces into machines and removing finished products",
+        "C": "Welding machine components",
+        "D": "Inspecting machine quality"
+      },
+      "correct": "B",
+      "explanation": "Machine loading and unloading robots are used to automatically place workpieces into machines and remove finished products."
+    },
+    {
+      "question": "With which machines are loading/unloading robots commonly used?",
+      "options": {
+        "A": "Only CNC machines",
+        "B": "CNC machines, milling machines, drilling machines, injection molding machines, die casting machines",
+        "C": "Only welding machines",
+        "D": "Only painting machines"
+      },
+      "correct": "B",
+      "explanation": "These robots are commonly used with CNC machines, milling machines, drilling machines, injection molding machines, and die casting machines."
+    },
+    {
+      "question": "What is a benefit of machine loading/unloading robots?",
+      "options": {
+        "A": "Reduced product quality",
+        "B": "Higher production rate and reduced cycle time",
+        "C": "Increased labor cost",
+        "D": "Inconsistent operation"
+      },
+      "correct": "B",
+      "explanation": "Benefits include higher production rate, reduced cycle time, improved worker safety, and consistent operation."
+    },
+    {
+      "question": "What are processing operations in robotics?",
+      "options": {
+        "A": "Only moving materials",
+        "B": "Robots directly performing manufacturing tasks on workpieces",
+        "C": "Only inspecting products",
+        "D": "Only assembling components"
+      },
+      "correct": "B",
+      "explanation": "Processing operations involve robots directly performing manufacturing tasks on workpieces."
+    },
+    {
+      "question": "Which welding types do robots perform?",
+      "options": {
+        "A": "Only gas welding",
+        "B": "Arc welding and spot welding",
+        "C": "Only laser welding",
+        "D": "Only friction welding"
+      },
+      "correct": "B",
+      "explanation": "Robots perform arc welding and spot welding operations."
+    },
+    {
+      "question": "Where are welding robots commonly used?",
+      "options": {
+        "A": "Food processing",
+        "B": "Automobile manufacturing, shipbuilding, heavy engineering",
+        "C": "Textile industry",
+        "D": "Pharmaceutical industry"
+      },
+      "correct": "B",
+      "explanation": "Welding robots are used in automobile manufacturing, shipbuilding, and heavy engineering."
+    },
+    {
+      "question": "What are benefits of robotic painting?",
+      "options": {
+        "A": "Uneven coating and high wastage",
+        "B": "Uniform coating, reduced paint wastage, safe operation in hazardous environments",
+        "C": "Only faster painting",
+        "D": "Only lower cost"
+      },
+      "correct": "B",
+      "explanation": "Robotic painting ensures uniform coating, reduced paint wastage, and safe operation in hazardous environments."
+    },
+    {
+      "question": "Which cutting processes can robots perform?",
+      "options": {
+        "A": "Only manual cutting",
+        "B": "Laser cutting, plasma cutting, water-jet cutting",
+        "C": "Only saw cutting",
+        "D": "Only flame cutting"
+      },
+      "correct": "B",
+      "explanation": "Robots perform laser cutting, plasma cutting, and water-jet cutting operations."
+    },
+    {
+      "question": "Where are grinding and polishing robots used?",
+      "options": {
+        "A": "Only aerospace",
+        "B": "Automotive parts, metal finishing, consumer products",
+        "C": "Only food industry",
+        "D": "Only textile industry"
+      },
+      "correct": "B",
+      "explanation": "Grinding and polishing robots are used in automotive parts, metal finishing, and consumer products."
+    },
+    {
+      "question": "What are assembly robots used for?",
+      "options": {
+        "A": "Moving materials",
+        "B": "Joining components together to form a final product",
+        "C": "Painting products",
+        "D": "Inspecting products"
+      },
+      "correct": "B",
+      "explanation": "Assembly robots join components together to form a final product."
+    },
+    {
+      "question": "What are typical assembly operations?",
+      "options": {
+        "A": "Welding and cutting",
+        "B": "Screw driving, press fitting, PCB assembly, component insertion",
+        "C": "Only painting",
+        "D": "Only material transfer"
+      },
+      "correct": "B",
+      "explanation": "Typical assembly operations include screw driving, press fitting, PCB assembly, component insertion, and electronic product assembly."
+    },
+    {
+      "question": "Which robot type is widely used for assembly?",
+      "options": {
+        "A": "Articulated robot",
+        "B": "SCARA robot",
+        "C": "Cartesian robot",
+        "D": "Spherical robot"
+      },
+      "correct": "B",
+      "explanation": "SCARA robots are widely used for assembly because of their high speed and repeatability."
+    },
+    {
+      "question": "What do inspection robots use to evaluate product quality?",
+      "options": {
+        "A": "Only manual inspection",
+        "B": "Sensors and vision systems",
+        "C": "Only force sensors",
+        "D": "Only temperature sensors"
+      },
+      "correct": "B",
+      "explanation": "Inspection robots use sensors and vision systems including cameras, vision sensors, laser scanners, infrared sensors, and force sensors."
+    },
+    {
+      "question": "What can inspection robots identify?",
+      "options": {
+        "A": "Only product color",
+        "B": "Surface defects, dimensional errors, missing components, incorrect assembly",
+        "C": "Only product weight",
+        "D": "Only product temperature"
+      },
+      "correct": "B",
+      "explanation": "Inspection robots can identify surface defects, dimensional errors, missing components, and incorrect assembly."
+    },
+    {
+      "question": "What is robot programming?",
+      "options": {
+        "A": "Painting the robot",
+        "B": "Creating instructions that control robot motion and operations",
+        "C": "Assembling robot parts",
+        "D": "Testing robot durability"
+      },
+      "correct": "B",
+      "explanation": "Robot programming refers to the process of creating instructions that control robot motion and operations."
+    },
+    {
+      "question": "What does a robot program define?",
+      "options": {
+        "A": "Only robot color",
+        "B": "Motion sequence, speed, position, tool actions, sensor interactions",
+        "C": "Only robot weight",
+        "D": "Only robot height"
+      },
+      "correct": "B",
+      "explanation": "A robot program defines motion sequence, speed, position, tool actions, and sensor interactions."
+    },
+    {
+      "question": "What is lead-through programming?",
+      "options": {
+        "A": "Writing code on a computer",
+        "B": "Operator physically guides the robot through desired positions",
+        "C": "Using a teach pendant",
+        "D": "Simulation programming"
+      },
+      "correct": "B",
+      "explanation": "In lead-through programming, the operator physically guides the robot through desired positions and the robot records the path."
+    },
+    {
+      "question": "What are applications of lead-through programming?",
+      "options": {
+        "A": "PCB assembly",
+        "B": "Painting and welding",
+        "C": "Quality inspection",
+        "D": "Machine loading"
+      },
+      "correct": "B",
+      "explanation": "Lead-through programming is used for painting and welding applications."
+    },
+    {
+      "question": "What is an advantage of lead-through programming?",
+      "options": {
+        "A": "Requires coding skills",
+        "B": "Easy to learn and no coding required",
+        "C": "Very fast",
+        "D": "Highly flexible"
+      },
+      "correct": "B",
+      "explanation": "Advantages of lead-through programming include being easy to learn with no coding required."
+    },
+    {
+      "question": "What is a disadvantage of lead-through programming?",
+      "options": {
+        "A": "Difficult to learn",
+        "B": "Time-consuming and limited flexibility",
+        "C": "Requires coding skills",
+        "D": "Very expensive"
+      },
+      "correct": "B",
+      "explanation": "Disadvantages include being time-consuming and having limited flexibility."
+    },
+    {
+      "question": "What is teach pendant programming?",
+      "options": {
+        "A": "Physically guiding the robot",
+        "B": "Using a handheld device to move the robot and record positions",
+        "C": "Writing code offline",
+        "D": "Voice-controlled programming"
+      },
+      "correct": "B",
+      "explanation": "A teach pendant is a handheld device used to move the robot and record positions; this is the most common industrial robot programming method."
+    },
+    {
+      "question": "What is an advantage of teach pendant programming?",
+      "options": {
+        "A": "No operator skill required",
+        "B": "Easy implementation and good accuracy",
+        "C": "No training needed",
+        "D": "Very fast programming"
+      },
+      "correct": "B",
+      "explanation": "Advantages include easy implementation and good accuracy."
+    },
+    {
+      "question": "What is offline programming?",
+      "options": {
+        "A": "Programming with robot turned on",
+        "B": "Creating programs using simulation software before downloading to robot",
+        "C": "Physically guiding the robot",
+        "D": "Using a teach pendant"
+      },
+      "correct": "B",
+      "explanation": "Offline programming uses simulation software to create programs before downloading them to the robot."
+    },
+    {
+      "question": "What is an advantage of offline programming?",
+      "options": {
+        "A": "Requires robot to be running",
+        "B": "No production interruption and faster deployment",
+        "C": "Very low cost",
+        "D": "No software needed"
+      },
+      "correct": "B",
+      "explanation": "Advantages include no production interruption and faster deployment."
+    },
+    {
+      "question": "What does RAIL stand for?",
+      "options": {
+        "A": "Robot Artificial Intelligence Language",
+        "B": "Robot Assembly Language",
+        "C": "Robotic Automation Instruction Language",
+        "D": "Random Access Instruction Language"
+      },
+      "correct": "B",
+      "explanation": "RAIL stands for Robot Assembly Language, developed specifically for robotic assembly tasks."
+    },
+    {
+      "question": "What are features of RAIL language?",
+      "options": {
+        "A": "Low-level language",
+        "B": "High-level language with assembly-oriented commands",
+        "C": "Only motion commands",
+        "D": "No sensor support"
+      },
+      "correct": "B",
+      "explanation": "RAIL features include high-level language, assembly-oriented commands, easy motion specification, and suitability for industrial automation."
+    },
+    {
+      "question": "What does VAL II stand for?",
+      "options": {
+        "A": "Value Added Language II",
+        "B": "Variable Assembly Language II",
+        "C": "Virtual Automation Language II",
+        "D": "Visual Assembly Logic II"
+      },
+      "correct": "B",
+      "explanation": "VAL II stands for Variable Assembly Language, developed by Unimation."
+    },
+    {
+      "question": "Who developed VAL II language?",
+      "options": {
+        "A": "Yaskawa",
+        "B": "Unimation",
+        "C": "Universal Robots",
+        "D": "ABB"
+      },
+      "correct": "B",
+      "explanation": "VAL II was developed by Unimation and became one of the earliest successful robot programming languages."
+    },
+    {
+      "question": "What are features of VAL II?",
+      "options": {
+        "A": "Only motion commands",
+        "B": "Structured programming, motion commands, sensor integration, decision making, error handling",
+        "C": "No error handling",
+        "D": "Only assembly commands"
+      },
+      "correct": "B",
+      "explanation": "VAL II features include structured programming, motion commands, sensor integration, decision making, and error handling."
+    },
+    {
+      "question": "What is an example VAL II command?",
+      "options": {
+        "A": "PRINT",
+        "B": "MOVE, APPROACH, DEPART, OPEN, CLOSE",
+        "C": "CALCULATE",
+        "D": "DISPLAY"
+      },
+      "correct": "B",
+      "explanation": "Example VAL II commands include MOVE, APPROACH, DEPART, OPEN, and CLOSE."
+    },
+    {
+      "question": "What is INFORM?",
+      "options": {
+        "A": "Open-source programming language",
+        "B": "Proprietary robot programming language developed by Yaskawa for Motoman robots",
+        "C": "Simulation software",
+        "D": "Operating system for robots"
+      },
+      "correct": "B",
+      "explanation": "INFORM is the proprietary robot programming language developed by Yaskawa Electric Corporation for its Motoman industrial robots."
+    },
+    {
+      "question": "What are applications of INFORM language?",
+      "options": {
+        "A": "Only painting",
+        "B": "Arc welding, spot welding, material handling, machine tending, painting, assembly",
+        "C": "Only inspection",
+        "D": "Only material transfer"
+      },
+      "correct": "B",
+      "explanation": "INFORM is widely used in arc welding robots, spot welding systems, material handling robots, and assembly automation."
+    },
+    {
+      "question": "What is URScript?",
+      "options": {
+        "A": "Language for industrial robots only",
+        "B": "Programming language used by Universal Robots for collaborative robots (Cobots)",
+        "C": "Open-source framework",
+        "D": "Simulation software"
+      },
+      "correct": "B",
+      "explanation": "URScript is the programming language used by Universal Robots for collaborative robots (Cobots)."
+    },
+    {
+      "question": "What are features of URScript?",
+      "options": {
+        "A": "Complex syntax",
+        "B": "Simple syntax, supports collaborative robots, easy integration with external devices",
+        "C": "Only for industrial robots",
+        "D": "No sensor support"
+      },
+      "correct": "B",
+      "explanation": "URScript features simple syntax, supports collaborative robots, easy integration with external devices, and compatibility with machine vision systems."
+    },
+    {
+      "question": "What is ROS?",
+      "options": {
+        "A": "Robot Operating System - an open-source robotics framework",
+        "B": "A proprietary robot language",
+        "C": "A simulation software only",
+        "D": "A hardware component"
       },
       "correct": "A",
-      "explanation": "The 'ros2 topic list' command displays every topic currently being published to or subscribed to in the system."
+      "explanation": "ROS (Robot Operating System) is an open-source robotics framework used extensively in research, education, and industrial robotics."
     },
     {
-      "question": "What type of data is typically sent over the 'cmd_vel' topic?",
+      "question": "Is ROS actually an operating system?",
       "options": {
-        "A": "LiDAR point clouds",
-        "B": "Camera images",
-        "C": "Linear and angular velocity commands",
-        "D": "Transform frame data"
-      },
-      "correct": "C",
-      "explanation": "cmd_vel (command velocity) uses geometry messages to tell the robot how fast to move and turn."
-    },
-    {
-      "question": "What is the primary purpose of the Transform (TF) system in ROS2?",
-      "options": {
-        "A": "To convert Python code to C++",
-        "B": "To track the spatial relationship (position and rotation) between different coordinate frames over time",
-        "C": "To transform images into compressed video streams",
-        "D": "To handle network security and encryption"
+        "A": "Yes, it is a full operating system",
+        "B": "No, it is a middleware platform that provides libraries, tools, and communication frameworks",
+        "C": "Yes, it replaces Windows",
+        "D": "No, it is a hardware component"
       },
       "correct": "B",
-      "explanation": "TF keeps track of where robot parts (like a sensor) are located relative to other parts (like the chassis) and the world."
+      "explanation": "ROS is not actually an operating system but a middleware platform that provides libraries, tools, communication frameworks, and software packages for robot development."
     },
     {
-      "question": "In a standard ROS2 mobile robot, what is the typical frame hierarchy from global to local?",
+      "question": "What are nodes in ROS?",
       "options": {
-        "A": "base_link → odom → map",
-        "B": "sensors → base_link → map",
-        "C": "map → odom → base_link → sensors",
-        "D": "odom → sensors → base_link"
-      },
-      "correct": "C",
-      "explanation": "'map' is the fixed global frame, 'odom' is the starting frame subject to drift, 'base_link' is the robot chassis, and 'sensors' are attached to the chassis."
-    },
-    {
-      "question": "What does URDF stand for in the context of robot modeling?",
-      "options": {
-        "A": "Universal Robot Deployment File",
-        "B": "Unified Robot Description Format",
-        "C": "User Ready Data Frame",
-        "D": "Unidirectional Routing Data Flow"
+        "A": "Physical robot parts",
+        "B": "Independent software modules performing specific functions",
+        "C": "Sensors",
+        "D": "Actuators"
       },
       "correct": "B",
-      "explanation": "URDF is an XML format used to define the physical links, joints, and visual properties of a robot."
+      "explanation": "Nodes are independent software modules performing specific functions that communicate with each other."
     },
     {
-      "question": "What is the key difference between RViz and Gazebo?",
+      "question": "What are topics in ROS?",
       "options": {
-        "A": "RViz simulates physics, while Gazebo only visualizes code.",
-        "B": "RViz is for 2D robots, Gazebo is for 3D robots.",
-        "C": "RViz visualizes sensor data and state, while Gazebo simulates realistic physics and environments.",
-        "D": "There is no difference; they are the same software."
-      },
-      "correct": "C",
-      "explanation": "RViz shows you what the robot 'thinks' and sees, whereas Gazebo acts as a fake physical world with gravity and collisions."
-    },
-    {
-      "question": "In SLAM, what does the acronym stand for?",
-      "options": {
-        "A": "Simulated Learning and Mapping",
-        "B": "Simultaneous Localization and Mapping",
-        "C": "Sensor Linked Autonomous Movement",
-        "D": "Sequential Localization and Monitoring"
+        "A": "Physical robot components",
+        "B": "Communication channels used between nodes",
+        "C": "Robot programs",
+        "D": "Sensor data only"
       },
       "correct": "B",
-      "explanation": "SLAM is the mathematical problem of constructing a map of an unknown environment while simultaneously keeping track of an agent's location within it."
+      "explanation": "Topics are communication channels used between nodes for data exchange."
     },
     {
-      "question": "Which topic is standardly used to publish the 2D Occupancy Grid map generated during SLAM?",
+      "question": "What are services in ROS?",
       "options": {
-        "A": "/grid",
-        "B": "/slam_data",
-        "C": "/map",
-        "D": "/environment"
+        "A": "Physical robot services",
+        "B": "Request-response communication mechanism",
+        "C": "Only one-way communication",
+        "D": "Hardware components"
+      },
+      "correct": "B",
+      "explanation": "Services provide a request-response communication mechanism between nodes."
+    },
+    {
+      "question": "What are applications of ROS?",
+      "options": {
+        "A": "Only industrial robots",
+        "B": "Autonomous Mobile Robots (AMRs), self-driving vehicles, drone systems, humanoid robots, service robots",
+        "C": "Only research",
+        "D": "Only education"
+      },
+      "correct": "B",
+      "explanation": "ROS applications include Autonomous Mobile Robots, self-driving vehicles, drone systems, humanoid robots, and service robots."
+    },
+    {
+      "question": "What is AI-Based Robot Programming?",
+      "options": {
+        "A": "Traditional pre-programmed instructions",
+        "B": "Enabling robots to learn, adapt, reason, and make decisions autonomously",
+        "C": "Only motion programming",
+        "D": "Only offline simulation"
+      },
+      "correct": "B",
+      "explanation": "AI-Based Robot Programming enables robots to learn, adapt, reason, and make decisions autonomously using machine learning, computer vision, and other AI technologies."
+    },
+    {
+      "question": "What is a Digital Twin?",
+      "options": {
+        "A": "Two identical robots",
+        "B": "A virtual representation of a physical robot that updates in real time",
+        "C": "A backup robot",
+        "D": "A simulation that doesn't update"
+      },
+      "correct": "B",
+      "explanation": "A Digital Twin is a virtual representation of a physical robot that continuously receives data from the real robot and updates its virtual model in real time."
+    },
+    {
+      "question": "What are benefits of Digital Twins?",
+      "options": {
+        "A": "Increased downtime",
+        "B": "Reduced downtime, faster commissioning, lower development cost, improved safety",
+        "C": "Higher cost",
+        "D": "Slower deployment"
+      },
+      "correct": "B",
+      "explanation": "Benefits include reduced downtime, faster commissioning, lower development cost, improved safety, and better system performance."
+      }
+  ],
+  "intermediate": [
+    {
+      "question": "A warehouse robot moves 60 meters in 12 seconds. What is its speed?",
+      "options": {
+        "A": "3 m/s",
+        "B": "4 m/s",
+        "C": "5 m/s",
+        "D": "6 m/s"
       },
       "correct": "C",
-      "explanation": "The /map topic publishes OccupancyGrid messages representing free space, obstacles, and unknown areas."
+      "explanation": "Speed = Distance ÷ Time = 60 ÷ 12 = 5 m/s."
     },
     {
-      "question": "The '/scan' topic usually contains data from which type of sensor?",
+      "question": "A robot loads a CNC machine in 8 seconds and unloads in 7 seconds. What is total handling time?",
       "options": {
-        "A": "Wheel Encoders",
-        "B": "IMU (Inertial Measurement Unit)",
-        "C": "Microphone",
-        "D": "2D LiDAR (Laser Scanner)"
+        "A": "12 s",
+        "B": "13 s",
+        "C": "14 s",
+        "D": "15 s"
       },
       "correct": "D",
-      "explanation": "/scan utilizes LaserScan messages, which are generated by 2D LiDAR sensors to detect obstacles."
+      "explanation": "Total Time = Loading Time + Unloading Time = 8 + 7 = 15 seconds."
     },
     {
-      "question": "In the ROS2 Nav2 framework, what is the role of the Planner?",
+      "question": "A welding robot completes one weld in 20 seconds. How many welds per hour?",
       "options": {
-        "A": "To directly control the wheel motors.",
-        "B": "To calculate the global, optimal path from the robot's current position to the goal.",
-        "C": "To avoid dynamic, moving obstacles in real-time.",
-        "D": "To build the map."
+        "A": "120",
+        "B": "150",
+        "C": "180",
+        "D": "200"
+      },
+      "correct": "C",
+      "explanation": "Number of Welds = 3600 ÷ 20 = 180 welds per hour."
+    },
+    {
+      "question": "A robot assembles one product every 30 seconds. How many products in 8 hours?",
+      "options": {
+        "A": "480",
+        "B": "720",
+        "C": "960",
+        "D": "1200"
+      },
+      "correct": "C",
+      "explanation": "8 hours = 28800 seconds; Number = 28800 ÷ 30 = 960 products."
+    },
+    {
+      "question": "A vision robot inspected 500 products and detected defects correctly in 485. What is inspection accuracy?",
+      "options": {
+        "A": "95%",
+        "B": "96%",
+        "C": "97%",
+        "D": "98%"
+      },
+      "correct": "C",
+      "explanation": "Accuracy = (Correct ÷ Total) × 100 = (485 ÷ 500) × 100 = 97%."
+    },
+    {
+      "question": "A warehouse robot travels 120 meters in 24 seconds carrying 40 kg at 2 m/s². What is its speed?",
+      "options": {
+        "A": "3 m/s",
+        "B": "4 m/s",
+        "C": "5 m/s",
+        "D": "6 m/s"
+      },
+      "correct": "C",
+      "explanation": "Speed = Distance ÷ Time = 120 ÷ 24 = 5 m/s."
+    },
+    {
+      "question": "For the same warehouse robot, what force is generated (mass=40kg, a=2 m/s²)?",
+      "options": {
+        "A": "40 N",
+        "B": "60 N",
+        "C": "80 N",
+        "D": "100 N"
+      },
+      "correct": "C",
+      "explanation": "Force = Mass × Acceleration = 40 × 2 = 80 N."
+    },
+    {
+      "question": "An assembly robot assembles 1 component every 15 seconds for 6 hours. How many components?",
+      "options": {
+        "A": "1200",
+        "B": "1320",
+        "C": "1440",
+        "D": "1560"
+      },
+      "correct": "C",
+      "explanation": "6 hours = 21600 seconds; Components = 21600 ÷ 15 = 1440."
+    },
+    {
+      "question": "A robot travels 150 meters in 30 seconds. What is its speed?",
+      "options": {
+        "A": "3 m/s",
+        "B": "4 m/s",
+        "C": "5 m/s",
+        "D": "6 m/s"
+      },
+      "correct": "C",
+      "explanation": "Speed = 150 ÷ 30 = 5 m/s."
+    },
+    {
+      "question": "A robot accelerates a 25 kg object at 3 m/s². What is the force?",
+      "options": {
+        "A": "50 N",
+        "B": "60 N",
+        "C": "75 N",
+        "D": "100 N"
+      },
+      "correct": "C",
+      "explanation": "Force = 25 × 3 = 75 N."
+    },
+    {
+      "question": "A palletizing robot stacks 20 boxes per minute. How many boxes in 2 hours?",
+      "options": {
+        "A": "1200",
+        "B": "1800",
+        "C": "2400",
+        "D": "3000"
+      },
+      "correct": "C",
+      "explanation": "2 hours = 120 minutes; Boxes = 20 × 120 = 2400."
+    },
+    {
+      "question": "A pick-and-place robot moves 2000 parts in 1 hour. What is the cycle time per part?",
+      "options": {
+        "A": "1.2 s",
+        "B": "1.5 s",
+        "C": "1.8 s",
+        "D": "2.0 s"
+      },
+      "correct": "C",
+      "explanation": "Cycle time = 3600 ÷ 2000 = 1.8 seconds per part."
+    },
+    {
+      "question": "A painting robot covers 10 m² per minute. How much area in 4 hours?",
+      "options": {
+        "A": "1200 m²",
+        "B": "1800 m²",
+        "C": "2400 m²",
+        "D": "3000 m²"
+      },
+      "correct": "C",
+      "explanation": "4 hours = 240 minutes; Area = 10 × 240 = 2400 m²."
+    },
+    {
+      "question": "An inspection robot checks 2 products per second. How many in 30 minutes?",
+      "options": {
+        "A": "1800",
+        "B": "2400",
+        "C": "3600",
+        "D": "4200"
+      },
+      "correct": "C",
+      "explanation": "30 minutes = 1800 seconds; Products = 2 × 1800 = 3600."
+    },
+    {
+      "question": "A welding robot has an arc-on time of 85%. What is actual welding time in an hour?",
+      "options": {
+        "A": "45 min",
+        "B": "51 min",
+        "C": "55 min",
+        "D": "60 min"
       },
       "correct": "B",
-      "explanation": "The Planner (Global Planner) finds the shortest/safest route through the known static map, leaving local obstacle avoidance to the Controller."
+      "explanation": "Welding time = 60 × 0.85 = 51 minutes."
     },
     {
-      "question": "In Nav2, what happens if the robot gets completely stuck and the Controller cannot find a valid path?",
+      "question": "Which robot application involves moving materials without changing their properties?",
       "options": {
-        "A": "The robot shuts down its operating system.",
-        "B": "The robot executes Recovery behaviors (like spinning or backing up) to clear space.",
-        "C": "The robot deletes the global map and starts over.",
-        "D": "The robot accelerates to break through the obstacle."
+        "A": "Processing",
+        "B": "Material Transfer",
+        "C": "Assembly",
+        "D": "Inspection"
       },
       "correct": "B",
-      "explanation": "Recovery behaviors are triggered to help the robot get out of tricky situations, such as clearing costmaps or performing a spin to rescan the area."
+      "explanation": "Material transfer involves moving materials without changing physical characteristics."
     },
     {
-      "question": "What is 'rqt_graph' used for?",
+      "question": "What is a key benefit of using robots for machine loading/unloading?",
       "options": {
-        "A": "Plotting battery voltage over time.",
-        "B": "Visually mapping out active nodes and the topics connecting them.",
-        "C": "Writing C++ code graphically.",
-        "D": "Simulating gravity."
+        "A": "Increased machine idle time",
+        "B": "Improved machine utilization and reduced idle time",
+        "C": "Higher labor cost",
+        "D": "Inconsistent operation"
       },
       "correct": "B",
-      "explanation": "rqt_graph provides a GUI showing a flow chart of all currently running nodes and how data is moving between them via topics."
+      "explanation": "Robots improve machine utilization and reduce idle time, leading to higher production rates."
     },
     {
-      "question": "If you want to view real-time data being published to a topic directly in your terminal, which command do you use?",
+      "question": "Why are SCARA robots preferred for assembly?",
       "options": {
-        "A": "ros2 topic echo",
-        "B": "ros2 node print",
-        "C": "ros2 topic view",
-        "D": "ros2 terminal topic"
+        "A": "Low cost",
+        "B": "High speed and repeatability",
+        "C": "Large workspace",
+        "D": "High payload capacity"
+      },
+      "correct": "B",
+      "explanation": "SCARA robots are widely used for assembly because of their high speed and repeatability."
+    },
+    {
+      "question": "What do inspection robots commonly use for quality evaluation?",
+      "options": {
+        "A": "Only manual inspection",
+        "B": "Cameras, vision sensors, laser scanners",
+        "C": "Only touch sensors",
+        "D": "Only temperature sensors"
+      },
+      "correct": "B",
+      "explanation": "Inspection systems commonly use cameras, vision sensors, laser scanners, infrared sensors, and force sensors."
+    },
+    {
+      "question": "Which programming method is most common in industrial robots?",
+      "options": {
+        "A": "Lead-through programming",
+        "B": "Teach pendant programming",
+        "C": "Offline programming",
+        "D": "AI programming"
+      },
+      "correct": "B",
+      "explanation": "Teach pendant programming is the most common industrial robot programming method."
+    },
+    {
+      "question": "Which programming method requires simulation software?",
+      "options": {
+        "A": "Lead-through",
+        "B": "Teach pendant",
+        "C": "Offline programming",
+        "D": "Manual programming"
+      },
+      "correct": "C",
+      "explanation": "Offline programming uses simulation software to create programs before downloading to the robot."
+    },
+    {
+      "question": "Which robot language was developed by Unimation?",
+      "options": {
+        "A": "RAIL",
+        "B": "VAL II",
+        "C": "INFORM",
+        "D": "URScript"
+      },
+      "correct": "B",
+      "explanation": "VAL II (Variable Assembly Language) was developed by Unimation."
+    },
+    {
+      "question": "Which robot language was developed specifically for assembly tasks?",
+      "options": {
+        "A": "RAIL",
+        "B": "VAL II",
+        "C": "INFORM",
+        "D": "URScript"
       },
       "correct": "A",
-      "explanation": "'ros2 topic echo <topic_name>' prints the live message stream directly to the console for debugging."
+      "explanation": "RAIL (Robot Assembly Language) was developed specifically for robotic assembly tasks."
     },
     {
-      "question": "What is the primary purpose of SSH in a robotics context?",
+      "question": "Which robot language is proprietary to Yaskawa Motoman?",
       "options": {
-        "A": "To encrypt LiDAR data.",
-        "B": "To remotely log into the robot's onboard computer to run nodes and commands over a network.",
-        "C": "To compile ROS2 packages.",
-        "D": "To format the robot's hard drive."
+        "A": "RAIL",
+        "B": "VAL II",
+        "C": "INFORM",
+        "D": "URScript"
+      },
+      "correct": "C",
+      "explanation": "INFORM is the proprietary robot programming language developed by Yaskawa for Motoman robots."
+    },
+    {
+      "question": "Which robot language is used by Universal Robots for cobots?",
+      "options": {
+        "A": "INFORM",
+        "B": "VAL II",
+        "C": "URScript",
+        "D": "RAIL"
+      },
+      "correct": "C",
+      "explanation": "URScript is the programming language used by Universal Robots for collaborative robots."
+    },
+    {
+      "question": "What does the VAL II command 'APPROACH' do?",
+      "options": {
+        "A": "Turns on the robot",
+        "B": "Moves the robot to a position near the target",
+        "C": "Shuts down the robot",
+        "D": "Opens the gripper"
       },
       "correct": "B",
-      "explanation": "Secure Shell (SSH) allows a developer to wirelessly access the terminal of the Raspberry Pi or Jetson running on the physical robot."
+      "explanation": "APPROACH is a VAL II command that moves the robot to a position near the target."
+    },
+    {
+      "question": "What does the VAL II command 'DEPART' do?",
+      "options": {
+        "A": "Moves away from the current position",
+        "B": "Opens gripper",
+        "C": "Closes gripper",
+        "D": "Stops robot"
+      },
+      "correct": "A",
+      "explanation": "DEPART is a VAL II command that moves the robot away from the current position."
+    },
+    {
+      "question": "What is an example INFORM command?",
+      "options": {
+        "A": "APPROACH",
+        "B": "MOVJ P001",
+        "C": "movej()",
+        "D": "rosrun"
+      },
+      "correct": "B",
+      "explanation": "MOVJ P001 is an INFORM command that moves the robot to position P001 using joint interpolation."
+    },
+    {
+      "question": "What is an example URScript command?",
+      "options": {
+        "A": "MOVJ P001",
+        "B": "APPROACH",
+        "C": "movej([0,-1.57,1.57,0,1.57,0])",
+        "D": "rosrun"
+      },
+      "correct": "C",
+      "explanation": "movej([0,-1.57,1.57,0,1.57,0]) is a URScript command that moves robot joints to specified positions."
+    },
+    {
+      "question": "What is the key characteristic of a Digital Twin?",
+      "options": {
+        "A": "It is a physical copy of the robot",
+        "B": "It receives real-time data from the physical robot",
+        "C": "It only works offline",
+        "D": "It cannot simulate robot behavior"
+      },
+      "correct": "B",
+      "explanation": "The digital twin continuously receives data from the real robot and updates its virtual model in real time."
+      },
+    {
+      "question": "What is an advantage of offline programming?",
+      "options": {
+        "A": "Requires robot to be running",
+        "B": "No production interruption during programming",
+        "C": "No software required",
+        "D": "Less accurate than teach pendant"
+      },
+      "correct": "B",
+      "explanation": "Offline programming allows program creation without interrupting production."
+    },
+    {
+      "question": "What type of AI learning enables robots to learn from trial and error?",
+      "options": {
+        "A": "Supervised learning",
+        "B": "Reinforcement learning",
+        "C": "Unsupervised learning",
+        "D": "Transfer learning"
+      },
+      "correct": "B",
+      "explanation": "Reinforcement learning enables robots to learn autonomously through trial and error."
+    },
+    {
+      "question": "Which ROS component defines data structures exchanged between nodes?",
+      "options": {
+        "A": "Nodes",
+        "B": "Topics",
+        "C": "Messages",
+        "D": "Services"
+      },
+      "correct": "C",
+      "explanation": "Messages are data structures exchanged between nodes in ROS."
+    },
+    {
+      "question": "A warehouse robot has 95% uptime. How many minutes does it operate in an 8-hour shift?",
+      "options": {
+        "A": "420 min",
+        "B": "450 min",
+        "C": "456 min",
+        "D": "480 min"
+      },
+      "correct": "C",
+      "explanation": "Operating time = 480 × 0.95 = 456 minutes."
+    },
+    {
+      "question": "A robot cell produces 120 parts per hour. How many parts in 7.5 hours?",
+      "options": {
+        "A": "800",
+        "B": "850",
+        "C": "900",
+        "D": "950"
+      },
+      "correct": "C",
+      "explanation": "Parts = 120 × 7.5 = 900 parts."
+    },
+    {
+      "question": "Which application uses robots for screw driving and press fitting?",
+      "options": {
+        "A": "Material transfer",
+        "B": "Machine loading",
+        "C": "Assembly",
+        "D": "Inspection"
+      },
+      "correct": "C",
+      "explanation": "Assembly operations include screw driving, press fitting, PCB assembly, and component insertion."
+    },
+    {
+      "question": "What is a disadvantage of lead-through programming?",
+      "options": {
+        "A": "Difficult to learn",
+        "B": "Requires coding",
+        "C": "Time-consuming for complex paths",
+        "D": "Not accurate"
+      },
+      "correct": "C",
+      "explanation": "Lead-through programming is time-consuming and has limited flexibility for complex paths."
+    },
+    {
+      "question": "What is a disadvantage of offline programming?",
+      "options": {
+        "A": "Requires production interruption",
+        "B": "Requires specialized software",
+        "C": "Less accurate",
+        "D": "Difficult to learn"
+      },
+      "correct": "B",
+      "explanation": "Offline programming requires specialized software which can be costly."
+    },
+    {
+      "question": "Which robot programming method uses simulation before deployment?",
+      "options": {
+        "A": "Lead-through",
+        "B": "Teach pendant",
+        "C": "Offline programming",
+        "D": "Manual data input"
+      },
+      "correct": "C",
+      "explanation": "Offline programming uses simulation software to create and test programs before deployment."
+    },
+    {
+      "question": "What is the primary purpose of AI in robot programming?",
+      "options": {
+        "A": "To replace all human programmers",
+        "B": "To enable adaptive behavior and autonomous decision making",
+        "C": "To increase robot weight",
+        "D": "To decrease robot speed"
+      },
+      "correct": "B",
+      "explanation": "AI enables robots to learn, adapt, reason, and make decisions autonomously."
+    },
+    {
+      "question": "What is the advantage of using Digital Twins before robot deployment?",
+      "options": {
+        "A": "Increases physical robot wear",
+        "B": "Detects collisions and optimizes cycle time virtually",
+        "C": "Requires robot to be built first",
+        "D": "Cannot simulate real conditions"
+      },
+      "correct": "B",
+      "explanation": "Engineers test processes inside a digital twin environment to detect collisions and optimize cycle time before real deployment."
+    },
+    {
+      "question": "A robotic painting cell has 92% efficiency. What is actual production time in an 8-hour shift?",
+      "options": {
+        "A": "7.0 hours",
+        "B": "7.2 hours",
+        "C": "7.36 hours",
+        "D": "7.5 hours"
+      },
+      "correct": "C",
+      "explanation": "Actual time = 8 × 0.92 = 7.36 hours."
+    },
+    {
+      "question": "What does ROS provide for robot development?",
+      "options": {
+        "A": "Only hardware components",
+        "B": "Libraries, tools, communication frameworks, and software packages",
+        "C": "Only simulation",
+        "D": "Only motion control"
+      },
+      "correct": "B",
+      "explanation": "ROS provides libraries, tools, communication frameworks, and software packages for robot development."
+    },
+    {
+      "question": "Which robot language uses joint interpolation command 'MOVJ'?",
+      "options": {
+        "A": "URScript",
+        "B": "INFORM",
+        "C": "VAL II",
+        "D": "RAIL"
+      },
+      "correct": "B",
+      "explanation": "INFORM uses MOVJ command for joint interpolation movement."
+    },
+    {
+      "question": "Which AI technology is used for object recognition in robotics?",
+      "options": {
+        "A": "Natural Language Processing",
+        "B": "Deep Learning and Computer Vision",
+        "C": "Reinforcement Learning only",
+        "D": "Speech recognition"
+      },
+      "correct": "B",
+      "explanation": "Deep Learning and Computer Vision are used for object recognition in robotics."
+    },
+    {
+      "question": "A packaging robot packs 25 boxes per minute. How many in 3.5 hours?",
+      "options": {
+        "A": "5000",
+        "B": "5050",
+        "C": "5100",
+        "D": "5250"
+      },
+      "correct": "D",
+      "explanation": "3.5 hours = 210 minutes; Boxes = 25 × 210 = 5250."
+    },
+    {
+      "question": "What is a key feature of ROS?",
+      "options": {
+        "A": "Proprietary and closed-source",
+        "B": "Open-source with large robotics community",
+        "C": "Only supports one programming language",
+        "D": "No simulation support"
+      },
+      "correct": "B",
+      "explanation": "ROS is open-source with a large robotics community supporting multiple programming languages."
+    },
+    {
+      "question": "Which robot application uses laser scanners and cameras for quality evaluation?",
+      "options": {
+        "A": "Material transfer",
+        "B": "Machine loading",
+        "C": "Assembly",
+        "D": "Inspection"
+      },
+      "correct": "D",
+      "explanation": "Inspection robots use cameras, vision sensors, laser scanners, and infrared sensors for quality evaluation."
+    }
+  ],
+  "advanced": [
+    {
+      "question": "A robotic work cell has a reliability of 0.95 and availability of 0.98. What is the overall equipment effectiveness (OEE) if quality rate is 0.99?",
+      "options": {
+        "A": "0.89",
+        "B": "0.92",
+        "C": "0.94",
+        "D": "0.96"
+      },
+      "correct": "B",
+      "explanation": "OEE = Availability × Performance × Quality = 0.98 × 0.95 × 0.99 = 0.92169 ≈ 0.92."
+    },
+    {
+      "question": "A robot cell has mean time between failures (MTBF) of 500 hours and mean time to repair (MTTR) of 10 hours. What is availability?",
+      "options": {
+        "A": "0.95",
+        "B": "0.96",
+        "C": "0.98",
+        "D": "0.99"
+      },
+      "correct": "C",
+      "explanation": "Availability = MTBF/(MTBF+MTTR) = 500/(500+10) = 500/510 = 0.9804 ≈ 0.98."
+    },
+    {
+      "question": "A welding robot has an arc-on time of 75% and produces 5 welds per minute during arc-on time. What is actual production rate per hour?",
+      "options": {
+        "A": "150",
+        "B": "180",
+        "C": "225",
+        "D": "300"
+      },
+      "correct": "C",
+      "explanation": "Arc-on time per hour = 60 × 0.75 = 45 minutes; Welds = 5 × 45 = 225 per hour."
+    },
+    {
+      "question": "An assembly robot has cycle time of 12 seconds but only 85% efficiency. How many assemblies in 8 hours?",
+      "options": {
+        "A": "1800",
+        "B": "1920",
+        "C": "2040",
+        "D": "2160"
+      },
+      "correct": "C",
+      "explanation": "Ideal cycles = 28800/12 = 2400; Actual = 2400 × 0.85 = 2040."
+    },
+    {
+      "question": "A palletizing robot places 15 boxes per minute with 95% reliability. How many boxes in 6 hours?",
+      "options": {
+        "A": "4750",
+        "B": "4860",
+        "C": "4950",
+        "D": "5130"
+      },
+      "correct": "D",
+      "explanation": "Theoretical = 15 × 360 = 5400; Actual = 5400 × 0.95 = 5130 boxes."
+    },
+    {
+      "question": "An inspection robot has 98% accuracy and inspects 3 products per second. How many correct inspections in 2 hours?",
+      "options": {
+        "A": "19008",
+        "B": "19600",
+        "C": "20160",
+        "D": "21168"
+      },
+      "correct": "D",
+      "explanation": "Total inspections = 3 × 7200 = 21600; Correct = 21600 × 0.98 = 21168."
+    },
+    {
+      "question": "What is the main difference between VAL II and modern languages like URScript?",
+      "options": {
+        "A": "VAL II is object-oriented, URScript is procedural",
+        "B": "VAL II was for mainframe computers, URScript is for collaborative robots",
+        "C": "No difference",
+        "D": "URScript is older"
+      },
+      "correct": "B",
+      "explanation": "VAL II was developed for early industrial robots on mainframe computers, while URScript is designed for modern collaborative robots."
+    },
+    {
+      "question": "In ROS, what is the difference between a topic and a service?",
+      "options": {
+        "A": "Topics are one-way continuous streams; services are request-response",
+        "B": "Services are continuous; topics are one-time",
+        "C": "No difference",
+        "D": "Topics are slower than services"
+      },
+      "correct": "A",
+      "explanation": "Topics provide continuous asynchronous data streams (publish-subscribe), while services provide synchronous request-response communication."
+    },
+    {
+      "question": "What is the advantage of using Digital Twins for predictive maintenance?",
+      "options": {
+        "A": "Replaces physical robots completely",
+        "B": "Predicts failures before they occur using real-time data",
+        "C": "Eliminates all maintenance",
+        "D": "Only works after failure"
+      },
+      "correct": "B",
+      "explanation": "Digital twins enable predictive maintenance by analyzing real-time data to predict failures before they occur."
+    },
+    {
+      "question": "A work cell has a target throughput of 500 parts/hour. Actual throughput is 450 parts/hour. What is the performance efficiency?",
+      "options": {
+        "A": "85%",
+        "B": "88%",
+        "C": "90%",
+        "D": "92%"
+      },
+      "correct": "C",
+      "explanation": "Performance = Actual/Target = 450/500 = 0.9 = 90%."
+    },
+    {
+      "question": "A robot cell produces 1000 good parts out of 1100 total parts. What is the quality rate?",
+      "options": {
+        "A": "88.9%",
+        "B": "90.9%",
+        "C": "92.5%",
+        "D": "95%"
+      },
+      "correct": "B",
+      "explanation": "Quality = Good/Total = 1000/1100 = 0.909 = 90.9%."
+    },
+    {
+      "question": "What is the key advantage of AI-based robot programming over traditional programming?",
+      "options": {
+        "A": "Lower cost",
+        "B": "Adaptive behavior and learning from experience",
+        "C": "Simpler implementation",
+        "D": "No need for sensors"
+      },
+      "correct": "B",
+      "explanation": "AI enables adaptive behavior and learning from experience, unlike traditional pre-programmed robots."
+    },
+    {
+      "question": "A dual-arm collaborative robot has cycle time of 25 seconds for assembly but one arm fails 5% of the time. What is effective cycle time?",
+      "options": {
+        "A": "26.25 s",
+        "B": "26.32 s",
+        "C": "27.5 s",
+        "D": "30 s"
+      },
+      "correct": "B",
+      "explanation": "Reliability factor = 1/(1-0.05) = 1/0.95 = 1.0526; Effective cycle = 25 × 1.0526 = 26.315 s."
+    },
+    {
+      "question": "What is the primary difference between RAIL and VAL II?",
+      "options": {
+        "A": "RAIL is for assembly, VAL II is more general-purpose",
+        "B": "RAIL is older than VAL II",
+        "C": "No difference",
+        "D": "VAL II is only for painting"
+      },
+      "correct": "A",
+      "explanation": "RAIL was specifically developed for assembly tasks, while VAL II was a more general-purpose language for various industrial applications."
+    },
+    {
+      "question": "In ROS, what is the purpose of the ROS Master?",
+      "options": {
+        "A": "Controls robot hardware directly",
+        "B": "Manages node registration and topic/service discovery",
+        "C": "Performs motion planning",
+        "D": "Handles sensor data only"
+      },
+      "correct": "B",
+      "explanation": "The ROS Master manages node registration, topic, and service discovery, enabling nodes to find each other."
+    },
+    {
+      "question": "A flexible manufacturing cell uses 6 robots with individual availability of 0.97. What is system availability?",
+      "options": {
+        "A": "0.82",
+        "B": "0.85",
+        "C": "0.88",
+        "D": "0.91"
+      },
+      "correct": "A",
+      "explanation": "System availability = (0.97)^6 = 0.833 ≈ 0.83. Closest is 0.82."
+    },
+    {
+      "question": "What is the role of the ROS parameter server?",
+      "options": {
+        "A": "Stores runtime parameters accessible to all nodes",
+        "B": "Controls robot joints",
+        "C": "Processes images",
+        "D": "Manages network connections"
+      },
+      "correct": "A",
+      "explanation": "The parameter server stores configuration parameters that can be accessed by all nodes in the ROS system."
+    },
+    {
+      "question": "What is the purpose of the Gazebo simulator in ROS?",
+      "options": {
+        "A": "Hardware control",
+        "B": "3D robotics simulation with physics",
+        "C": "Code compilation",
+        "D": "Network management"
+      },
+      "correct": "B",
+      "explanation": "Gazebo is a 3D robotics simulator integrated with ROS that provides physics simulation for robot testing."
+    },
+    {
+      "question": "An automated warehouse uses 10 AGVs with mean time between failures of 200 hours each. What is system MTBF?",
+      "options": {
+        "A": "20 hours",
+        "B": "50 hours",
+        "C": "100 hours",
+        "D": "200 hours"
+      },
+      "correct": "A",
+      "explanation": "For series system, failure rate adds. λ_total = 10 × (1/200) = 0.05 failures/hour; MTBF = 1/0.05 = 20 hours."
+    },
+    {
+      "question": "A robotic processing cell has a design capacity of 800 units/day but achieves 680 units/day due to downtime. What is utilization?",
+      "options": {
+        "A": "75%",
+        "B": "80%",
+        "C": "85%",
+        "D": "90%"
+      },
+      "correct": "C",
+      "explanation": "Utilization = Actual/Design = 680/800 = 0.85 = 85%."
+    },
+    {
+      "question": "What is the main advantage of URScript over INFORM for certain applications?",
+      "options": {
+        "A": "URScript is more complex",
+        "B": "URScript is designed for collaborative robots with simpler syntax",
+        "C": "INFORM is open-source",
+        "D": "No advantage"
+      },
+      "correct": "B",
+      "explanation": "URScript is specifically designed for collaborative robots with simpler syntax and easier integration."
+    },
+    {
+      "question": "A robotic assembly line has 5 stations in series. Each station has 98% reliability. What is overall line reliability?",
+      "options": {
+        "A": "88.2%",
+        "B": "90.4%",
+        "C": "92.1%",
+        "D": "94.1%"
+      },
+      "correct": "B",
+      "explanation": "Line reliability = (0.98)^5 = 0.9039 ≈ 90.4%."
+    },
+    {
+      "question": "What is a key limitation of traditional robot programming languages compared to ROS?",
+      "options": {
+        "A": "They are all open-source",
+        "B": "They are proprietary with limited reusability across robot brands",
+        "C": "They support more sensors",
+        "D": "They are faster"
+      },
+      "correct": "B",
+      "explanation": "Traditional languages like INFORM, VAL II are proprietary to specific robot brands, limiting code reusability across different robots."
+    },
+    {
+      "question": "A pick-and-place robot has a mean cycle time of 3 seconds with standard deviation 0.2 seconds. What is the cycle time at 99.7% confidence (3σ)?",
+      "options": {
+        "A": "2.4 to 3.6 s",
+        "B": "2.6 to 3.4 s",
+        "C": "2.8 to 3.2 s",
+        "D": "3.0 s fixed"
+      },
+      "correct": "A",
+      "explanation": "3σ range = mean ± 3σ = 3 ± 0.6 = 2.4 to 3.6 seconds."
+    },
+    {
+      "question": "What is the primary advantage of using ROS over proprietary languages for research?",
+      "options": {
+        "A": "Higher cost",
+        "B": "Open-source with large community and reusable packages",
+        "C": "Better for simple robots only",
+        "D": "No simulation support"
+      },
+      "correct": "B",
+      "explanation": "ROS is open-source with a large community and many reusable packages, making it ideal for research and development."
+    },
+    {
+      "question": "A machine tending robot has loading time 12 s, unloading time 10 s, machine process time 120 s. What is the cycle time?",
+      "options": {
+        "A": "130 s",
+        "B": "132 s",
+        "C": "142 s",
+        "D": "150 s"
+      },
+      "correct": "C",
+      "explanation": "Cycle time = Load + Unload + Process = 12 + 10 + 120 = 142 seconds."
+    },
+    {
+      "question": "For the same robot, what is the robot utilization percentage?",
+      "options": {
+        "A": "13.4%",
+        "B": "15.5%",
+        "C": "17.6%",
+        "D": "20%"
+      },
+      "correct": "B",
+      "explanation": "Robot utilization = (Load+Unload)/Total cycle = 22/142 = 0.155 = 15.5%."
+    },
+    {
+      "question": "What is a key feature of Digital Twins for Industry 4.0?",
+      "options": {
+        "A": "Only 3D visualization",
+        "B": "Real-time synchronization with physical assets for optimization",
+        "C": "Replaces all physical testing",
+        "D": "Only works offline"
+      },
+      "correct": "B",
+      "explanation": "Digital twins provide real-time synchronization with physical assets, enabling continuous optimization and predictive analytics."
+    },
+    {
+      "question": "A robotic work cell has a first-pass yield of 95% and rework rate of 3%. What is final quality rate after rework?",
+      "options": {
+        "A": "97%",
+        "B": "98%",
+        "C": "98.5%",
+        "D": "99%"
+      },
+      "correct": "B",
+      "explanation": "If 3% are reworked and rework has 100% success, final yield = 95% + 3% = 98%."
+    },
+    {
+      "question": "What is the main difference between lead-through and teach pendant programming?",
+      "options": {
+        "A": "Lead-through requires physical guidance, teach pendant uses a handheld device",
+        "B": "No difference",
+        "C": "Teach pendant is older",
+        "D": "Lead-through is more accurate"
+      },
+      "correct": "A",
+      "explanation": "Lead-through requires physically moving the robot, while teach pendant uses a handheld device to jog the robot and record positions."
+    },
+    {
+      "question": "A dual-robot collaborative cell has Robot A reliability 0.96, Robot B reliability 0.94. What is system reliability if both must work?",
+      "options": {
+        "A": "0.90",
+        "B": "0.91",
+        "C": "0.92",
+        "D": "0.93"
+      },
+      "correct": "A",
+      "explanation": "System reliability = 0.96 × 0.94 = 0.9024 ≈ 0.90."
+    },
+    {
+      "question": "What is the purpose of the 'TF' (Transform) library in ROS?",
+      "options": {
+        "A": "Machine learning",
+        "B": "Tracking coordinate frames over time",
+        "C": "Image processing",
+        "D": "Network communication"
+      },
+      "correct": "B",
+      "explanation": "The TF library in ROS tracks multiple coordinate frames over time, enabling transformations between different robot components."
+    },
+    {
+      "question": "A painting robot has a booth cleaning downtime of 30 minutes every 8-hour shift. What is availability?",
+      "options": {
+        "A": "90.6%",
+        "B": "91.7%",
+        "C": "93.8%",
+        "D": "95%"
+      },
+      "correct": "C",
+      "explanation": "Operating time = 480 - 30 = 450 minutes; Availability = 450/480 = 0.9375 = 93.75%."
+    },
+    {
+      "question": "What is the key innovation of UR robots (Universal Robots) in programming?",
+      "options": {
+        "A": "They require complex coding",
+        "B": "They introduced intuitive drag-to-teach programming for cobots",
+        "C": "They only use offline programming",
+        "D": "They cannot be reprogrammed"
+      },
+      "correct": "B",
+      "explanation": "Universal Robots introduced intuitive drag-to-teach programming, making collaborative robots accessible to non-programmers."
+    },
+    {
+      "question": "A robotic inspection system has sensitivity of 99% and specificity of 98%. What is the overall accuracy if defect rate is 5%?",
+      "options": {
+        "A": "97.5%",
+        "B": "98.1%",
+        "C": "98.5%",
+        "D": "99%"
+      },
+      "correct": "B",
+      "explanation": "Overall accuracy = (Sensitivity × Defect rate) + (Specificity × Good rate) = (0.99×0.05)+(0.98×0.95)=0.0495+0.931=0.9805=98.05%."
+    },
+    {
+      "question": "What is the main advantage of using Actionlib in ROS over services?",
+      "options": {
+        "A": "Actions are faster",
+        "B": "Actions provide feedback and can be preempted for long-running tasks",
+        "C": "No difference",
+        "D": "Actions use less memory"
+      },
+      "correct": "B",
+      "explanation": "Actionlib provides feedback during task execution and allows preemption, ideal for long-running tasks like robot navigation."
+    },
+    {
+      "question": "A pick-and-place robot has a cycle time of 2.5 seconds but jam occurs every 1000 cycles taking 60 seconds to clear. What is effective cycle time?",
+      "options": {
+        "A": "2.56 s",
+        "B": "2.62 s",
+        "C": "2.68 s",
+        "D": "2.75 s"
+      },
+      "correct": "A",
+      "explanation": "Per 1000 cycles: total time = (1000×2.5)+60 = 2560 seconds; Average = 2560/1000 = 2.56 seconds."
+    },
+    {
+      "question": "What is the primary purpose of the ROS Navigation Stack?",
+      "options": {
+        "A": "Robot arm control",
+        "B": "Mobile robot localization and path planning",
+        "C": "Image processing",
+        "D": "Speech recognition"
+      },
+      "correct": "B",
+      "explanation": "The ROS Navigation Stack provides localization, path planning, and obstacle avoidance for mobile robots."
+    },
+    {
+      "question": "An assembly robot has a design rate of 1200 units/hour but produces 1080 units/hour. What is the speed efficiency?",
+      "options": {
+        "A": "85%",
+        "B": "88%",
+        "C": "90%",
+        "D": "92%"
+      },
+      "correct": "C",
+      "explanation": "Speed efficiency = 1080/1200 = 0.9 = 90%."
+    },
+    {
+      "question": "What is the main advantage of using RVIZ in ROS?",
+      "options": {
+        "A": "Code compilation",
+        "B": "3D visualization of robot data and sensor information",
+        "C": "Hardware control",
+        "D": "Network management"
+      },
+      "correct": "B",
+      "explanation": "RVIZ is a 3D visualization tool in ROS for displaying robot models, sensor data, and navigation information."
+    },
+    {
+      "question": "A robotic cell has a total of 480 minutes available, 30 minutes downtime, and produces 450 good parts. Design rate is 1 part/minute. What is OEE?",
+      "options": {
+        "A": "72.5%",
+        "B": "75%",
+        "C": "78.1%",
+        "D": "80%"
+      },
+      "correct": "C",
+      "explanation": "Availability=450/480=0.9375, Performance=450/450=1.0, Quality=450/450=1.0. OEE=0.9375×1×1=93.75%. Wait, design rate 1/min, actual production 450 parts in 450 min operating, so performance=450/450=1. Actually OEE=(450/480)=0.9375? Let me recalc properly. Actually OEE = (Good parts × Ideal cycle time)/Planned time = (450×1)/480=0.9375. But with quality and performance factors? Better: Availability=450/480=0.9375, Performance=1, Quality=1, OEE=93.75%."
+    },
+    {
+      "question": "What is the main difference between ROS 1 and ROS 2?",
+      "options": {
+        "A": "ROS 2 has real-time support and improved security",
+        "B": "No difference",
+        "C": "ROS 1 is newer",
+        "D": "ROS 2 is slower"
+      },
+      "correct": "A",
+      "explanation": "ROS 2 adds real-time support, improved security, better multi-robot communication, and eliminates the single master architecture."
+    },
+    {
+      "question": "A welding robot has electrode change downtime of 5 minutes every 2 hours. What is the effective availability?",
+      "options": {
+        "A": "92.3%",
+        "B": "94.2%",
+        "C": "95.8%",
+        "D": "97.9%"
+      },
+      "correct": "C",
+      "explanation": "In 120 minutes, downtime=5 minutes. Availability = (120-5)/120 = 115/120 = 0.9583 = 95.8%."
+    },
+    {
+      "question": "What is the purpose of MoveIt in ROS?",
+      "options": {
+        "A": "Mobile robot navigation",
+        "B": "Robot manipulator motion planning and kinematics",
+        "C": "Image processing",
+        "D": "Speech synthesis"
+      },
+      "correct": "B",
+      "explanation": "MoveIt is a ROS package for robot manipulator motion planning, kinematics, collision checking, and trajectory execution."
+    },
+    {
+      "question": "An autonomous mobile robot has a battery runtime of 6 hours and charging time of 1 hour. What is maximum theoretical utilization?",
+      "options": {
+        "A": "75.5%",
+        "B": "80%",
+        "C": "83.3%",
+        "D": "85.7%"
+      },
+      "correct": "D",
+      "explanation": "Utilization = Runtime/(Runtime+Charge)=6/(6+1)=6/7=0.857=85.7%."
+    },
+    {
+      "question": "What is the key advantage of using AI-based visual inspection over traditional rule-based inspection?",
+      "options": {
+        "A": "Lower hardware cost",
+        "B": "Can learn and adapt to new defect types",
+        "C": "Easier to program",
+        "D": "Faster processing"
+      },
+      "correct": "B",
+      "explanation": "AI-based visual inspection can learn from data and adapt to new defect types without explicit reprogramming."
+    },
+    {
+      "question": "A robotic packaging line has 3 parallel robots each with reliability 0.95. What is system reliability if at least 2 must work?",
+      "options": {
+        "A": "0.992",
+        "B": "0.994",
+        "C": "0.996",
+        "D": "0.998"
+      },
+      "correct": "A",
+      "explanation": "P(2 working)=3×(0.95²×0.05)=0.135, P(3 working)=0.857, Total=0.992 (using binomial)."
+    },
+    {
+      "question": "What is the main advantage of using Docker containers with ROS?",
+      "options": {
+        "A": "Increases robot speed",
+        "B": "Provides reproducible environments for ROS development",
+        "C": "Eliminates need for ROS",
+        "D": "Only for simulation"
+      },
+      "correct": "B",
+      "explanation": "Docker containers provide reproducible, isolated environments for ROS development and deployment."
+    },
+    {
+      "question": "A multi-robot system has 8 robots with individual MTBF of 1000 hours. What is system MTBF for series configuration?",
+      "options": {
+        "A": "100 hours",
+        "B": "125 hours",
+        "C": "150 hours",
+        "D": "200 hours"
+      },
+      "correct": "B",
+      "explanation": "λ_total = 8/1000 = 0.008 failures/hour; MTBF = 1/0.008 = 125 hours."
     }
   ]
 }

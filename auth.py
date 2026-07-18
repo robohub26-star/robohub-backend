@@ -2,6 +2,7 @@ from bson import ObjectId
 from flask import Blueprint, request, jsonify
 from werkzeug.security import generate_password_hash, check_password_hash
 from pymongo import MongoClient
+import certifi
 import os
 from dotenv import load_dotenv
 from flask_jwt_extended import create_access_token, jwt_required, get_jwt_identity
@@ -15,7 +16,7 @@ auth_bp = Blueprint("auth", __name__)
 # MongoDB Setup
 # -------------------------------
 MONGO_URI = os.getenv("MONGODB_URI")
-client = MongoClient(MONGO_URI)
+client = MongoClient(MONGO_URI, tlsCAFile=certifi.where())
 db = client["learnflow"]
 users_collection = db["users"]  
 
@@ -37,6 +38,17 @@ def register():
     email = data.get("email")
     full_name = data.get("fullName")
 
+    # Required fields common to every registration
+    category = data.get("category")       # School / College / Professional
+    mode = data.get("mode")                # Online / Offline
+    gender = data.get("gender")            # Male / Female / Other
+
+    if not all([full_name, email, data.get("password"), category, mode, gender]):
+        return jsonify({
+            "success": False,
+            "message": "fullName, email, password, category, mode and gender are all required"
+        }), 400
+
     # 1. Check if user already exists based on their role
     if role == "student":
         if users_collection.find_one({"email": email, "role": "student"}):
@@ -53,10 +65,13 @@ def register():
         "phone": data.get("phone"),
         "password": generate_password_hash(data.get("password")),
         "role": role,
-        "extra": data.get("extra") 
+        "extra": data.get("extra"),
+        "category": category,
+        "mode": mode,
+        "gender": gender,
     }
-    
-    # 3. Add extra fields if student
+
+    # 3. Add extra fields depending on role
     if role == "student":
         user_data["progress"] = {
             "days": {
@@ -65,6 +80,12 @@ def register():
                 "3": {"completed": False, "score": None},
             },
         }
+    else:  # mentor: how many students they teach
+        students_count = data.get("studentsCount")
+        try:
+            user_data["studentsCount"] = int(students_count)
+        except (TypeError, ValueError):
+            return jsonify({"success": False, "message": "studentsCount must be a number"}), 400
 
     users_collection.insert_one(user_data)
     return jsonify({"success": True, "message": f"{role.title()} registered successfully"})
@@ -82,6 +103,21 @@ def create_admin():
     if users_collection.find_one({"email": data.get("email"), "role": "mentor"}):
         return jsonify({"success": False, "message": "Admin already exists"}), 400
 
+    category = data.get("category")
+    mode = data.get("mode")
+    gender = data.get("gender")
+
+    if not all([data.get("fullName"), data.get("email"), data.get("password"), category, mode, gender]):
+        return jsonify({
+            "success": False,
+            "message": "fullName, email, password, category, mode and gender are all required"
+        }), 400
+
+    try:
+        students_count = int(data.get("studentsCount"))
+    except (TypeError, ValueError):
+        return jsonify({"success": False, "message": "studentsCount must be a number"}), 400
+
     user_data = {
         "fullName": data.get("fullName"),
         "email": data.get("email"),
@@ -89,6 +125,10 @@ def create_admin():
         "password": generate_password_hash(data.get("password")),
         "role": "mentor",
         "extra": data.get("extra"),
+        "category": category,
+        "mode": mode,
+        "gender": gender,
+        "studentsCount": students_count,
         "isApproved": True,
         "isActive": False,
         "createdAt": datetime.utcnow()
@@ -107,6 +147,7 @@ def create_admin():
 @auth_bp.route("/api/login", methods=["POST"])
 def login():
     data = request.json
+    print("DEBUG /api/login received:", repr(data))  # TEMP DEBUG LINE
     role = data.get("role")
     password = data.get("password")
 
